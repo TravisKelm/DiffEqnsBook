@@ -130,7 +130,7 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
   <title>Exercises for Chapter 1</title>
 <ol>
   <li>
-    Verify the solution in Example <xref ref="example-iex" />.
+    Verify the solution in <xref ref="example-iex" />.
   </li>
   <li>
     Give an example of a differential equation whose solution is <me>y(x) = x^2-2\text{ on the interval }(-\infty, \infty)</me>.
