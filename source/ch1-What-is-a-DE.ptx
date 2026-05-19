@@ -26,7 +26,7 @@
         <p>
           <ol>
             <li>
-              <m>\dfrac{dy}{dt}=y is a <term>first-order</term> ODE in independent variable </m>t</m>.
+              <m>\dfrac{dy}{dt}=y</m> is a <term>first-order</term> ODE in independent variable </m>t</m>.
             </li>
             <li>
               <m>\dfrac{\partial u}{\partial x}+\dfrac{\partial u}{\partial y}=0</m> is a <term>first-order</term> PDE in two independent variables, <m>x</m> and <m>y</m>.
