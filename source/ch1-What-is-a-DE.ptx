@@ -3,9 +3,8 @@
 <chapter xml:id="ch1-What-is-a-DE" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>What is a Differential Equation?</title>
 
-  <introduction>
-    <p> Text before the first section. </p>
-  </introduction>
+<section xml:id="sec-chpt1">
+  <title>Chapter 1</title>  
 
 <definition xml:id="def-DifferentialEquation"><idx>Differential Equations</idx>
     <statement>
@@ -25,13 +24,13 @@
     <title>Some Examples</title>
         <p>
           <ol>
-            <li>
-              <m>\dfrac{dy}{dt}=y</m> is a <term>first-order</term> ODE in independent variable </m>t</m>.
+            <li xml:id="example-standardODE">
+              <m>\dfrac{dy}{dt}=y</m> is a <term>first-order</term> ODE in independent variable <m>t</m>.
             </li>
             <li>
               <m>\dfrac{\partial u}{\partial x}+\dfrac{\partial u}{\partial y}=0</m> is a <term>first-order</term> PDE in two independent variables, <m>x</m> and <m>y</m>.
             </li>
-            <li>
+            <li xml:id="example-nonstandardODE">
               <m>y^{(3)}+xy'+y^2=e^{-x}</m> is a <term>third-order</term>  ODE in independent variable <m>x</m>.
             </li>
             <li>
@@ -61,13 +60,13 @@
 </p>
 
 <p>
-  Let $u$ be a function of $x$ and $y$. So $u = u(x, y)$.  Then we may represent the partial derivatives by, for example:
+  Let <m>u</m> be a function of <m>x</m> and <m>y</m>. So <m>u = u(x, y)</m>.  Then we may represent the partial derivatives by, for example:
   <me>
     \dfrac{\partial u}{\partial x} \text{ and } \dfrac{\partial^2 u}{\partial^2 y}
   </me>
   or, equivalently
   <me>
-    u_x \text{ and } u_{yy}.$$
+    u_x \text{ and } u_{yy}.
   </me>
 </p>
 
@@ -80,9 +79,9 @@
 
 <p>
 The most general form of an <m>n^{\text{th}}</m>-order ordinary differential equation with independent variable <m>x</m> and unknown function (or dependent variable) <m>y=y(x)</m> is
-<me xml:id="eq-general" number="yes">
+<md xml:id="eq-general" number="yes">
   F\bigl(x,y,y',y'',\dots,y^{(n)}\bigr)=0,
-</me>
+</md>
 where <m>F</m> is a function of the <m>n+2</m> variables.
 </p>
 
@@ -94,7 +93,8 @@ An <m>n^{\text{th}}</m>-order differential equation solved relative to the highe
 where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{(n)}</m>.
 </p>
 
-<p>Thus, in the prior examples, DE 1 is in standard form and DE 3 is not.</p>
+<p>Thus, in <xref ref="example-DEs" /> the prior examples, 
+  <xref ref="example-standardODE"/> is in standard form and <xref ref="example-nonstandardODE"/> is not.</p>
 
 <definition xml:id="def-solution">
   <title>Solution of a Differential Equation</title>  
@@ -124,7 +124,9 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
   </statement>
 </example>
 
-<section xml:id="sec-Exercises for Chapter 1">
+</section>
+
+<section xml:id="sec-exercises-chpt1">
   <title>Exercises for Chapter 1</title>
 <ol>
   <li>
