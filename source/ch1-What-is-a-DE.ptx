@@ -124,12 +124,19 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
   </statement>
 </example>
 
-
-\subsection*{Exercises for Chapter \ref*{intro}}
-\begin{enumerate}
-\item Verify the solution in Example \ref*{iex}.
-\item Give an example of a differential equation whose solution is $y(x) = x^2-2$ on $(-\infty, \infty)$.
-\item Give an example of a differential equation and its solution.
-\end{enumerate}
+<section xml:id="sec-Exercises for Chapter 1">
+  <title>Exercises for Chapter 1</title>
+<ol>
+  <li>
+    Verify the solution in Example <xref ref="example-iex" />.
+  </li>
+  <li>
+    Give an example of a differential equation whose solution is <m>y(x) = x^2-2</m> on <m>(-\infty, \infty)</m>.
+  </li>
+  <li>
+    Give an example of a differential equation and its solution.
+  </li>
+</ol>
+</section>
 
 </chapter>
