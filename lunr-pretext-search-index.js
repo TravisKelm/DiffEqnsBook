@@ -88,7 +88,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Exercises for Chapter 1",
-  "body": " Exercises for Chapter 1   Verify the solution in Example .  Give an example of a differential equation whose solution is .  Give an example of a differential equation and its solution.   "
+  "body": " Exercises for Chapter 1   Verify the solution in .  Give an example of a differential equation whose solution is .  Give an example of a differential equation and its solution.   "
 },
 {
   "id": "backmatter-2",
