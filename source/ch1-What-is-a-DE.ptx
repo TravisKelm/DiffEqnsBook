@@ -9,10 +9,10 @@
 <definition xml:id="def-DifferentialEquation"><idx>Differential Equations</idx>
     <statement>
     <p>
-      An equation relating an unknown function and one or more of its derivatives is called a <term>differential equation</term>}(or DE for short).
+      An equation relating an unknown function and one or more of its derivatives is called a <term>differential equation</term> (or DE for short).
     </p>
     <p>
-      A DE in one independent variable is called an <term>ordinary differential equation</term> (short, ODE). A DE in several independent variables is called a <term>partial differential equation</term>(or PDE).
+      A DE in one independent variable is called an <term>ordinary differential equation</term> (short, ODE). A DE in several independent variables is called a <term>partial differential equation</term> (or PDE).
     </p>
     <p>
       The <term>order</term> of a differential equation is the order of the highest derivative of the unknown function in the equation.
@@ -21,7 +21,7 @@
 </definition>
 
 <example xml:id="example-DEs">
-    <title>Some Examples</title>
+    <title>Examples of Differential Equations</title>
         <p>
           <ol>
             <li xml:id="example-standardODE">
@@ -41,7 +41,7 @@
 </example>
 
 <note xml:id="note-deriv-notations">
-  <title>Note</title>
+  <title>Notations for Derivatives</title>
   <p>
     The prior examples demonstrate various notations for derivatives.
   </p>
@@ -133,7 +133,7 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
     Verify the solution in Example <xref ref="example-iex" />.
   </li>
   <li>
-    Give an example of a differential equation whose solution is <m>y(x) = x^2-2</m> on <m>(-\infty, \infty)</m>.
+    Give an example of a differential equation whose solution is <me>y(x) = x^2-2\text{ on the interval }(-\infty, \infty)</me>.
   </li>
   <li>
     Give an example of a differential equation and its solution.
