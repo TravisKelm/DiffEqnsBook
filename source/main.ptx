@@ -6,7 +6,7 @@
 
   <book xml:id="diff-eqns-with-lin-alg">
     <title>Elementary Differential Equations with Linear Algebra</title>
-    <subtitle>A Textbook for Math 81 at Fresno State</subtitle>
+    <subtitle>A Great Textbook for Math 81 at Fresno State</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
@@ -14,6 +14,8 @@
     <!-- Include chapters -->
     <xi:include href="./ch1-What-is-a-DE.ptx" />
 
+    <!-- Include chapters -->
+    <xi:include href="./ch2-First-Order.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
