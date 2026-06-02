@@ -97,12 +97,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Introduction to First-Order Differential Equations",
-  "body": " Introduction to First-Order Differential Equations   Particular, General, and Singular Solutions   Particular, General, and Singular Solutions   A function is said to be a solution of differential equation on an interval provided it is differentiable on and   A one-parameter family of solutions of differential equation containing an arbitrary constant is called a general solution .  Any particular choice of a specific value for yields a particular solution .  A first-order differential equation may have both a general solution involving an arbitrary constant and particular solutions that cannot be obtained from it by any choice of . Such exceptional solutions are called singular solutions (see Examples in Section ).  To solve is to find all of its solutions.     Since a differentiable function is necessarily continuous, every solution of on an interval must be continuous on .   For a first-order equation of the form   where is a continuous function on an interval , a general solution on is   where is an antiderivative of on . By the Fundamental Theorem of Calculus (see, e.g., ), we can set   where is a fixed point in .     The one-parameter family ( ) is a general solution of the equation.   on .    The one-parameter family ( ) is the general solution of the equation.   on each of the intervals and .       Initial Value Problems    Initial Value Problem  A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.    One way to solve initial value problem is to     first find the general solution of the equation, which, provided the differential equation is of the form   can be done via indefinite integration   and    then, plug and into the general solution, and solve for .       Solve the initial value problem    Solution: Considering that the initial -value 1 is in the interval , where , we obtain the unique solution of the IVP from the general solution of the equation on by substituting the values and into it:   which yields .  Thus, the unique solution to the IVP on is       An alternative definite-integral approach to solving an initial value problem of the form   which bypasses finding the general solution of the differential equation, is based on the Fundamental Theorem of Calculus and, provided the function is continuous on an interval containing , gives the unique solution of the IVP by the formula   In the following examples, we will compare the two approaches to solving initial value problem . Solve the following initial value problems.    .   Solution: (indefinite integral approach)  First, we find the general solution of the equation   Next, we need to determine the value of for which the solution we have obtained will satisfy the IVP.  Substituting in the initial condition gives     which we solve to find . The unique solution is, therefore,     or        .   Solution: (definite-integral approach)  The desired solution is given by the formula   Integrating by parts, with     we have:   Therefore, the solution is       Exercises for Section  Find a general solution of the following equations.                     Solve the following initial value problems.                      "
+  "body": " Introduction to First-Order Differential Equations   Particular, General, and Singular Solutions   Particular, General, and Singular Solutions   A function is said to be a solution of differential equation on an interval provided it is differentiable on and   A one-parameter family of solutions of differential equation containing an arbitrary constant is called a general solution .  Any particular choice of a specific value for yields a particular solution .  A first-order differential equation may have both a general solution involving an arbitrary constant and particular solutions that cannot be obtained from it by any choice of . Such exceptional solutions are called singular solutions (see Examples in Section ).  To solve is to find all of its solutions.     Since a differentiable function is necessarily continuous, every solution of on an interval must be continuous on .   For a first-order equation of the form   where is a continuous function on an interval , a general solution on is   where is an antiderivative of on . By the Fundamental Theorem of Calculus (see, e.g., ), we can set   where is a fixed point in .     The one-parameter family ( ) is a general solution of the equation.   on .    The one-parameter family ( ) is the general solution of the equation.   on each of the intervals and .       Initial Value Problems   Initial Value Problem   A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.    One way to solve initial value problem is to     first find the general solution of the equation, which, provided the differential equation is of the form   can be done via indefinite integration   and    then, plug and into the general solution, and solve for .       Solve the initial value problem    Solution: Considering that the initial -value 1 is in the interval , where , we obtain the unique solution of the IVP from the general solution of the equation on by substituting the values and into it:   which yields .  Thus, the unique solution to the IVP on is       An alternative definite-integral approach to solving an initial value problem of the form   which bypasses finding the general solution of the differential equation, is based on the Fundamental Theorem of Calculus and, provided the function is continuous on an interval containing , gives the unique solution of the IVP by the formula   In the following examples, we will compare the two approaches to solving initial value problem . Solve the following initial value problems.    .   Solution: (indefinite integral approach)  First, we find the general solution of the equation   Using substitution ( , so ), we obtain   Next, we need to determine the value of for which the solution we have obtained will satisfy the IVP.  Substituting in the initial condition gives     which we solve to find . The unique solution is, therefore,     or        .   Solution: (definite-integral approach)  The desired solution is given by the formula   Integrating by parts, with   we have:   Therefore, the solution is       Exercises for  Find a general solution of the following equations.                     Solve the following initial value problems.                      "
 },
 {
-  "id": "def-",
+  "id": "def-Particular-general-singular",
   "level": "2",
-  "url": "sec-Intro-to-first-order.html#def-",
+  "url": "sec-Intro-to-first-order.html#def-Particular-general-singular",
   "type": "Definition",
   "number": "2.1.1",
   "title": "Particular, General, and Singular Solutions.",
@@ -136,22 +136,94 @@ var ptx_lunr_docs = [
   "body": "   The one-parameter family ( ) is a general solution of the equation.   on .    The one-parameter family ( ) is the general solution of the equation.   on each of the intervals and .    "
 },
 {
-  "id": "sec-Intro-to-first-order-3-2",
+  "id": "def-Initial-value-problem",
   "level": "2",
-  "url": "sec-Intro-to-first-order.html#sec-Intro-to-first-order-3-2",
+  "url": "sec-Intro-to-first-order.html#def-Initial-value-problem",
   "type": "Definition",
   "number": "2.1.4",
-  "title": "",
-  "body": "  Initial Value Problem  A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.   "
+  "title": "Initial Value Problem.",
+  "body": " Initial Value Problem   A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.   "
 },
 {
-  "id": "EXMP2",
+  "id": "example-IVP-reciprocal",
   "level": "2",
-  "url": "sec-Intro-to-first-order.html#EXMP2",
+  "url": "sec-Intro-to-first-order.html#example-IVP-reciprocal",
   "type": "Example",
   "number": "2.1.5",
   "title": "",
   "body": "  Solve the initial value problem    Solution: Considering that the initial -value 1 is in the interval , where , we obtain the unique solution of the IVP from the general solution of the equation on by substituting the values and into it:   which yields .  Thus, the unique solution to the IVP on is      "
+},
+{
+  "id": "subsec-IVP-6",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#subsec-IVP-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "definite-integral approach "
+},
+{
+  "id": "sec-Separable",
+  "level": "1",
+  "url": "sec-Separable.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Separable Differential Equations",
+  "body": " Separable Differential Equations   Motivating Example: Home Loan  Suppose you want to take out a 30-year loan to purchase a house. If interest rates are 4.75% and you know that you can afford at most \\$1,250 per month, you would like to determine the most expensive house that you can purchase in order pay off the loan on time. To do this, define as the amount that you owe after years. Since you can afford \\$1,250 per month, your annual payments will be . The balance due will gain 4.75% interest, so that amount added to the balance annually is . Thus, the rate of change in the amount of money due is given by the difference between the amount the loan increases and the amount that you pay on the loan, or . The initial condition is , because you want the entire loan to be paid off by the end of the 30 years. This gives the initial value problem   This is a separable equation, as we will see momentarily (also a linear equation, as we will see in Section ). The solution to is   The size of the loan you should take is the amount you owe at the beginning, or , which is \\$239,839.43.    Definition and Examples   Separable Differential Equation   A first-order differential equation   whose right-hand side can be factored into , i.e., it can written in the form   is called separable .  There are two special cases of separable equations:         is separable.     is separable.    The exponential differential equation where is separable (and autonomous).    The logistic differential equation where ( are constants) is separable (and autonomous).     is separable.     is not separable. As we will see in Section , this equation is also linear .     is not separable.            Method of Separation of Variables  Consider a separable differential equation   Observe that, if there is such a such that , then the constant function is a so-called equilibrium solution of the equation. The method of separation of variables is used for solving these differential equations.   How Separation of Variables Works  The method of separation of variables works as follows:    Find all equilibrium solutions from the equation     Separate the variables:     Integrate both sides:     Solve the resulting equation for , whenever possible, obtaining a general solution. The equilibrium solutions that are not included in this general solution give the singular solutions.      The separable differential equation   has a general solution of ( ) and the singular equilibrium solution not included in the general solution.     If it is impossible (or impractical) to solve the resulting equation for , the general solution is said to be an implicit general solution .    Solving a Separable Differential Equation    Solve the differential equation      To solve this separable DE, we apply the method of separation of variables.    Find the equilibrium solutions from the equation   Clearly, there is only one: .    Separate the variables:     Integrate both sides:     Solve the resulting equation for :   Renaming to simply , we obtain the general solution     What is the reason for the requirement that ?    Observe that the equilibrium solution is attained when .             Why Separation of Variables Works  The method of separation of variables is based on the substitution rule for indefinite integrals .  Indeed, let be a nonequilibrium solution of a separable equation   on an interval .  Then, for all ,   Dividing both sides of differential equation by and integrating, we obtain   Using the substitution , we obtain   Thus, any nonequilibrium solution of differential equation satisfies integral equation .  Conversely, a function , implicitly defined by integral equation on the interval , solves on . Indeed, differentiating relative to by the chain rule (considering ), we arrive at for all .     Exercises for Section     Determine which of the following first order differential equations are separable.                                 Apply the method of separation of variables to verify Example .     Find a general solution for each of the following equations.                               Solve the following initial value problems.                                          "
+},
+{
+  "id": "def-Separable",
+  "level": "2",
+  "url": "sec-Separable.html#def-Separable",
+  "type": "Definition",
+  "number": "2.2.1",
+  "title": "Separable Differential Equation.",
+  "body": " Separable Differential Equation   A first-order differential equation   whose right-hand side can be factored into , i.e., it can written in the form   is called separable .  There are two special cases of separable equations:    "
+},
+{
+  "id": "sec-Separable-3-3",
+  "level": "2",
+  "url": "sec-Separable.html#sec-Separable-3-3",
+  "type": "Example",
+  "number": "2.2.2",
+  "title": "",
+  "body": "    is separable.     is separable.    The exponential differential equation where is separable (and autonomous).    The logistic differential equation where ( are constants) is separable (and autonomous).     is separable.     is not separable. As we will see in Section , this equation is also linear .     is not separable.    "
+},
+{
+  "id": "subsec-Separation-of-variables-4",
+  "level": "2",
+  "url": "sec-Separable.html#subsec-Separation-of-variables-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "equilibrium solution "
+},
+{
+  "id": "example-Separable-square",
+  "level": "2",
+  "url": "sec-Separable.html#example-Separable-square",
+  "type": "Example",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  The separable differential equation   has a general solution of ( ) and the singular equilibrium solution not included in the general solution.   "
+},
+{
+  "id": "subsubsec-How-separation-works-5",
+  "level": "2",
+  "url": "sec-Separable.html#subsubsec-How-separation-works-5",
+  "type": "Remark",
+  "number": "2.2.4",
+  "title": "",
+  "body": " If it is impossible (or impractical) to solve the resulting equation for , the general solution is said to be an implicit general solution .  "
+},
+{
+  "id": "example-Separable-worked-out",
+  "level": "2",
+  "url": "sec-Separable.html#example-Separable-worked-out",
+  "type": "Example",
+  "number": "2.2.5",
+  "title": "Solving a Separable Differential Equation.",
+  "body": " Solving a Separable Differential Equation    Solve the differential equation      To solve this separable DE, we apply the method of separation of variables.    Find the equilibrium solutions from the equation   Clearly, there is only one: .    Separate the variables:     Integrate both sides:     Solve the resulting equation for :   Renaming to simply , we obtain the general solution     What is the reason for the requirement that ?    Observe that the equilibrium solution is attained when .     "
 },
 {
   "id": "backmatter-2",
