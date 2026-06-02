@@ -91,6 +91,69 @@ var ptx_lunr_docs = [
   "body": " Exercises for Chapter 1   Verify the solution in .  Give an example of a differential equation whose solution is .  Give an example of a differential equation and its solution.   "
 },
 {
+  "id": "sec-Intro-to-first-order",
+  "level": "1",
+  "url": "sec-Intro-to-first-order.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Introduction to First-Order Differential Equations",
+  "body": " Introduction to First-Order Differential Equations   Particular, General, and Singular Solutions   Particular, General, and Singular Solutions   A function is said to be a solution of differential equation on an interval provided it is differentiable on and   A one-parameter family of solutions of differential equation containing an arbitrary constant is called a general solution .  Any particular choice of a specific value for yields a particular solution .  A first-order differential equation may have both a general solution involving an arbitrary constant and particular solutions that cannot be obtained from it by any choice of . Such exceptional solutions are called singular solutions (see Examples in Section ).  To solve is to find all of its solutions.     Since a differentiable function is necessarily continuous, every solution of on an interval must be continuous on .   For a first-order equation of the form   where is a continuous function on an interval , a general solution on is   where is an antiderivative of on . By the Fundamental Theorem of Calculus (see, e.g., ), we can set   where is a fixed point in .     The one-parameter family ( ) is a general solution of the equation.   on .    The one-parameter family ( ) is the general solution of the equation.   on each of the intervals and .       Initial Value Problems    Initial Value Problem  A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.    One way to solve initial value problem is to     first find the general solution of the equation, which, provided the differential equation is of the form   can be done via indefinite integration   and    then, plug and into the general solution, and solve for .       Solve the initial value problem    Solution: Considering that the initial -value 1 is in the interval , where , we obtain the unique solution of the IVP from the general solution of the equation on by substituting the values and into it:   which yields .  Thus, the unique solution to the IVP on is       An alternative definite-integral approach to solving an initial value problem of the form   which bypasses finding the general solution of the differential equation, is based on the Fundamental Theorem of Calculus and, provided the function is continuous on an interval containing , gives the unique solution of the IVP by the formula   In the following examples, we will compare the two approaches to solving initial value problem . Solve the following initial value problems.    .   Solution: (indefinite integral approach)  First, we find the general solution of the equation   Next, we need to determine the value of for which the solution we have obtained will satisfy the IVP.  Substituting in the initial condition gives     which we solve to find . The unique solution is, therefore,     or        .   Solution: (definite-integral approach)  The desired solution is given by the formula   Integrating by parts, with     we have:   Therefore, the solution is       Exercises for Section  Find a general solution of the following equations.                     Solve the following initial value problems.                      "
+},
+{
+  "id": "def-",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#def-",
+  "type": "Definition",
+  "number": "2.1.1",
+  "title": "Particular, General, and Singular Solutions.",
+  "body": " Particular, General, and Singular Solutions   A function is said to be a solution of differential equation on an interval provided it is differentiable on and   A one-parameter family of solutions of differential equation containing an arbitrary constant is called a general solution .  Any particular choice of a specific value for yields a particular solution .  A first-order differential equation may have both a general solution involving an arbitrary constant and particular solutions that cannot be obtained from it by any choice of . Such exceptional solutions are called singular solutions (see Examples in Section ).  To solve is to find all of its solutions.   "
+},
+{
+  "id": "subsec-Part-general-singular-3",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#subsec-Part-general-singular-3",
+  "type": "Note",
+  "number": "2.1.2",
+  "title": "",
+  "body": " Since a differentiable function is necessarily continuous, every solution of on an interval must be continuous on .  "
+},
+{
+  "id": "subsec-Part-general-singular-6",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#subsec-Part-general-singular-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "general solution "
+},
+{
+  "id": "subsec-Part-general-singular-11",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#subsec-Part-general-singular-11",
+  "type": "Example",
+  "number": "2.1.3",
+  "title": "",
+  "body": "   The one-parameter family ( ) is a general solution of the equation.   on .    The one-parameter family ( ) is the general solution of the equation.   on each of the intervals and .    "
+},
+{
+  "id": "sec-Intro-to-first-order-3-2",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#sec-Intro-to-first-order-3-2",
+  "type": "Definition",
+  "number": "2.1.4",
+  "title": "",
+  "body": "  Initial Value Problem  A first-order differential equation is often accompanied by a condition of the form:   where and are specified values. Such a condition is called an initial condition (IC) and such a problem   is called an initial value problem (IVP).  A solution of the initial value problem is a function satisfying both the differential equation on some interval containing and the initial condition.   "
+},
+{
+  "id": "EXMP2",
+  "level": "2",
+  "url": "sec-Intro-to-first-order.html#EXMP2",
+  "type": "Example",
+  "number": "2.1.5",
+  "title": "",
+  "body": "  Solve the initial value problem    Solution: Considering that the initial -value 1 is in the interval , where , we obtain the unique solution of the IVP from the general solution of the equation on by substituting the values and into it:   which yields .  Thus, the unique solution to the IVP on is      "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
