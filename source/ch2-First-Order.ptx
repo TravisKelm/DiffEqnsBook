@@ -1,403 +1,1005 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch2-First-Order" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>First-Order Differential Equations</title>
+    <title>First-Order Differential Equations</title>
 
-<p>
-  In this chapter, we shall study first-order order ordinary differential equations that can be written in standard form
-  <md xml:id="eq-First-order-general" number="yes">
-    y'=f(x,y).
-  </md>
-</p>
+    <p>
+        In this chapter, we shall study first-order order ordinary differential
+        equations that can be written in standard form
+        <md xml:id="eq-First-order-general" number="yes">
+            y'=f(x,y).
+        </md>
+    </p>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Section - Introduction to First-Order Differential Equations -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <section xml:id="sec-Intro-to-first-order">
+        <title>Introduction to First-Order Differential Equations</title>
 
-<section xml:id="sec-Intro-to-first-order">
-  <title>Introduction to First-Order Differential Equations</title> 
-
-
-  <subsection xml:id="subsec-Part-general-singular">
-        <title>Particular, General, and Singular Solutions</title>
-
-        <definition xml:id="def-">
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Particular, General, and Singular Solutions -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection xml:id="subsec-Part-general-singular">
             <title>Particular, General, and Singular Solutions</title>
-            <statement>
-                <p>
-                   A function <m>y=y(x)</m> is said to be a <term>solution</term> of differential equation <xref ref="eq-First-order-general"/> on an interval <m>I</m> provided it is differentiable on <m>I</m> and
-                </p>
-                <md>
-                    y'(x)=f\left(x,y(x)\right)\text{ for all }x\in I
-                </md>
-                <p>
-                   A one-parameter family of solutions <m>y=y(x,c)</m> of differential equation <xref ref="eq-First-order-general"/> containing an arbitrary constant<m>c</m> is called a <term>general solution</term>. 
-                </p>
-                <p>
-                    Any particular choice of a specific value for <m>c</m> yields a <term>particular solution</term>.
-                </p>
-                <p>
-                    A first-order differential equation may have both a general solution involving an arbitrary constant<m>c</m> and particular solutions that cannot be obtained from it by any choice of <m>c</m>. Such exceptional solutions are called <term>singular solutions</term>(see Examples <xref ref="example-Singular"/> in Section <xref ref="sec-Separable"/>).
-                </p>
-                <p>
-                    To solve <xref ref="eq-First-order-general"/> is to find <em>all</em> of its solutions.
-                </p>
-            </statement>
-        </definition>
 
-        <note>
-            <p>
-                Since a differentiable function is necessarily continuous, every solution <m>y=y(x)</m> of <xref ref="eq-First-order-general"/> on an interval <m>I</m> must be continuous on <m>I</m>.
-            </p>
-        </note>
-        <p>
-            For a first-order equation of the form
-        </p>
-        <md>
-            y'=f(x),
-        </md>
-        <p>
-            where <m>f(x)</m> is a continuous function on an interval <m>I</m>, a
-            <term>general solution</term> on <m>I</m> is
-        </p>
-        <md>
-            y=\int f(x)\,dx=F(x)+c\qquad (c\in \R),
-        </md>
-        <p>
-            where <m>F(x)</m> is an antiderivative of <m>f</m> on <m>I</m>.
-            By the Fundamental Theorem of Calculus (see, e.g., <xref ref="Stewart"/> ),
-            we can set
-        </p>
-        <md>
-            F(x):=\int_{x_0}^{x}f(t)\,dt,\quad x\in I,
-        </md>
-        <p>
-            where <m>x_{0}</m> is a fixed point in <m>I</m>.
-        </p>
+            <definition xml:id="def-Particular-general-singular">
+                <title>Particular, General, and Singular Solutions</title>
 
-        <example>
-            <ol>
-                <li>
+                <statement>
                     <p>
-                        The one-parameter family <m>y=c</m> ( <m>c\in \R</m> ) is a general
-                        solution of the equation.
+                        A function <m>y=y(x)</m> is said to be a
+                        <term>solution</term> of differential equation
+                        <xref ref="eq-First-order-general"/> on an interval
+                        <m>I</m> provided it is differentiable on <m>I</m> and
                     </p>
                     <md>
-                        y'=0
+                        y'(x)=f\left(x,y(x)\right)\text{ for all }x\in I
                     </md>
 
                     <p>
-                        on <m>(-\infty,\infty)</m>.
+                        A one-parameter family of solutions <m>y=y(x,c)</m> of
+                        differential equation
+                        <xref ref="eq-First-order-general"/> containing an
+                        arbitrary constant <m>c</m> is called a
+                        <term>general solution</term>.
                     </p>
-                </li>
 
-                <li>
                     <p>
-                        The one-parameter family <m>y=\ln|x|+c</m> ( <m>c \in \R</m> ) is
-                        the general solution of the equation.
+                        Any particular choice of a specific value for <m>c</m>
+                        yields a <term>particular solution</term>.
+                    </p>
+
+                    <p>
+                        A first-order differential equation may have both a
+                        general solution involving an arbitrary constant
+                        <m>c</m> and particular solutions that cannot be
+                        obtained from it by any choice of <m>c</m>.
+                        Such exceptional solutions are called
+                        <term>singular solutions</term> (see Examples
+                        <xref ref="example-Singular"/> in Section
+                        <xref ref="sec-Separable"/> ).
+                    </p>
+
+                    <p>
+                        To solve <xref ref="eq-First-order-general"/> is to find
+                        <em>all</em> of its solutions.
+                    </p>
+                </statement>
+            </definition>
+
+            <note>
+                <p>
+                    Since a differentiable function is necessarily continuous,
+                    every solution <m>y=y(x)</m> of
+                    <xref ref="eq-First-order-general"/> on an interval <m>I</m>
+                    must be continuous on <m>I</m>.
+                </p>
+            </note>
+
+            <p>
+                For a first-order equation of the form
+            </p>
+            <md>
+                y'=f(x),
+            </md>
+
+            <p>
+                where <m>f(x)</m> is a continuous function on an interval
+                <m>I</m>, a <term>general solution</term> on <m>I</m> is
+            </p>
+            <md>
+                y=\int f(x)\,dx=F(x)+c\qquad (c\in \mathbb{R}),
+            </md>
+
+            <p>
+                where <m>F(x)</m> is an antiderivative of <m>f</m> on <m>I</m>.
+                By the Fundamental Theorem of Calculus (see, e.g.,
+                <xref ref="Stewart"/> ), we can set
+            </p>
+            <md>
+                F(x):=\int_{x_0}^{x}f(t)\,dt,\quad x\in I,
+            </md>
+
+            <p>
+                where <m>x_{0}</m> is a fixed point in <m>I</m>.
+            </p>
+
+            <example>
+                <ol>
+                    <li>
+                        <p>
+                            The one-parameter family <m>y=c</m> (
+                            <m>c\in \mathbb{R}</m> ) is a general solution of
+                            the equation.
+                        </p>
+                        <md>
+                            y'=0
+                        </md>
+
+                        <p>
+                            on <m>(-\infty,\infty)</m>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            The one-parameter family <m>y=\ln|x|+c</m> (
+                            <m>c \in \mathbb{R}</m> ) is the general solution of
+                            the equation.
+                        </p>
+                        <md>
+                            y'=\dfrac{1}{x}
+                        </md>
+
+                        <p>
+                            on each of the intervals <m>(-\infty,0)</m> and
+                            <m>(0,\infty)</m>.
+                        </p>
+                    </li>
+                </ol>
+            </example>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Particular, General, and Singular Solutions -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection xml:id="subsec-IVP">
+            <title>Initial Value Problems</title>
+
+            <definition xml:id="def-Initial-value-problem">
+                <title>Initial Value Problem</title>
+
+                <statement>
+                    <p>
+                        A first-order differential equation
+                        <xref ref="eq-First-order-general"/> is often
+                        accompanied by a condition of the form:
                     </p>
                     <md>
-                        y'=\dfrac{1}{x}
+                        y(x_{0})=y_{0},
                     </md>
 
                     <p>
-                        on each of the intervals <m>(-\infty,0)</m> and <m>(0,\infty)</m>.
+                        where <m>x_{0}</m> and <m>y_{0}</m> are specified
+                        values.
+                        Such a condition is called an
+                        <term>initial condition</term> (IC) and such a problem
                     </p>
-                </li>
-            </ol>        
-        </example>
+                    <md xml:id="eq-IVP" number="yes">
+                        y'=f(x,y),\ y(x_{0})=y_{0}
+                    </md>
 
-    </subsection>
+                    <p>
+                        is called an <term>initial value problem</term> (IVP).
+                    </p>
 
-<subsection>
-    <title>Initial Value Problems</title>
+                    <p>
+                        A solution of the initial value problem
+                        <xref ref="eq-IVP"/> is a function <m>y=y(x)</m>
+                        satisfying both the differential equation on some
+                        interval <m>I</m> containing <m>x_{0}</m> and the
+                        initial condition.
+                    </p>
+                </statement>
+            </definition>
 
-    <definition>
-        <statement>
             <p>
-                Initial Value Problem
+                One way to solve initial value problem <xref ref="eq-IVP"/> is
+                to
             </p>
 
             <p>
-                A first-order differential equation <xref ref="F-ODE"/> is often
-                accompanied by a condition of the form:
+                <ol>
+                    <li>
+                        <p>
+                            first find the general solution <m>y=y(x,c)</m> of
+                            the equation, which, provided the differential
+                            equation is of the form
+                        </p>
+                        <md>
+                            y'=f(x),
+                        </md>
+
+                        <p>
+                            can be done via indefinite integration
+                        </p>
+                        <md>
+                            y=\int f(x)\,dx,
+                        </md>
+
+                        <p>
+                            and
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            then, plug <m>x = x_{0}</m> and <m>y = y_{0}</m>
+                            into the general solution, and solve for <m>c</m>.
+                        </p>
+                    </li>
+                </ol>
             </p>
-            <md>
-                y(x_{0})=y_{0},
+
+            <example xml:id="example-IVP-reciprocal">
+                <statement>
+                    <p>
+                        Solve the initial value problem
+                    </p>
+                    <md>
+                        y'=\dfrac{1}{x},\ y(1)=0.
+                    </md>
+
+                    <p>
+                        <alert>Solution:</alert> Considering that the initial
+                        <m>x</m>-value 1 is in the interval <m>(0,\infty)</m>,
+                        where <m>|x|=x</m>, we obtain the unique solution of the
+                        IVP from the general solution <m>y=\ln|x|+c=\ln x+c</m>
+                        of the equation on <m>(0,\infty)</m> by substituting the
+                        values <m>x=1</m> and <m>y=0</m> into it:
+                    </p>
+                    <md>
+                        0=\ln 1+c,
+                    </md>
+
+                    <p>
+                        which yields <m>c = 0</m>.
+                    </p>
+
+                    <p>
+                        Thus, the unique solution to the IVP on
+                        <m>(0,\infty)</m> is
+                    </p>
+
+                    <p>
+                        <md>
+                            \boxed{y=\ln x.}
+                        </md>
+                    </p>
+                </statement>
+            </example>
+
+            <p>
+                An alternative <term>definite-integral approach</term> to
+                solving an initial value problem of the form
+            </p>
+            <md xml:id="eq-IVP-single-variable" number="yes">
+                y'=f(x),\ y(x_{0})=y_{0},
             </md>
 
             <p>
-                where <m>x_{0}</m> and <m>y_{0}</m> are specified values.
-                Such a condition is called an <em>initial condition</em> (IC)
-                and such a problem
+                which bypasses finding the general solution of the differential
+                equation, is based on the Fundamental Theorem of Calculus and,
+                provided the function <m>f(x)</m> is continuous on an interval
+                <m>I</m> containing <m>x_{0}</m>, gives the <em>unique</em>
+                solution of the IVP by the formula
             </p>
             <md>
-                y'=f(x,y),\ y(x_{0})=y_{0}
+                y=y_{0}+\int_{x_0}^{x}f(t)\,dt.
             </md>
 
             <p>
-                is called an <em>initial value problem</em> (IVP).
+                In the following two examples, we will compare the two
+                approaches to solving initial value problem
+                <xref ref="eq-IVP-single-variable"/>.
+            </p>
+
+            <example>
+                <title>Indefinite Integral Approach</title>
+
+                <statement>
+                    <p>
+                        Solve the differential equation
+                    </p>
+                    <md>
+                        y'=x\sqrt{x^{2}+9},\ y(-4)=0
+                    </md>
+                </statement>
+
+                <solution>
+                    <p>
+                        First, we find the general solution of the equation
+                    </p>
+                    <md>
+                        y= \int x \sqrt{x^{2} + 9}\, dx
+                    </md>
+
+                    <p>
+                        Using substitution ( <m>u = x^{2} + 9</m>, so
+                        <m>du = 2x \, dx</m> ), we obtain
+                    </p>
+                    <md>
+                        y= \frac{1}{3}(x^{2} + 9)^{\frac{3}{2}}+ C
+                    </md>
+
+                    <p>
+                        Next, we need to determine the value of <m>c</m> for
+                        which the solution we have obtained will satisfy the
+                        IVP.
+                    </p>
+
+                    <p>
+                        Substituting in the initial condition gives
+                    </p>
+                    <md>
+                        \dfrac{1}{3}\left((-4)^{2}+9\right)^{3/2}+c=0,
+                    </md>
+
+                    <p>
+                        which we solve to find <m>c=-\dfrac{125}{3}</m>.
+                        The unique solution is, therefore,
+                    </p>
+                    <md>
+                        \boxed{y = \dfrac{1}{3}(x^2+9)^{3/2}-\dfrac{125}{3},}
+                    </md>
+
+                    <p>
+                        or
+                    </p>
+                    <md>
+                        \boxed{y = \dfrac{1}{3}\left((x^2+9)^{3/2}-125\right).}
+                    </md>
+                </solution>
+            </example>
+
+            <example>
+                <title>Definite Integral Approach</title>
+
+                <statement>
+                    <p>
+                        Solve the differential equation
+                    </p>
+                    <md>
+                        y'=xe^{-x},\ y(0)=1.
+                    </md>
+                </statement>
+
+                <solution>
+                    <p>
+                        The desired solution is given by the formula
+                    </p>
+                    <md>
+                        y=1+\int_{0}^{x}te^{-t}\,dt.
+                    </md>
+
+                    <p>
+                        Integrating by parts, with
+                    </p>
+                    <md>
+                        <mrow>u\amp =t,\amp du\amp =dt</mrow>
+                        <mrow>dv\amp =e^{-t}\;dt,\amp v\amp =-e^{-t},</mrow>
+                    </md>
+
+                    <p>
+                        we have:
+                    </p>
+                    <md>
+                        <mrow>\int_{0}^{x}te^{-t}\,dt\amp = \left[\left.-te^{-t}\right|_{0}^{x}+\int_{0}^{x} e^{-t}\,dt\right]</mrow>
+                        <mrow> \amp =\left[\left.-xe^{-x}-e^{-t}\right|_{0}^{x}\right] </mrow>
+                        <mrow> \amp =\left[-xe^{-x}-(e^{-x}-1)\right]</mrow>
+                        <mrow> \amp =-xe^{-x}-e^{-x}+1=-(x+1)e^{-x}+1.</mrow>
+                    </md>
+
+                    <p>
+                        Therefore, the solution is
+                    </p>
+                    <md>
+                        \boxed{y(x)=-(x+1)e^{-x}+2.}
+                    </md>
+                </solution>
+            </example>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Exercises for Intro to First-Order Differential Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>Exercises for <xref ref="sec-Intro-to-first-order"/></title>
+
+            <p>
+                Find a general solution of the following equations.
             </p>
 
             <p>
-                A solution of the initial value problem <xref ref="IVP"/> is a
-                function <m>y=y(x)</m> satisfying both the differential equation
-                on some interval <m>I</m> containing <m>x_{0}</m> and the
-                initial condition.
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = xe^{-x^2}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dx}= 3x^{2}\sin(x^{3})</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dt}= 4e^{t} \cos(t)</m>
+                        </p>
+                    </li>
+                </ol>
             </p>
-        </statement>
-    </definition>
 
-    <p>
-        One way to solve initial value problem <xref ref="IVP"/> is to
-    </p>
-
-    <p>
-        <ul>
-            <li>
-                <p>
-                    first find the general solution <m>y=y(x,c)</m> of the
-                    equation, which, provided the differential equation is of
-                    the form
-                </p>
-                <md>
-                    y'=f(x),
-                </md>
-
-                <p>
-                    can be done via indefinite integration
-                </p>
-                <md>
-                    y=\int f(x)\,dx,
-                </md>
-
-                <p>
-                    and
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    then, plug <m>x = x_{0}</m> and <m>y = y_{0}</m> into the
-                    general solution, and solve for <m>c</m>.
-                </p>
-            </li>
-        </ul>
-    </p>
-
-    <example xml:id="EXMP2">
-        <statement>
             <p>
-                Solve the initial value problem
+                Solve the following initial value problems.
             </p>
-            <md>
-                y'=\dfrac{1}{x},\ y(1)=0.
+
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = \dfrac{1}{\sqrt{x+2}}, \ y(2)=-1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = (t^{2} + 2t + 1)e^{t}, \ y(0) = 2</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle \frac{dy}{dx}= \dfrac{\ln(x)}{x}, \ y(1) = 0 \quad (x &gt; 0)</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </subsection>
+    </section>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Section - Separable Differential Equations -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <section xml:id="sec-Separable">
+        <title>Separable Differential Equations</title>
+
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Motivating Example: Home Loan -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection xml:id="motivation-Home-loan">
+            <title>Motivating Example: Home Loan</title>
+
+            <p>
+                Suppose you want to take out a 30-year loan to purchase a house.
+                If interest rates are 4.75% and you know that you can afford at
+                most $1,250 per month, you would like to determine the most
+                expensive house that you can purchase in order pay off the loan
+                on time.
+                To do this, define <m>L(t)</m> as the amount that you owe after
+                <m>t</m> years.
+                Since you can afford $1,250 per month, your annual payments will
+                be <m>\$1,250 \times 12 = \$15,000</m>.
+                The balance due will gain 4.75% interest, so that amount added
+                to the balance annually is <m>0.0475L</m>.
+                Thus, the rate of change in the amount of money due is given by
+                the difference between the amount the loan increases and the
+                amount that you pay on the loan, or
+                <m>\dfrac{dL}{dt}=0475L - 15000</m>.
+                The initial condition is <m>L(30) = 0</m>, because you want the
+                entire loan to be paid off by the end of the 30 years.
+                This gives the initial value problem
+            </p>
+            <md xml:id="eq-Home-loan" number="yes">
+                \frac{dL}{dt}= 0.0475L - 15000, \, L(30) = 0.
             </md>
 
             <p>
-                <alert>Solution:</alert> Considering that the initial
-                <m>x</m>-value 1 is in the interval <m>(0,\infty)</m>, where
-                <m>|x|=x</m>, we obtain the unique solution of the IVP from the
-                general solution <m>y=\ln|x|+c=\ln x+c</m> of the equation on
-                <m>(0,\infty)</m> by substituting the values <m>x=1</m> and
-                <m>y=0</m> into it:
+                This is a separable equation, as we will see momentarily (also a
+                linear equation, as we will see in Section
+                <xref ref="sec-Linear"/> ).
+                The solution to <xref ref="eq-Home-loan"/> is
             </p>
             <md>
-                0=\ln 1+c,
+                L(t) = \frac{6000000}{19}\left(1 - e^{\frac{19}{400}t-\frac{57}{40}}\right).
             </md>
 
             <p>
-                which yields <m>c = 0</m>.
+                The size of the loan you should take is the amount you owe at
+                the beginning, or <m>L(0)</m>, which is $239,839.43.
             </p>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Separable Differential Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>Definition and Examples</title>
+
+            <definition xml:id="def-Separable">
+                <title>Separable Differential Equation</title>
+
+                <statement>
+                    <p>
+                        A first-order differential equation
+                    </p>
+                    <md>
+                        \dfrac{dy}{dx}=f(x,y),
+                    </md>
+
+                    <p>
+                        whose right-hand side can be factored into
+                        <m>g(x)h(y)</m>, i.e., it can written in the form
+                    </p>
+                    <md xml:id="eq-Seperable-form" number="yes">
+                        \dfrac{dy}{dx}=g(x)h(y),
+                    </md>
+
+                    <p>
+                        is called <term>separable</term>.
+                    </p>
+
+                    <p>
+                        There are two special cases of separable equations:
+                    </p>
+                    <md>
+                        <mrow> \frac{dy}{dx}\amp =g(x) \quad (h(y)=1),</mrow>
+                        <mrow> \frac{dy}{dx}\amp =h(y)\quad (g(x)=1) \qquad \text{(called an \emph{autonomous equation})}.</mrow>
+                    </md>
+                </statement>
+            </definition>
+
+            <example>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dx}=x^{2}e^{-y}</m> is separable.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dt}=\sin t^{2}</m> is separable.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            The <term>exponential</term> differential equation
+                            <m>\dfrac{dx}{dt}=kx</m> where
+                            <m>k\in \mathbb{R}</m> is separable (and
+                            autonomous).
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            The <term>logistic</term> differential equation
+                            <m>\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)</m>
+                            where ( <m>k, N &gt; 0 </m> are constants) is
+                            separable (and autonomous).
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dx}=\dfrac{\sqrt{y}}{xy+x+y+1}</m> is
+                            separable.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dx}=y+x</m> is not separable.
+                            As we will see in Section <xref ref="sec-Linear"/>,
+                            this equation is also <term>linear</term>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\dfrac{dy}{dx}=y^{3}+xy+5</m> is not separable.
+                        </p>
+                    </li>
+                </ol>
+            </example>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Method of Separation of Variables -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection xml:id="subsec-Separation-of-variables">
+            <title>Method of Separation of Variables</title>
 
             <p>
-                Thus, the unique solution to the IVP on <m>(0,\infty)</m> is
-            </p>
-
-            <p>
-                <md>
-                    \boxed{y=\ln x.}
-                </md>
-            </p>
-        </statement>
-    </example>
-
-    <p>
-        An alternative <em>definite-integral approach</em> to solving an initial
-        value problem of the form
-    </p>
-    <md>
-        y'=f(x),\ y(x_{0})=y_{0},
-    </md>
-
-    <p>
-        which bypasses finding the general solution of the differential
-        equation, is based on the Fundamental Theorem of Calculus and, provided
-        the function <m>f(x)</m> is continuous on an interval <m>I</m>
-        containing <m>x_{0}</m>, gives the <em>unique</em> solution of the IVP
-        by the formula
-    </p>
-    <md>
-        y=y_{0}+\int_{x_0}^{x}f(t)\,dt.
-    </md>
-
-    <p>
-        In the following examples, we will compare the two approaches to solving
-        initial value problem <xref ref="IVPS"/>.
-    </p>
-    Solve the following initial value problems.
-    <ol>
-        <li>
-            <p>
-                <m>y'=x\sqrt{x^{2}+9},\ y(-4)=0</m>.
-            </p>
-
-            <p>
-                <alert>Solution:</alert> (indefinite integral approach)
-            </p>
-
-            <p>
-                First, we find the general solution of the equation
+                Consider a separable differential equation
             </p>
             <md>
-                y&amp;= \int x \sqrt{x^{2} + 9}\, dx \\  \intertext{Using substitution ($u = x^{2} + 9$, so $du = 2x \, dx$), we obtain}y&amp;= \frac{1}{3}(x^{2} + 9)^{\frac{3}{2}}+ c.
+                \dfrac{dy}{dx}=g(x)h(y).
             </md>
 
             <p>
-                Next, we need to determine the value of <m>c</m> for which the
-                solution we have obtained will satisfy the IVP.
+                Observe that, if there is such a <m>c\in \mathbb{R}</m> such
+                that <m>h(c)=0</m>, then the constant function <m>y=c</m> is a
+                so-called <term>equilibrium solution</term> of the equation.
+                The method of separation of variables is used for solving these
+                differential equations.
             </p>
+            <!-- ===================================================== -->
+            <!-- ===================================================== -->
+            <!-- Subsubsection - How Separation Works -->
+            <!-- ===================================================== -->
+            <!-- ===================================================== -->
+            <subsubsection xml:id="subsubsec-How-separation-works">
+                <title>How Separation of Variables Works</title>
 
-            <p>
-                Substituting in the initial condition gives
-            </p>
+                <p>
+                    The method of separation of variables works as follows:
+                </p>
 
-            <p>
-                <md>
-                    \dfrac{1}{3}\left((-4)^{2}+9\right)^{3/2}+c=0,
+                <ol>
+                    <li>
+                        <p>
+                            Find all equilibrium solutions from the equation
+                        </p>
+                        <md>
+                            h(y)=0.
+                        </md>
+                    </li>
+
+                    <li>
+                        <p>
+                            Separate the variables:
+                        </p>
+                        <md>
+                            \frac{1}{h(y)}\, dy=g(x)\,dx.
+                        </md>
+                    </li>
+
+                    <li>
+                        <p>
+                            Integrate both sides:
+                        </p>
+                        <md>
+                            \int\frac{1}{h(y)}\,dy=\int g(x)\,dx.
+                        </md>
+                    </li>
+
+                    <li>
+                        <p>
+                            Solve the resulting equation for <m>y</m>, whenever
+                            possible, obtaining a general solution.
+                            The equilibrium solutions that are not included in
+                            this general solution give the singular solutions.
+                        </p>
+                    </li>
+                </ol>
+
+                <example xml:id="example-Separable-square">
+                    <statement>
+                        <p>
+                            The separable differential equation
+                            <md>
+                                y'=y^{2}.
+                            </md>
+                            has a general solution of <m>y=\dfrac{1}{c-x}</m> (
+                            <m>c\in\mathbb{R}</m> ) and the singular equilibrium
+                            solution <m>y=0</m> not included in the general
+                            solution.
+                        </p>
+                    </statement>
+                </example>
+
+                <remark>
+                    <p>
+                        If it is impossible (or impractical) to solve the
+                        resulting equation for <m>y</m>, the general solution is
+                        said to be an <term>implicit general solution</term>.
+                    </p>
+                </remark>
+
+                <example xml:id="example-Separable-worked-out">
+                    <title>Solving a Separable Differential Equation</title>
+
+                    <statement>
+                        <p>
+                            Solve the differential equation
+                        <md>
+                            \frac{dy}{dt}=\frac{2y+1}{t}.
+                        </md>
+                        </p>
+                    </statement>
+
+                    <solution>
+                        <p>
+                            To solve this separable DE, we apply the method of
+                            separation of variables.
+                        </p>
+
+                        <ol>
+                            <li>
+                                <p>
+                                    Find the equilibrium solutions from the
+                                    equation
+                                <md>
+                                    2y+1=0.
+                                </md>
+                                </p>
+                                <p>
+                                    Clearly, there is only one:
+                                    <m>y=-\dfrac{1}{2}</m>.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Separate the variables:
+                                </p>
+                                <md>
+                                    \frac{1}{2y+1}dy=\frac{1}{t}dt\quad (y\neq -1/2)
+                                </md>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Integrate both sides:
+                                </p>
+                                <md>
+                                    <mrow> \int\frac{1}{2y+1}dy\amp =\int\frac{1}{t}dt,</mrow>
+                                    <mrow> \frac{1}{2}\ln|2y+1|\amp =\ln|t|+c\ (c\in \mathbb{R}).</mrow>
+                                </md>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Solve the resulting equation for <m>y</m>:
+                                </p>
+                                <md>
+                                    <mrow> \ln|2y+1|\amp =2\ln|t|+c\amp \amp(\text{where } c\in \mathbb{R}) </mrow>
+                                    <mrow> |2y+1|\amp =e^{2\ln|t|+c} \amp \amp\text{(exponentiate both sides)}</mrow>
+                                    <mrow> |2y+1|\amp =e^{c}\;t^{2} \amp \amp\text{(exponent rules)}</mrow>
+                                    <mrow> |2y+1|\amp =c_{1}\;t^{2} \amp \amp(\text{replace } c_{1}:=e^{c} &gt; 0)</mrow>
+                                    <mrow> 2y+1\amp =\pm c_{1}\;t^{2}</mrow>
+                                    <mrow> 2y+1\amp =c_{2}t^{2} \amp \amp(\text{ where }c_{2} := \pm c_{1} \neq 0 ) </mrow>
+                                    <mrow> y\amp =c_{2}\;t^{2}-\frac{1}{2} \amp \amp(\text{solve for }y)</mrow>
+                                </md>
+
+                                <p>
+                                    Renaming <m>c_{2}</m> to simply <m>c</m>, we
+                                    obtain the general solution
+                                </p>
+                                <md>
+                                    \boxed{y(x)=ct^2-\dfrac{1}{2}\qquad\text{where } c\in \mathbb{R}\text{ and }t\neq 0}
+                                </md>
+
+                                <p>
+                                    <em>Question:</em> What is the reason for
+                                    the requirement that <m>t\neq 0</m>?
+                                </p>
+
+                                <p>
+                                    Observe that the equilibrium solution
+                                    <m>y=-\dfrac{1}{2}</m> is attained when
+                                    <m>c=0</m>.
+                                </p>
+                            </li>
+                        </ol>
+                    </solution>
+                </example>
+            </subsubsection>
+            <!-- ===================================================== -->
+            <!-- ===================================================== -->
+            <!-- Subsubsection - Why Separation of Variables Works -->
+            <!-- ===================================================== -->
+            <!-- ===================================================== -->
+            <subsubsection>
+                <title>Why Separation of Variables Works</title>
+
+                <p>
+                    The method of separation of variables is based on the
+                    substitution rule for indefinite integrals
+                    <xref ref="Stewart"/>.
+                </p>
+
+                <p>
+                    Indeed, let <m>y=y(x)</m> be a nonequilibrium solution of a
+                    separable equation
+                <md xml:id="eq-SDE" number="yes">
+                    \dfrac{dy}{dx}=g(x)h(y)
                 </md>
-            </p>
+                    on an interval <m>I</m>.
+                </p>
 
-            <p>
-                which we solve to find <m>c=-\dfrac{125}{3}</m>.
-                The unique solution is, therefore,
-            </p>
-
-            <p>
-                <md>
-                    \boxed{y = \dfrac{1}{3}(x^2+9)^{3/2}-\dfrac{125}{3},}
+                <p>
+                    Then, for all <m>x\in I</m>,
+                <md xml:id="eq-Why-separation-works" number="yes">
+                    y'(x)=g(x)h(y(x)).
                 </md>
-            </p>
+                </p>
 
-            <p>
-                or
-            </p>
-
-            <p>
+                <p>
+                    Dividing both sides of differential equation
+                    <xref ref="eq-Why-separation-works"/> by <m>h(y(x))</m> and
+                    integrating, we obtain
                 <md>
-                    \boxed{y = \dfrac{1}{3}\left((x^2+9)^{3/2}-125\right).}
+                    \int\frac{1}{h(y(x))}y'(x)\,dx=\int g(x)\,dx \text{ on }I.
                 </md>
-            </p>
-        </li>
+                </p>
 
-        <li>
-            <p>
-                <m>y'=xe^{-x},\ y(0)=1</m>.
-            </p>
-
-            <p>
-                <alert>Solution:</alert> (definite-integral approach)
-            </p>
-
-            <p>
-                The desired solution is given by the formula
-            </p>
-            <md>
-                y=1+\int_{0}^{x}te^{-t}\,dt.
-            </md>
-
-            <p>
-                Integrating by parts, with
-            </p>
-
-            <p>
-                <md>
-                    \begin{array}{ll}u =t,&amp;du =dt\\
-
-dv = e^{-t}\,dt,&amp; v=-e^{-t},\end{array}
+                <p>
+                    Using the substitution <m>y=y(x)</m>, we obtain
+                <md xml:id="eq-INTE" number="yes">
+                    \int\frac{1}{h(y)}\,dy=\int g(x)\, dx.
                 </md>
+                </p>
+
+                <p>
+                    Thus, any nonequilibrium solution <m>y(x)</m> of
+                    differential equation <xref ref="eq-SDE"/> satisfies
+                    integral equation <xref ref="eq-INTE"/>.
+                </p>
+
+                <p>
+                    Conversely, a function <m>y=y(x)</m>, implicitly defined by
+                    integral equation <xref ref="eq-INTE"/> on the interval
+                    <m>I</m>, solves <xref ref="eq-SDE"/> on <m>I</m>.
+                    Indeed, differentiating <xref ref="eq-INTE"/> relative to
+                    <m>x</m> by the chain rule (considering <m>y=y(x)</m> ), we
+                    arrive at <xref ref="eq-Why-separation-works"/> for all
+                    <m>x\in I</m>.
+                </p>
+            </subsubsection>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Separable Exercises -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>Exercises for Section <xref ref="sec-Separable"/></title>
+
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Determine which of the following first order
+                            differential equations are separable.
+                        </p>
+
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>\displaystyle \frac{dy}{dx}= 3x^{2}y</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' = e^{2x+y}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle \frac{dy}{dx}= x^{2} + 2xy + y^{2}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle \tan(x) y' = y^{2} + 1</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle \frac{dy}{dx}= xy + x + y</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Apply the method of separation of variables to
+                            verify <xref ref="example-Separable-square"/>.
+                        </p>
+                    </li>
+                </ol>
             </p>
 
             <p>
-                we have:
+                Find a general solution for each of the following equations.
             </p>
-            <md>
-                \int_{0}^{x}te^{-t}\,dt&amp;= \left[\left.-te^{-t}\right|_{0}^{x}+\int_{0}^{x} e^{-t}\,dt\right] \\&amp;=\left[\left.-xe^{-x}-e^{-t}\right|_{0}^{x}\right] \\&amp;=\left[-xe^{-x}-(e^{-x}-1)\right]\\&amp;=-xe^{-x}-e^{-x}+1=-(x+1)e^{-x}+1.
-            </md>
 
             <p>
-                Therefore, the solution is
-                <md>
-                    \boxed{y(x)=-(x+1)e^{-x}+2.}
-                </md>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle (x^{2} + 1)y' = y^{2} + 1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = 3x^{2}y^{2}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle \left(\frac{2y}{x}\right) \frac{dy}{dx}= 0 \quad (x \ne 0)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle \sin(y) y' = \cos(x)</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = 3x^{2}e^{y}</m>
+                        </p>
+                    </li>
+                </ol>
             </p>
-        </li>
-    </ol>
-</subsection>
 
-<subsection>
-    <title>Exercises for Section <xref ref="introd"/></title>
+            <p>
+                Solve the following initial value problems.
+            </p>
 
-    <p>
-        Find a general solution of the following equations.
-    </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle y\frac{dy}{dx}= x^{2} + 1, \ y(0) = -2</m>
+                        </p>
+                    </li>
 
-    <p>
-        <ol>
-            <li>
-                <p>
-                    <m>\ds y' = xe^{-x^2}</m>
-                </p>
-            </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle \frac{dy}{dx}= \frac{y}{x}, \ y(1) = 1</m>
+                        </p>
+                    </li>
 
-            <li>
-                <p>
-                    <m>\dfrac{dy}{dx}= 3x^{2}\sin(x^{3})</m>
-                </p>
-            </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle x^{2} y' = y, \ y(1) = 0</m>
+                        </p>
+                    </li>
 
-            <li>
-                <p>
-                    <m>\dfrac{dy}{dt}= 4e^{t} \cos(t)</m>
-                </p>
-            </li>
-        </ol>
-    </p>
+                    <li>
+                        <p>
+                            <m>\displaystyle \frac{dy}{dx}= xy + x + y + 1, \ y(0) = 0</m>
+                        </p>
+                    </li>
 
-    <p>
-        Solve the following initial value problems.
-    </p>
+                    <li>
+                        <p>
+                            <m>\displaystyle x\dfrac{dy}{dx}-y = 2x^{2}y, \ y(1) = 1</m>
+                        </p>
+                    </li>
 
-    <p>
-        <ol>
-            <li>
-                <p>
-                    <m>\ds y' = \dfrac{1}{\sqrt{x+2}}, \ y(2)=-1</m>
-                </p>
-            </li>
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = 2x(y^{2} + 1), \ y(\sqrt{\pi}) = 0</m>
+                        </p>
+                    </li>
 
-            <li>
-                <p>
-                    <m>\ds y' = (t^{2} + 2t + 1)e^{t}, \ y(0) = 2</m>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <m>\ds \frac{dy}{dx}= \dfrac{\ln(x)}{x}, \ y(1) = 0 \quad (x &gt; 0)</m>
-                </p>
-            </li>
-        </ol>
-    </p>
-</subsection>
-
-</section>
-
+                    <li>
+                        <p>
+                            <m>\displaystyle xy' = 2y\ln(x), \ y(1) = 2</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </subsection>
+    </section>
 </chapter>
-
