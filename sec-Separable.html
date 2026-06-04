@@ -81,7 +81,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Intro-to-first-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-First-Order.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Intro-to-first-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-First-Order.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sepapp.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -125,6 +125,22 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Separable.html#sec-Separable-5" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercises for Section Section 2.2</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sepapp.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Applications of Separable Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sepapp.html#sepapp-2" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Radiocarbon Dating</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-2-3" class="internal"><span class="codenumber">2.3.1.1</span> <span class="title">Mathematical Model</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-2-4" class="internal"><span class="codenumber">2.3.1.2</span> <span class="title">Sample Case</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-3" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Geometric Example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-4" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Mixing Problem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-5" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Newton’s Law of Cooling/Heating</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sepapp.html#sepapp-6" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Exercises for Section Section 2.3</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -138,7 +154,7 @@ eBookConfig.enable_chatcodes =  false;
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Motivating Example: Home Loan</span>
 </h3>
-<div class="para" id="motivation-Home-loan-2">Suppose you want to take out a 30-year loan to purchase a house. If interest rates are 4.75% and you know that you can afford at most \$1,250 per month, you would like to determine the most expensive house that you can purchase in order pay off the loan on time. To do this, define <span class="process-math">\(L(t)\)</span> as the amount that you owe after <span class="process-math">\(t\)</span> years. Since you can afford \$1,250 per month, your annual payments will be <span class="process-math">\(\$1,250 \times 12 = \$15,000\text{.}\)</span> The balance due will gain 4.75% interest, so that amount added to the balance annually is <span class="process-math">\(0.0475L\text{.}\)</span> Thus, the rate of change in the amount of money due is given by the difference between the amount the loan increases and the amount that you pay on the loan, or <span class="process-math">\(\dfrac{dL}{dt}=0475L - 15000\text{.}\)</span> The initial condition is <span class="process-math">\(L(30) = 0\text{,}\)</span> because you want the entire loan to be paid off by the end of the 30 years. This gives the initial value problem<div class="autopermalink" data-description="Paragraph"><a href="#motivation-Home-loan-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="motivation-Home-loan-2">Suppose you want to take out a 30-year loan to purchase a house. If interest rates are 4.75% and you know that you can afford at most $1,250 per month, you would like to determine the most expensive house that you can purchase in order pay off the loan on time. To do this, define <span class="process-math">\(L(t)\)</span> as the amount that you owe after <span class="process-math">\(t\)</span> years. Since you can afford $1,250 per month, your annual payments will be <span class="process-math">\(\$1,250 \times 12 = \$15,000\text{.}\)</span> The balance due will gain 4.75% interest, so that amount added to the balance annually is <span class="process-math">\(0.0475L\text{.}\)</span> Thus, the rate of change in the amount of money due is given by the difference between the amount the loan increases and the amount that you pay on the loan, or <span class="process-math">\(\dfrac{dL}{dt}=0475L - 15000\text{.}\)</span> The initial condition is <span class="process-math">\(L(30) = 0\text{,}\)</span> because you want the entire loan to be paid off by the end of the 30 years. This gives the initial value problem<div class="autopermalink" data-description="Paragraph"><a href="#motivation-Home-loan-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq-Home-loan.html" id="eq-Home-loan">
 \begin{equation}
@@ -152,7 +168,7 @@ eBookConfig.enable_chatcodes =  false;
 L(t) = \frac{6000000}{19}\left(1 - e^{\frac{19}{400}t-\frac{57}{40}}\right).
 \end{equation*}
 </div>
-<div class="para" id="motivation-Home-loan-6">The size of the loan you should take is the amount you owe at the beginning, or <span class="process-math">\(L(0)\text{,}\)</span> which is \$239,839.43.<div class="autopermalink" data-description="Paragraph"><a href="#motivation-Home-loan-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="motivation-Home-loan-6">The size of the loan you should take is the amount you owe at the beginning, or <span class="process-math">\(L(0)\text{,}\)</span> which is $239,839.43.<div class="autopermalink" data-description="Paragraph"><a href="#motivation-Home-loan-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Subsection 2.2.1: Motivating Example: Home Loan"><a href="#motivation-Home-loan" title="Copy heading and permalink for Subsection 2.2.1: Motivating Example: Home Loan" aria-label="Copy heading and permalink for Subsection 2.2.1: Motivating Example: Home Loan">🔗</a></div>
 </section>
@@ -212,7 +228,7 @@ L(t) = \frac{6000000}{19}\left(1 - e^{\frac{19}{400}t-\frac{57}{40}}\right).
 <div class="autopermalink" data-description="Item 3"><a href="#sec-Separable-3-3-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="sec-Separable-3-3-1-4">
-<div class="para" id="sec-Separable-3-3-1-4-1">The <dfn class="terminology">logistic</dfn> differential equation <span class="process-math">\(\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)\)</span> where (<span class="process-math">\(k, N &gt; 0 \)</span> are constants) is separable (and autonomous).<div class="autopermalink" data-description="Paragraph"><a href="#sec-Separable-3-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Separable-3-3-1-4-1">The <dfn class="terminology">logistic</dfn> differential equation <span class="process-math">\(\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)\)</span> where ( <span class="process-math">\(k, N &gt; 0 \)</span> are constants) is separable (and autonomous).<div class="autopermalink" data-description="Paragraph"><a href="#sec-Separable-3-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 4"><a href="#sec-Separable-3-3-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
@@ -294,22 +310,21 @@ h(y)=0.
 <div class="autopermalink" data-description="Item 4"><a href="#subsubsec-How-separation-works-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 </ol>
-<details id="example-Separable-square" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<details id="example-Singular" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5></summary>
 <article class="example example-like knowl__content">
-<div class="para logical" id="example-Separable-square-1-1">
+<div class="para logical" id="example-Singular-1-1">
 <div class="para">The separable differential equation</div>
-<div class="displaymath process-math" id="example-Separable-square-1-1-1">
+<div class="displaymath process-math" id="example-Singular-1-1-1">
 \begin{equation*}
 y'=y^{2}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-square-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="example-Separable-square-1-2">has a general solution of <span class="process-math">\(y=\dfrac{1}{c-x}\)</span> ( <span class="process-math">\(c\in\mathbb{R}\)</span>) and the singular equilibrium solution <span class="process-math">\(y=0\)</span> not included in the general solution.<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-square-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">has a general solution of <span class="process-math">\(y=\dfrac{1}{c-x}\)</span> ( <span class="process-math">\(c\in\mathbb{R}\)</span> ) and the singular equilibrium solution <span class="process-math">\(y=0\)</span> not included in the general solution.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-Singular-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 2.2.3"><a href="#example-Separable-square" title="Copy heading and permalink for Example 2.2.3" aria-label="Copy heading and permalink for Example 2.2.3">🔗</a></div>
+<div class="autopermalink" data-description="Example 2.2.3"><a href="#example-Singular" title="Copy heading and permalink for Example 2.2.3" aria-label="Copy heading and permalink for Example 2.2.3">🔗</a></div>
 </article></details>
 <article class="remark remark-like" id="subsubsec-How-separation-works-5"><h5 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -322,18 +337,89 @@ y'=y^{2}.
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving a Separable Differential Equation.</span>
 </h5></summary>
 <article class="example example-like knowl__content">
-<article class="task exercise-like" id="example-Separable-worked-out-2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para logical" id="example-Separable-worked-out-2-1-1">
+<div class="para logical" id="example-Separable-worked-out-2-1">
 <div class="para">Solve the differential equation</div>
-<div class="displaymath process-math" id="example-Separable-worked-out-2-1-1-1">
+<div class="displaymath process-math" id="example-Separable-worked-out-2-1-1">
 \begin{equation*}
 \frac{dy}{dt}=\frac{2y+1}{t}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 2.2.5.a"><a href="#example-Separable-worked-out-2" title="Copy heading and permalink for Task 2.2.5.a" aria-label="Copy heading and permalink for Task 2.2.5.a">🔗</a></div>
-</article><div class="autopermalink" data-description="Example 2.2.5: Solving a Separable Differential Equation"><a href="#example-Separable-worked-out" title="Copy heading and permalink for Example 2.2.5: Solving a Separable Differential Equation" aria-label="Copy heading and permalink for Example 2.2.5: Solving a Separable Differential Equation">🔗</a></div>
+<div class="solutions">
+<details id="example-Separable-worked-out-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="example-Separable-worked-out-3-1">To solve this separable DE, we apply the method of separation of variables.<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="example-Separable-worked-out-3-2">
+<li id="example-Separable-worked-out-3-2-1">
+<div class="para logical" id="example-Separable-worked-out-3-2-1-1">
+<div class="para">Find the equilibrium solutions from the equation</div>
+<div class="displaymath process-math" id="example-Separable-worked-out-3-2-1-1-1">
+\begin{equation*}
+2y+1=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-Separable-worked-out-3-2-1-2">Clearly, there is only one: <span class="process-math">\(y=-\dfrac{1}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#example-Separable-worked-out-3-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="example-Separable-worked-out-3-2-2">
+<div class="para" id="example-Separable-worked-out-3-2-2-1">Separate the variables:<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-Separable-worked-out-3-2-2-2">
+\begin{equation*}
+\frac{1}{2y+1}dy=\frac{1}{t}dt\quad (y\neq -1/2)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#example-Separable-worked-out-3-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="example-Separable-worked-out-3-2-3">
+<div class="para" id="example-Separable-worked-out-3-2-3-1">Integrate both sides:<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-Separable-worked-out-3-2-3-2">
+\begin{align*}
+\int\frac{1}{2y+1}dy\amp =\int\frac{1}{t}dt,\\
+\frac{1}{2}\ln|2y+1|\amp =\ln|t|+c\ (c\in \mathbb{R}).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#example-Separable-worked-out-3-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="example-Separable-worked-out-3-2-4">
+<div class="para" id="example-Separable-worked-out-3-2-4-1">Solve the resulting equation for <span class="process-math">\(y\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-Separable-worked-out-3-2-4-2">
+\begin{align*}
+\ln|2y+1|\amp =2\ln|t|+c\amp \amp(\text{where } c\in \mathbb{R}) \\
+|2y+1|\amp =e^{2\ln|t|+c} \amp \amp\text{(exponentiate both sides)}\\
+|2y+1|\amp =e^{c}\;t^{2} \amp \amp\text{(exponent rules)}\\
+|2y+1|\amp =c_{1}\;t^{2} \amp \amp(\text{replace } c_{1}:=e^{c} &gt; 0)\\
+2y+1\amp =\pm c_{1}\;t^{2}\\
+2y+1\amp =c_{2}t^{2} \amp \amp(\text{ where }c_{2} := \pm c_{1} \neq 0 ) \\
+y\amp =c_{2}\;t^{2}-\frac{1}{2} \amp \amp(\text{solve for }y)
+\end{align*}
+</div>
+<div class="para" id="example-Separable-worked-out-3-2-4-3">Renaming <span class="process-math">\(c_{2}\)</span> to simply <span class="process-math">\(c\text{,}\)</span> we obtain the general solution<div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="example-Separable-worked-out-3-2-4-4">
+\begin{equation*}
+\boxed{y(x)=ct^2-\dfrac{1}{2}\qquad\text{where } c\in \mathbb{R}\text{ and }t\neq 0}
+\end{equation*}
+</div>
+<div class="para" id="example-Separable-worked-out-3-2-4-5">
+<em class="emphasis">Question:</em> What is the reason for the requirement that <span class="process-math">\(t\neq 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-Separable-worked-out-3-2-4-6">Observe that the equilibrium solution <span class="process-math">\(y=-\dfrac{1}{2}\)</span> is attained when <span class="process-math">\(c=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-Separable-worked-out-3-2-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#example-Separable-worked-out-3-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 2.2.5.1"><a href="#example-Separable-worked-out-3" title="Copy heading and permalink for Solution 2.2.5.1" aria-label="Copy heading and permalink for Solution 2.2.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.2.5: Solving a Separable Differential Equation"><a href="#example-Separable-worked-out" title="Copy heading and permalink for Example 2.2.5: Solving a Separable Differential Equation" aria-label="Copy heading and permalink for Example 2.2.5: Solving a Separable Differential Equation">🔗</a></div>
 </article></details><div class="autopermalink" data-description="Subsubsection 2.2.3.1: How Separation of Variables Works"><a href="#subsubsec-How-separation-works" title="Copy heading and permalink for Subsubsection 2.2.3.1: How Separation of Variables Works" aria-label="Copy heading and permalink for Subsubsection 2.2.3.1: How Separation of Variables Works">🔗</a></div>
 </section>
 <section class="subsubsection" id="subsec-Separation-of-variables-6">
@@ -342,39 +428,48 @@ y'=y^{2}.
 </h4>
 <div class="para" id="subsec-Separation-of-variables-6-2">The method of separation of variables is based on the substitution rule for indefinite integrals <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "Stewart" missing or not unique]</code>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-3">Indeed, let <span class="process-math">\(y=y(x)\)</span> be a nonequilibrium solution of a separable equation<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq-Why-separation-works.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-Why-separation-works.html" id="eq-SDE">
+<div class="para logical" id="subsec-Separation-of-variables-6-3">
+<div class="para">Indeed, let <span class="process-math">\(y=y(x)\)</span> be a nonequilibrium solution of a separable equation</div>
+<div class="displaymath process-math" id="eq-SDE">
 \begin{equation}
 \dfrac{dy}{dx}=g(x)h(y)\tag{2.2.3}
 \end{equation}
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-5">on an interval <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">on an interval <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-6">Then, for all <span class="process-math">\(x\in I\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq-Why-separation-works.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-Why-separation-works.html" id="eq-Why-separation-works">
+<div class="para logical" id="subsec-Separation-of-variables-6-4">
+<div class="para">Then, for all <span class="process-math">\(x\in I\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="eq-Why-separation-works">
 \begin{equation}
 y'(x)=g(x)h(y(x)).\tag{2.2.4}
 \end{equation}
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-8">Dividing both sides of differential equation <a href="sec-Separable.html#eq-Why-separation-works" class="xref" data-knowl="./knowl/xref/eq-Why-separation-works.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a> by <span class="process-math">\(h(y(x))\)</span> and integrating, we obtain<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq-Why-separation-works.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-Why-separation-works.html" id="subsec-Separation-of-variables-6-9">
+<div class="para logical" id="subsec-Separation-of-variables-6-5">
+<div class="para">Dividing both sides of differential equation <a href="sec-Separable.html#eq-Why-separation-works" class="xref" data-knowl="./knowl/xref/eq-Why-separation-works.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a> by <span class="process-math">\(h(y(x))\)</span> and integrating, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-Why-separation-works.html" id="subsec-Separation-of-variables-6-5-3">
 \begin{equation*}
 \int\frac{1}{h(y(x))}y'(x)\,dx=\int g(x)\,dx \text{ on }I.
 \end{equation*}
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-10">Using the substitution <span class="process-math">\(y=y(x)\text{,}\)</span> we obtain<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq-Why-separation-works.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-SDE.html ./knowl/xref/eq-INTE.html ./knowl/xref/eq-Why-separation-works.html" id="eq-INTE">
+<div class="para logical" id="subsec-Separation-of-variables-6-6">
+<div class="para">Using the substitution <span class="process-math">\(y=y(x)\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math" id="eq-INTE">
 \begin{equation}
 \int\frac{1}{h(y)}\,dy=\int g(x)\, dx.\tag{2.2.5}
 \end{equation}
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-12">Thus, any nonequilibrium solution <span class="process-math">\(y(x)\)</span> of differential equation <a href="sec-Separable.html#eq-SDE" class="xref" data-knowl="./knowl/xref/eq-SDE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> satisfies integral equation <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-Separation-of-variables-6-13">Conversely, a function <span class="process-math">\(y=y(x)\text{,}\)</span> implicitly defined by integral equation <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a> on the interval <span class="process-math">\(I\text{,}\)</span> solves <a href="sec-Separable.html#eq-SDE" class="xref" data-knowl="./knowl/xref/eq-SDE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> on <span class="process-math">\(I\text{.}\)</span> Indeed, differentiating <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a> relative to <span class="process-math">\(x\)</span> by the chain rule (considering <span class="process-math">\(y=y(x)\)</span> ), we arrive at <a href="sec-Separable.html#eq-Why-separation-works" class="xref" data-knowl="./knowl/xref/eq-Why-separation-works.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a> for all <span class="process-math">\(x\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-Separation-of-variables-6-7">Thus, any nonequilibrium solution <span class="process-math">\(y(x)\)</span> of differential equation <a href="sec-Separable.html#eq-SDE" class="xref" data-knowl="./knowl/xref/eq-SDE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> satisfies integral equation <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-Separation-of-variables-6-8">Conversely, a function <span class="process-math">\(y=y(x)\text{,}\)</span> implicitly defined by integral equation <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a> on the interval <span class="process-math">\(I\text{,}\)</span> solves <a href="sec-Separable.html#eq-SDE" class="xref" data-knowl="./knowl/xref/eq-SDE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> on <span class="process-math">\(I\text{.}\)</span> Indeed, differentiating <a href="sec-Separable.html#eq-INTE" class="xref" data-knowl="./knowl/xref/eq-INTE.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a> relative to <span class="process-math">\(x\)</span> by the chain rule (considering <span class="process-math">\(y=y(x)\)</span> ), we arrive at <a href="sec-Separable.html#eq-Why-separation-works" class="xref" data-knowl="./knowl/xref/eq-Why-separation-works.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a> for all <span class="process-math">\(x\in I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Separation-of-variables-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Subsubsection 2.2.3.2: Why Separation of Variables Works"><a href="#subsec-Separation-of-variables-6" title="Copy heading and permalink for Subsubsection 2.2.3.2: Why Separation of Variables Works" aria-label="Copy heading and permalink for Subsubsection 2.2.3.2: Why Separation of Variables Works">🔗</a></div>
 </section><div class="autopermalink" data-description="Subsection 2.2.3: Method of Separation of Variables"><a href="#subsec-Separation-of-variables" title="Copy heading and permalink for Subsection 2.2.3: Method of Separation of Variables" aria-label="Copy heading and permalink for Subsection 2.2.3: Method of Separation of Variables">🔗</a></div>
@@ -426,7 +521,7 @@ y'(x)=g(x)h(y(x)).\tag{2.2.4}
 <div class="autopermalink" data-description="Item 1"><a href="#sec-Separable-5-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="sec-Separable-5-2-1-2">
-<div class="para" id="sec-Separable-5-2-1-2-1">Apply the method of separation of variables to verify Example <a href="sec-Separable.html#example-Separable-square" class="xref" data-knowl="./knowl/xref/example-Separable-square.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.3">Example 2.2.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Separable-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-Separable-5-2-1-2-1">Apply the method of separation of variables to verify <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "example-Separable-square" missing or not unique]</code>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Separable-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item 2"><a href="#sec-Separable-5-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
@@ -524,7 +619,7 @@ y'(x)=g(x)h(y(x)).\tag{2.2.4}
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-Intro-to-first-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-Intro-to-first-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sepapp.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
