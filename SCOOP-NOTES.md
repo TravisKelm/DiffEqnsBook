@@ -23,10 +23,16 @@
 ## Misc
 - the LaTeX pakage *colortbl* needed installation
 
+## Github.io Website
+- [https://traviskelm.github.io/DiffEqnsBook/frontmatter.html](https://traviskelm.github.io/DiffEqnsBook/frontmatter.html)
+
 # Tips for using VS Code with pretext-tools extension
 
 ### Converting LaTeX to PreTeXt
-- Ctrl+Shift+P then type "convert"
+- Select text then Ctrl+Shift+P then type "convert"
 - <md> blocks can go inside of <p> blocks and should whenever it is natural
 - Find and replace "em>" with "term>"
-- You can clean up indentation with <Right-click>,"Format document with...",Pretext-tools 
+- You can clean up indentation with <Right-click>,"Format document with...",Pretext-tools
+
+### Removing Extraneous line breaks
+- Shift+Ctrl+P to bring up command palatte, then *Join Lines*
