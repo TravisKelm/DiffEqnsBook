@@ -3,13 +3,16 @@
 <chapter xml:id="ch2-First-Order" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>First-Order Differential Equations</title>
 
-  <p>
-    In this chapter, we shall study first-order ordinary differential equations
+  <introduction>
+    <p>
+         In this chapter, we shall study first-order ordinary differential equations
     that can be written in standard form
-  </p>
-  <md xml:id="eq-First-order-general" number="yes">
-    y'=f(x,y).
-  </md>
+    <md xml:id="eq-First-order-general" number="yes">
+      y'=f(x,y).
+    </md> 
+    </p>
+  </introduction>
+
   <!-- ===================================================== -->
   <!-- ===================================================== -->
   <!-- Section - Introduction to First-Order Differential Equations -->
@@ -17,7 +20,6 @@
   <!-- ===================================================== -->
   <section xml:id="sec-Intro-to-first-order">
     <title>Introduction to First-Order Differential Equations</title>
-
     <!-- ===================================================== -->
     <!-- ===================================================== -->
     <!-- Subsection - Particular, General, and Singular Solutions -->
@@ -34,10 +36,10 @@
             A function <m>y=y(x)</m> is said to be a <term>solution</term> of
             differential equation <xref ref="eq-First-order-general"/> on an
             interval <m>I</m> provided it is differentiable on <m>I</m> and
+            <md>
+              y'(x)=f\left(x,y(x)\right)\text{ for all }x\in I
+            </md>
           </p>
-          <md>
-            y'(x)=f\left(x,y(x)\right)\text{ for all }x\in I
-          </md>
 
           <p>
             A one-parameter family of solutions <m>y=y(x,c)</m> of differential
@@ -78,62 +80,66 @@
 
       <p>
         For a first-order equation of the form
+        <md>
+          y'=f(x),
+        </md>
       </p>
-      <md>
-        y'=f(x),
-      </md>
 
       <p>
         where <m>f(x)</m> is a continuous function on an interval <m>I</m>, a
         <term>general solution</term> on <m>I</m> is
+        <md>
+          y=\int f(x)\,dx=F(x)+c\qquad (c\in \mathbb{R}),
+        </md>
       </p>
-      <md>
-        y=\int f(x)\,dx=F(x)+c\qquad (c\in \mathbb{R}),
-      </md>
 
       <p>
         where <m>F(x)</m> is an antiderivative of <m>f</m> on <m>I</m>.
         By the Fundamental Theorem of Calculus (see, e.g., <xref ref="Stewart"/>
         ), we can set
+        <md>
+          F(x):=\int_{x_0}^{x}f(t)\,dt,\quad x\in I,
+        </md>
       </p>
-      <md>
-        F(x):=\int_{x_0}^{x}f(t)\,dt,\quad x\in I,
-      </md>
 
       <p>
         where <m>x_{0}</m> is a fixed point in <m>I</m>.
       </p>
 
       <example>
-        <ol>
-          <li>
-            <p>
-              The one-parameter family <m>y=c</m> ( <m>c\in \mathbb{R}</m> ) is
-              a general solution of the equation.
-            </p>
-            <md>
-              y'=0
-            </md>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The one-parameter family <m>y=c</m> ( <m>c\in \mathbb{R}</m> )
+                is a general solution of the equation.
+                <md>
+                  y'=0
+                </md>
+              </p>
 
-            <p>
-              on <m>(-\infty,\infty)</m>.
-            </p>
-          </li>
+              <p>
+                on <m>(-\infty,\infty)</m>.
+              </p>
+            </li>
 
-          <li>
-            <p>
-              The one-parameter family <m>y=\ln|x|+c</m> (
-              <m>c \in \mathbb{R}</m> ) is the general solution of the equation.
-            </p>
-            <md>
-              y'=\dfrac{1}{x}
-            </md>
+            <li>
+              <p>
+                The one-parameter family <m>y=\ln|x|+c</m> (
+                <m>c \in \mathbb{R}</m> ) is the general solution of the
+                equation.
+                <md>
+                  y'=\dfrac{1}{x}
+                </md>
+              </p>
 
-            <p>
-              on each of the intervals <m>(-\infty,0)</m> and <m>(0,\infty)</m>.
-            </p>
-          </li>
-        </ol>
+              <p>
+                on each of the intervals <m>(-\infty,0)</m> and
+                <m>(0,\infty)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
       </example>
     </subsection>
     <!-- ===================================================== -->
@@ -152,19 +158,19 @@
             A first-order differential equation
             <xref ref="eq-First-order-general"/> is often accompanied by a
             condition of the form:
+            <md>
+              y(x_{0})=y_{0},
+            </md>
           </p>
-          <md>
-            y(x_{0})=y_{0},
-          </md>
 
           <p>
             where <m>x_{0}</m> and <m>y_{0}</m> are specified values.
             Such a condition is called an <term>initial condition</term> (IC)
             and such a problem
+            <md xml:id="eq-IVP" number="yes">
+              y'=f(x,y),\ y(x_{0})=y_{0}
+            </md>
           </p>
-          <md xml:id="eq-IVP" number="yes">
-            y'=f(x,y),\ y(x_{0})=y_{0}
-          </md>
 
           <p>
             is called an <term>initial value problem</term> (IVP).
@@ -189,17 +195,17 @@
             <p>
               first find the general solution <m>y=y(x,c)</m> of the equation,
               which, provided the differential equation is of the form
+              <md>
+                y'=f(x),
+              </md>
             </p>
-            <md>
-              y'=f(x),
-            </md>
 
             <p>
               can be done via indefinite integration
+              <md>
+                y=\int f(x)\,dx,
+              </md>
             </p>
-            <md>
-              y=\int f(x)\,dx,
-            </md>
 
             <p>
               and
@@ -219,21 +225,21 @@
         <statement>
           <p>
             Solve the initial value problem
+            <md>
+              y'=\dfrac{1}{x},\ y(1)=0.
+            </md>
           </p>
-          <md>
-            y'=\dfrac{1}{x},\ y(1)=0.
-          </md>
 
           <p>
-            <alert>Solution:</alert> Considering that the initial <m>x</m>-value
-            1 is in the interval <m>(0,\infty)</m>, where <m>|x|=x</m>, we
-            obtain the unique solution of the IVP from the general solution
+            <em>Solution:</em> Considering that the initial <m>x</m>-value 1 is
+            in the interval <m>(0,\infty)</m>, where <m>|x|=x</m>, we obtain the
+            unique solution of the IVP from the general solution
             <m>y=\ln|x|+c=\ln x+c</m> of the equation on <m>(0,\infty)</m> by
             substituting the values <m>x=1</m> and <m>y=0</m> into it:
+            <md>
+              0=\ln 1+c,
+            </md>
           </p>
-          <md>
-            0=\ln 1+c,
-          </md>
 
           <p>
             which yields <m>c = 0</m>.
@@ -254,10 +260,10 @@
       <p>
         An alternative <term>definite-integral approach</term> to solving an
         initial value problem of the form
+        <md xml:id="eq-IVP-single-variable" number="yes">
+          y'=f(x),\ y(x_{0})=y_{0},
+        </md>
       </p>
-      <md xml:id="eq-IVP-single-variable" number="yes">
-        y'=f(x),\ y(x_{0})=y_{0},
-      </md>
 
       <p>
         which bypasses finding the general solution of the differential
@@ -265,10 +271,10 @@
         the function <m>f(x)</m> is continuous on an interval <m>I</m>
         containing <m>x_{0}</m>, gives the <em>unique</em> solution of the IVP
         by the formula
+        <md>
+          y=y_{0}+\int_{x_0}^{x}f(t)\,dt.
+        </md>
       </p>
-      <md>
-        y=y_{0}+\int_{x_0}^{x}f(t)\,dt.
-      </md>
 
       <p>
         In the following two examples, we will compare the two approaches to
@@ -281,27 +287,27 @@
         <statement>
           <p>
             Solve the differential equation
+            <md>
+              y'=x\sqrt{x^{2}+9},\ y(-4)=0
+            </md>
           </p>
-          <md>
-            y'=x\sqrt{x^{2}+9},\ y(-4)=0
-          </md>
         </statement>
 
         <solution>
           <p>
             First, we find the general solution of the equation
+            <md>
+              y= \int x \sqrt{x^{2} + 9}\, dx
+            </md>
           </p>
-          <md>
-            y= \int x \sqrt{x^{2} + 9}\, dx
-          </md>
 
           <p>
             Using substitution ( <m>u = x^{2} + 9</m>, so <m>du = 2x \, dx</m>
             ), we obtain
+            <md>
+              y= \frac{1}{3}(x^{2} + 9)^{\frac{3}{2}}+ C
+            </md>
           </p>
-          <md>
-            y= \frac{1}{3}(x^{2} + 9)^{\frac{3}{2}}+ C
-          </md>
 
           <p>
             Next, we need to determine the value of <m>c</m> for which the
@@ -310,25 +316,25 @@
 
           <p>
             Substituting in the initial condition gives
+            <md>
+              \dfrac{1}{3}\left((-4)^{2}+9\right)^{3/2}+c=0,
+            </md>
           </p>
-          <md>
-            \dfrac{1}{3}\left((-4)^{2}+9\right)^{3/2}+c=0,
-          </md>
 
           <p>
             which we solve to find <m>c=-\dfrac{125}{3}</m>.
             The unique solution is, therefore,
+            <md>
+              \boxed{y = \dfrac{1}{3}(x^2+9)^{3/2}-\dfrac{125}{3},}
+            </md>
           </p>
-          <md>
-            \boxed{y = \dfrac{1}{3}(x^2+9)^{3/2}-\dfrac{125}{3},}
-          </md>
 
           <p>
             or
+            <md>
+              \boxed{y = \dfrac{1}{3}\left((x^2+9)^{3/2}-125\right).}
+            </md>
           </p>
-          <md>
-            \boxed{y = \dfrac{1}{3}\left((x^2+9)^{3/2}-125\right).}
-          </md>
         </solution>
       </example>
 
@@ -338,44 +344,44 @@
         <statement>
           <p>
             Solve the differential equation
+            <md>
+              y'=xe^{-x},\ y(0)=1.
+            </md>
           </p>
-          <md>
-            y'=xe^{-x},\ y(0)=1.
-          </md>
         </statement>
 
         <solution>
           <p>
             The desired solution is given by the formula
+            <md>
+              y=1+\int_{0}^{x}te^{-t}\,dt.
+            </md>
           </p>
-          <md>
-            y=1+\int_{0}^{x}te^{-t}\,dt.
-          </md>
 
           <p>
             Integrating by parts, with
+            <md>
+              <mrow>u\amp =t,\amp du\amp =dt</mrow>
+              <mrow>dv\amp =e^{-t}\;dt,\amp v\amp =-e^{-t},</mrow>
+            </md>
           </p>
-          <md>
-            <mrow>u\amp =t,\amp du\amp =dt</mrow>
-            <mrow>dv\amp =e^{-t}\;dt,\amp v\amp =-e^{-t},</mrow>
-          </md>
 
           <p>
             we have:
+            <md>
+              <mrow>\int_{0}^{x}te^{-t}\,dt\amp = \left[\left.-te^{-t}\right|_{0}^{x}+\int_{0}^{x} e^{-t}\,dt\right]</mrow>
+              <mrow> \amp =\left[\left.-xe^{-x}-e^{-t}\right|_{0}^{x}\right] </mrow>
+              <mrow> \amp =\left[-xe^{-x}-(e^{-x}-1)\right]</mrow>
+              <mrow> \amp =-xe^{-x}-e^{-x}+1=-(x+1)e^{-x}+1.</mrow>
+            </md>
           </p>
-          <md>
-            <mrow>\int_{0}^{x}te^{-t}\,dt\amp = \left[\left.-te^{-t}\right|_{0}^{x}+\int_{0}^{x} e^{-t}\,dt\right]</mrow>
-            <mrow> \amp =\left[\left.-xe^{-x}-e^{-t}\right|_{0}^{x}\right] </mrow>
-            <mrow> \amp =\left[-xe^{-x}-(e^{-x}-1)\right]</mrow>
-            <mrow> \amp =-xe^{-x}-e^{-x}+1=-(x+1)e^{-x}+1.</mrow>
-          </md>
 
           <p>
             Therefore, the solution is
+            <md>
+              \boxed{y(x)=-(x+1)e^{-x}+2.}
+            </md>
           </p>
-          <md>
-            \boxed{y(x)=-(x+1)e^{-x}+2.}
-          </md>
         </solution>
       </example>
     </subsection>
@@ -473,19 +479,19 @@
         The initial condition is <m>L(30) = 0</m>, because you want the entire
         loan to be paid off by the end of the 30 years.
         This gives the initial value problem
+        <md xml:id="eq-Home-loan" number="yes">
+          \frac{dL}{dt}= 0.0475L - 15000, \, L(30) = 0.
+        </md>
       </p>
-      <md xml:id="eq-Home-loan" number="yes">
-        \frac{dL}{dt}= 0.0475L - 15000, \, L(30) = 0.
-      </md>
 
       <p>
         This is a separable equation, as we will see momentarily (also a linear
         equation, as we will see in Section <xref ref="sec-Linear"/> ).
         The solution to <xref ref="eq-Home-loan"/> is
+        <md>
+          L(t) = \frac{6000000}{19}\left(1 - e^{\frac{19}{400}t-\frac{57}{40}}\right).
+        </md>
       </p>
-      <md>
-        L(t) = \frac{6000000}{19}\left(1 - e^{\frac{19}{400}t-\frac{57}{40}}\right).
-      </md>
 
       <p>
         The size of the loan you should take is the amount you owe at the
@@ -506,18 +512,18 @@
         <statement>
           <p>
             A first-order differential equation
+            <md>
+              \dfrac{dy}{dx}=f(x,y),
+            </md>
           </p>
-          <md>
-            \dfrac{dy}{dx}=f(x,y),
-          </md>
 
           <p>
             whose right-hand side can be factored into <m>g(x)h(y)</m>, i.e., it
             can written in the form
+            <md xml:id="eq-Seperable-form" number="yes">
+              \dfrac{dy}{dx}=g(x)h(y),
+            </md>
           </p>
-          <md xml:id="eq-Seperable-form" number="yes">
-            \dfrac{dy}{dx}=g(x)h(y),
-          </md>
 
           <p>
             is called <term>separable</term>.
@@ -525,64 +531,60 @@
 
           <p>
             There are two special cases of separable equations:
+            <md>
+              <mrow> \frac{dy}{dx}\amp =g(x) \quad (h(y)=1),</mrow>
+              <mrow> \frac{dy}{dx}\amp =h(y)\quad (g(x)=1) \qquad \text{(called an \emph{autonomous equation})}.</mrow>
+            </md>
           </p>
-          <md>
-            <mrow> \frac{dy}{dx}\amp =g(x) \quad (h(y)=1),</mrow>
-            <mrow> \frac{dy}{dx}\amp =h(y)\quad (g(x)=1) \qquad \text{(called an \emph{autonomous equation})}.</mrow>
-          </md>
         </statement>
       </definition>
 
       <example>
-        <ol>
-          <li>
-            <p>
-              <m>\dfrac{dy}{dx}=x^{2}e^{-y}</m> is separable.
-            </p>
-          </li>
+        <p>
+          <m>\dfrac{dy}{dx}=x^{2}e^{-y}</m> is separable.
+        </p>
+      </example>
 
-          <li>
-            <p>
-              <m>\dfrac{dy}{dt}=\sin t^{2}</m> is separable.
-            </p>
-          </li>
+      <example>
+        <p>
+          <m>\dfrac{dy}{dt}=\sin t^{2}</m> is separable.
+        </p>
+      </example>
 
-          <li>
-            <p>
-              The <term>exponential</term> differential equation
-              <m>\dfrac{dx}{dt}=kx</m> where <m>k\in \mathbb{R}</m> is separable
-              (and autonomous).
-            </p>
-          </li>
+      <example>
+        <p>
+          The <term>exponential</term> differential equation
+          <m>\dfrac{dx}{dt}=kx</m> where <m>k\in \mathbb{R}</m> is separable
+          (and autonomous).
+        </p>
+      </example>
 
-          <li>
-            <p>
-              The <term>logistic</term> differential equation
-              <m>\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)</m> where (
-              <m>k, N &gt; 0 </m> are constants) is separable (and autonomous).
-            </p>
-          </li>
+      <example>
+        <p>
+          The <term>logistic</term> differential equation
+          <m>\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)</m> where (
+          <m>k, N &gt; 0 </m> are constants) is separable (and autonomous).
+        </p>
+      </example>
 
-          <li>
-            <p>
-              <m>\dfrac{dy}{dx}=\dfrac{\sqrt{y}}{xy+x+y+1}</m> is separable.
-            </p>
-          </li>
+      <example>
+        <p>
+          <m>\dfrac{dy}{dx}=\dfrac{\sqrt{y}}{xy+x+y+1}</m> is separable.
+        </p>
+      </example>
 
-          <li>
-            <p>
-              <m>\dfrac{dy}{dx}=y+x</m> is not separable.
-              As we will see in Section <xref ref="sec-Linear"/>, this equation
-              is also <term>linear</term>.
-            </p>
-          </li>
+      <example>
+        <p>
+          <m>\dfrac{dy}{dx}=y+x</m> is not separable.
+          As we will see in Section <xref ref="sec-Linear"/>, this equation is
+          also <term>linear</term>.
+        </p>
+      </example>
 
-          <li>
-            <p>
-              <m>\dfrac{dy}{dx}=y^{3}+xy+5</m> is not separable.
-            </p>
-          </li>
-        </ol>
+      <example>
+        <p>
+          <m>\dfrac{dy}{dx}=y^{3}+xy+5</m> is not separable.
+        </p>
       </example>
     </subsection>
     <!-- ===================================================== -->
@@ -595,10 +597,10 @@
 
       <p>
         Consider a separable differential equation
+        <md>
+          \dfrac{dy}{dx}=g(x)h(y).
+        </md>
       </p>
-      <md>
-        \dfrac{dy}{dx}=g(x)h(y).
-      </md>
 
       <p>
         Observe that, if there is such a <m>c\in \mathbb{R}</m> such that
@@ -612,50 +614,52 @@
       <!-- Subsubsection - How Separation Works -->
       <!-- ===================================================== -->
       <!-- ===================================================== -->
-      <subsubsection xml:id="subsubsec-How-separation-works">
+      <paragraphs xml:id="subsubsec-How-separation-works">
         <title>How Separation of Variables Works</title>
 
         <p>
           The method of separation of variables works as follows:
         </p>
 
-        <ol>
-          <li>
-            <p>
-              Find all equilibrium solutions from the equation
-            </p>
-            <md>
-              h(y)=0.
-            </md>
-          </li>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Find all equilibrium solutions from the equation
+                <md>
+                  h(y)=0.
+                </md>
+              </p>
+            </li>
 
-          <li>
-            <p>
-              Separate the variables:
-            </p>
-            <md>
-              \frac{1}{h(y)}\, dy=g(x)\,dx.
-            </md>
-          </li>
+            <li>
+              <p>
+                Separate the variables:
+                <md>
+                  \frac{1}{h(y)}\, dy=g(x)\,dx.
+                </md>
+              </p>
+            </li>
 
-          <li>
-            <p>
-              Integrate both sides:
-            </p>
-            <md>
-              \int\frac{1}{h(y)}\,dy=\int g(x)\,dx.
-            </md>
-          </li>
+            <li>
+              <p>
+                Integrate both sides:
+                <md>
+                  \int\frac{1}{h(y)}\,dy=\int g(x)\,dx.
+                </md>
+              </p>
+            </li>
 
-          <li>
-            <p>
-              Solve the resulting equation for <m>y</m>, whenever possible,
-              obtaining a general solution.
-              The equilibrium solutions that are not included in this general
-              solution give the singular solutions.
-            </p>
-          </li>
-        </ol>
+            <li>
+              <p>
+                Solve the resulting equation for <m>y</m>, whenever possible,
+                obtaining a general solution.
+                The equilibrium solutions that are not included in this general
+                solution give the singular solutions.
+              </p>
+            </li>
+          </ol>
+        </p>
 
         <example xml:id="example-Singular">
           <statement>
@@ -697,81 +701,83 @@
               variables.
             </p>
 
-            <ol>
-              <li>
-                <p>
-                  Find the equilibrium solutions from the equation
-                  <md>
-                    2y+1=0.
-                  </md>
-                </p>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Find the equilibrium solutions from the equation
+                    <md>
+                      2y+1=0.
+                    </md>
+                  </p>
 
-                <p>
-                  Clearly, there is only one: <m>y=-\dfrac{1}{2}</m>.
-                </p>
-              </li>
+                  <p>
+                    Clearly, there is only one: <m>y=-\dfrac{1}{2}</m>.
+                  </p>
+                </li>
 
-              <li>
-                <p>
-                  Separate the variables:
-                </p>
-                <md>
-                  \frac{1}{2y+1}dy=\frac{1}{t}dt\quad (y\neq -1/2)
-                </md>
-              </li>
+                <li>
+                  <p>
+                    Separate the variables:
+                    <md>
+                      \frac{1}{2y+1}dy=\frac{1}{t}dt\quad (y\neq -1/2)
+                    </md>
+                  </p>
+                </li>
 
-              <li>
-                <p>
-                  Integrate both sides:
-                </p>
-                <md>
-                  <mrow> \int\frac{1}{2y+1}dy\amp =\int\frac{1}{t}dt,</mrow>
-                  <mrow> \frac{1}{2}\ln|2y+1|\amp =\ln|t|+c\ (c\in \mathbb{R}).</mrow>
-                </md>
-              </li>
+                <li>
+                  <p>
+                    Integrate both sides:
+                    <md>
+                      <mrow> \int\frac{1}{2y+1}dy\amp =\int\frac{1}{t}dt,</mrow>
+                      <mrow> \frac{1}{2}\ln|2y+1|\amp =\ln|t|+c\ (c\in \mathbb{R}).</mrow>
+                    </md>
+                  </p>
+                </li>
 
-              <li>
-                <p>
-                  Solve the resulting equation for <m>y</m>:
-                </p>
-                <md>
-                  <mrow> \ln|2y+1|\amp =2\ln|t|+c\amp \amp(\text{where } c\in \mathbb{R}) </mrow>
-                  <mrow> |2y+1|\amp =e^{2\ln|t|+c} \amp \amp\text{(exponentiate both sides)}</mrow>
-                  <mrow> |2y+1|\amp =e^{c}\;t^{2} \amp \amp\text{(exponent rules)}</mrow>
-                  <mrow> |2y+1|\amp =c_{1}\;t^{2} \amp \amp(\text{replace } c_{1}:=e^{c} &gt; 0)</mrow>
-                  <mrow> 2y+1\amp =\pm c_{1}\;t^{2}</mrow>
-                  <mrow> 2y+1\amp =c_{2}t^{2} \amp \amp(\text{ where }c_{2} := \pm c_{1} \neq 0 ) </mrow>
-                  <mrow> y\amp =c_{2}\;t^{2}-\frac{1}{2} \amp \amp(\text{solve for }y)</mrow>
-                </md>
+                <li>
+                  <p>
+                    Solve the resulting equation for <m>y</m>:
+                    <md>
+                      <mrow> \ln|2y+1|\amp =2\ln|t|+c\amp \amp(\text{where } c\in \mathbb{R}) </mrow>
+                      <mrow> |2y+1|\amp =e^{2\ln|t|+c} \amp \amp\text{(exponentiate both sides)}</mrow>
+                      <mrow> |2y+1|\amp =e^{c}\;t^{2} \amp \amp\text{(exponent rules)}</mrow>
+                      <mrow> |2y+1|\amp =c_{1}\;t^{2} \amp \amp(\text{replace } c_{1}:=e^{c} &gt; 0)</mrow>
+                      <mrow> 2y+1\amp =\pm c_{1}\;t^{2}</mrow>
+                      <mrow> 2y+1\amp =c_{2}t^{2} \amp \amp(\text{ where }c_{2} := \pm c_{1} \neq 0 ) </mrow>
+                      <mrow> y\amp =c_{2}\;t^{2}-\frac{1}{2} \amp \amp(\text{solve for }y)</mrow>
+                    </md>
+                  </p>
 
-                <p>
-                  Renaming <m>c_{2}</m> to simply <m>c</m>, we obtain the
-                  general solution
-                </p>
-                <md>
-                  \boxed{y(x)=ct^2-\dfrac{1}{2}\qquad\text{where } c\in \mathbb{R}\text{ and }t\neq 0}
-                </md>
+                  <p>
+                    Renaming <m>c_{2}</m> to simply <m>c</m>, we obtain the
+                    general solution
+                    <md>
+                      \boxed{y(x)=ct^2-\dfrac{1}{2}\qquad\text{where } c\in \mathbb{R}\text{ and }t\neq 0}
+                    </md>
+                  </p>
 
-                <p>
-                  <em>Question:</em> What is the reason for the requirement that
-                  <m>t\neq 0</m>?
-                </p>
+                  <p>
+                    <em>Question:</em> What is the reason for the requirement
+                    that <m>t\neq 0</m>?
+                  </p>
 
-                <p>
-                  Observe that the equilibrium solution <m>y=-\dfrac{1}{2}</m>
-                  is attained when <m>c=0</m>.
-                </p>
-              </li>
-            </ol>
+                  <p>
+                    Observe that the equilibrium solution <m>y=-\dfrac{1}{2}</m>
+                    is attained when <m>c=0</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
           </solution>
         </example>
-      </subsubsection>
+      </paragraphs>
       <!-- ===================================================== -->
       <!-- ===================================================== -->
       <!-- Subsubsection - Why Separation of Variables Works -->
       <!-- ===================================================== -->
       <!-- ===================================================== -->
-      <subsubsection>
+      <paragraphs>
         <title>Why Separation of Variables Works</title>
 
         <p>
@@ -825,7 +831,7 @@
           the chain rule (considering <m>y=y(x)</m> ), we arrive at
           <xref ref="eq-Why-separation-works"/> for all <m>x\in I</m>.
         </p>
-      </subsubsection>
+      </paragraphs>
     </subsection>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -991,6 +997,7 @@
     <!-- ===================================================== -->
     <subsection>
       <title>Radiocarbon Dating</title>
+
       <p>
         Carbon-14 is a radioactive isotope of carbon produced in the upper
         atmosphere by radiation from the sun.
@@ -1008,7 +1015,7 @@
       <!-- Subsubsubsection - Mathematical Model -->
       <!-- ===================================================== -->
       <!-- ===================================================== -->
-      <subsubsection>
+      <paragraphs>
         <title>Mathematical Model</title>
 
         <p>
@@ -1028,13 +1035,9 @@
           For example, if we have the half-life of Carbon-14 (which is standard
           information for a radioactive isotope), we can determine <m>k</m>.
         </p>
-      </subsubsection>
-      <!-- ===================================================== -->
-      <!-- ===================================================== -->
-      <!-- Subsubsubsection - Sample Case -->
-      <!-- ===================================================== -->
-      <!-- ===================================================== -->
-      <subsubsection>
+      </paragraphs>
+
+      <paragraphs>
         <title>Sample Case</title>
 
         <p>
@@ -1094,13 +1097,13 @@
           of Carbon-14, or <m>y(t_{\ast}) = 0.3y_{0}.</m> So, plugging this into
           our solution for <m>y(t)</m> will allow us to solve for the age of the
           remains.
+          <md>
+            <mrow>0.3y_{0}\amp = y_{0} e^{-0.000121t_{\ast}} </mrow>
+            <mrow>\ln 0.3\amp = -0.000121 t_{\ast}</mrow>
+            <mrow> t_{\ast}\amp = -\frac{\ln 0.3}{0.000121}\approx 9,950 \text{ years}. </mrow>
+          </md>
         </p>
-        <md>
-          <mrow>0.3y_{0}\amp = y_{0} e^{-0.000121t_{\ast}} </mrow>
-          <mrow>\ln 0.3\amp = -0.000121 t_{\ast}</mrow>
-          <mrow> t_{\ast}\amp = -\frac{\ln 0.3}{0.000121}\approx 9,950 \text{ years}. </mrow>
-        </md>
-      </subsubsection>
+      </paragraphs>
     </subsection>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -1210,40 +1213,44 @@
       <example>
         <title>Mixing Problem with Constant Volume</title>
 
-        <p>
-          A tank contains <m>1000</m> L of pure water.
-          A brine containing <m>0.05</m> kg/L of salt enters the tank at a
-          constant rate of <m>5</m> L/min.
-          A brine containing <m>0.04</m> kg/L of salt enters the tank at a
-          constant rate of <m>10</m> L/min.
-          The solution is kept thoroughly mixed and drains from the tank at a
-          constant rate of <m>15</m> L/min.
-        </p>
+        <statement>
+          <p>
+            A tank contains <m>1000</m> L of pure water.
+            A brine containing <m>0.05</m> kg/L of salt enters the tank at a
+            constant rate of <m>5</m> L/min.
+            A brine containing <m>0.04</m> kg/L of salt enters the tank at a
+            constant rate of <m>10</m> L/min.
+            The solution is kept thoroughly mixed and drains from the tank at a
+            constant rate of <m>15</m> L/min.
+          </p>
 
-        <ol>
-          <li>
-            <p>
-              Set up an initial value problem describing how the amount of salt
-              in the tank changes over time.
-            </p>
-          </li>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Set up an initial value problem describing how the amount of
+                  salt in the tank changes over time.
+                </p>
+              </li>
 
-          <li>
-            <p>
-              Find the amount of salt in the tank after <m>t</m> min.
-            </p>
-          </li>
-        </ol>
+              <li>
+                <p>
+                  Find the amount of salt in the tank after <m>t</m> min.
+                </p>
+              </li>
+            </ol>
+          </p>
 
-        <figure xml:id="fig-mix1">
-          <caption>Mixing Problem with Constant Volume</caption>
-          <image source="mixconst1.jpg" width="60%">
-            <shortdescription>
-              Image of cylindrical tank with two input sources and one output
-              drain.
-            </shortdescription>
-          </image>
-        </figure>
+          <figure xml:id="fig-mix1">
+            <caption>Mixing Problem with Constant Volume</caption>
+            <image source="mixconst1.jpg" width="60%">
+              <shortdescription>
+                Image of cylindrical tank with two input sources and one output
+                drain.
+              </shortdescription>
+            </image>
+          </figure>
+        </statement>
 
         <solution>
           <p>
@@ -1266,20 +1273,20 @@
                         the inflow rate of salt entering the tank, which
                         consists of the sum of the rates coming from the two
                         sources
+                        <md>
+                          <mrow> \text{rate in}\amp = 5 \, \frac{\text{L}}{\text{min}}\cdot 0.05 \, \frac{\text{kg}}{\text{L}}+ 10 \, \frac{\text{L}}{\text{min}}\cdot 0.04 \, \frac{\text{kg}}{\text{L}} </mrow>
+                          <mrow> \amp = 0.65\ \text{ kg/min}.</mrow>
+                        </md>
                       </p>
-                      <md>
-                        <mrow> \text{rate in}\amp = 5 \, \frac{\text{L}}{\text{min}}\cdot 0.05 \, \frac{\text{kg}}{\text{L}}+ 10 \, \frac{\text{L}}{\text{min}}\cdot 0.04 \, \frac{\text{kg}}{\text{L}} </mrow>
-                        <mrow> \amp = 0.65\ \text{ kg/min}.</mrow>
-                      </md>
                     </li>
 
                     <li>
                       <p>
                         the outflow rate of salt leaving the tank:
+                        <md>
+                          \text{rate out}= 15 \frac{\text{L}}{\text{min}}\cdot\dfrac{y \text{ kg}}{1000 \text{ L}}= 0.015y\ \text{ kg/min}.
+                        </md>
                       </p>
-                      <md>
-                        \text{rate out}= 15 \frac{\text{L}}{\text{min}}\cdot\dfrac{y \text{ kg}}{1000 \text{ L}}= 0.015y\ \text{ kg/min}.
-                      </md>
                     </li>
                   </ul>
                 </p>
@@ -1288,10 +1295,10 @@
                   Since initially there was no salt in the tank ( <m>y(0)=0</m>
                   ), we obtain at the following IVP model for the mixing
                   problem:
+                  <md>
+                    \dfrac{dy}{dt}=0.65-0.015y,\ y(0)=0.
+                  </md>
                 </p>
-                <md>
-                  \dfrac{dy}{dt}=0.65-0.015y,\ y(0)=0.
-                </md>
               </li>
 
               <li>
@@ -1312,20 +1319,20 @@
                     <li>
                       <p>
                         Separating the variables, we obtain
+                        <md>
+                          <mrow> \dfrac{1}{0.65-0.015y}\,dy\amp = 1\,dt </mrow>
+                          <mrow> \int\dfrac{1}{0.65-0.015y}\,dy\amp =\int 1\,dt </mrow>
+                          <mrow> \dfrac{1}{-0.015}\ln|0.65-0.015y|\amp = t+c_{1} \quad (c_{1} \in \R). </mrow>
+                        </md>
                       </p>
-                      <md>
-                        <mrow> \dfrac{1}{0.65-0.015y}\,dy\amp = 1\,dt </mrow>
-                        <mrow> \int\dfrac{1}{0.65-0.015y}\,dy\amp =\int 1\,dt </mrow>
-                        <mrow> \dfrac{1}{-0.015}\ln|0.65-0.015y|\amp = t+c_{1} \quad (c_{1} \in \R). </mrow>
-                      </md>
 
                       <p>
                         Now we solve for <m>y</m>:
+                        <md>
+                          <mrow> \ln|0.015y-0.65|\amp = -0.015t+c \quad (c \in \R) </mrow>
+                          <mrow> y(t)\amp = \frac{0.65}{0.015}+ce^{-0.015t}\quad (c \in \R) </mrow>
+                        </md>
                       </p>
-                      <md>
-                        <mrow> \ln|0.015y-0.65|\amp = -0.015t+c \quad (c \in \R) </mrow>
-                        <mrow> y(t)\amp = \frac{0.65}{0.015}+ce^{-0.015t}\quad (c \in \R) </mrow>
-                      </md>
                     </li>
 
                     <li>
@@ -1340,25 +1347,28 @@
                         <md>
                           \boxed{y(t) =\frac{0.65}{0.015}-\frac{0.65}{0.015}e^{-0.015t}.}
                         </md>
+                        Note that <m>y</m> increasingly tends to the equilibrium
+                        <m> \dfrac{0.65}{0.015}\approx 43 </m> kg as
+                        <m> t\to \infty </m>, but never attains it.
                       </p>
                     </li>
                   </ul>
                 </p>
               </li>
             </ol>
+          </p>
 
-            <figure xml:id="fig-mix2">
-              <caption>The Graph of <m>y</m> ( <m>y(0)=0</m> )</caption>
-              <image source="mixconst2.jpg" width="80%"/>
-              <shortdescription>
+        <figure xml:id="fig-mix2">
+          <caption>The Graph of <m>y</m> ( <m>y(0)=0</m> )</caption>
+          <image source="mixconst2.jpg" width="80%">
+            <description>
+              <p>
                 Curve that starts at origin and increases towards a horizontal
                 asymptote at <m>y=43</m>.
-              </shortdescription>
-            </figure>
-            Note that <m> y </m> increasingly tends to the equilibrium
-            <m> \dfrac{0.65}{0.015}\approx 43 </m> kg as <m> t\to \infty </m>,
-            but never attains it.
-          </p>
+              </p>
+            </description>
+          </image>
+        </figure>
         </solution>
       </example>
     </subsection>
@@ -1384,11 +1394,11 @@
       <example xml:id="ex-newt">
         <statement>
           <p>
-            Consider a tray of cookies removed from the oven at
-            350<m>^{\circ}</m> F and placed in a room with a temperature of
-            72<m>^{\circ}</m> F.
-            If the cookies are at 240<m>^{\circ}</m> F after 10 minutes, how
-            long will it take for them to cool to 80<m>^{\circ}</m> F?
+            Consider a tray of cookies removed from the oven at 350
+            <m>^{\circ}</m> F and placed in a room with a temperature of 72
+            <m>^{\circ}</m> F.
+            If the cookies are at 240 <m>^{\circ}</m> F after 10 minutes, how
+            long will it take for them to cool to 80 <m>^{\circ}</m> F?
           </p>
         </statement>
 
@@ -1396,10 +1406,10 @@
           <p>
             The IVP modeling this situation is given by applying equation
             <xref ref="eq-cool"/>:
+            <md>
+              \dfrac{dT}{dt}= k(72 - T), \ T(0) = 350.
+            </md>
           </p>
-          <md>
-            \dfrac{dT}{dt}= k(72 - T), \ T(0) = 350.
-          </md>
 
           <p>
             We will apply the method of separation of variables.
@@ -1411,14 +1421,14 @@
 
           <p>
             Integrate both sides and solve for <m>T</m>:
+            <md>
+              <mrow> \int \dfrac{1}{72-T}\, dT\amp = \int k \, dt </mrow>
+              <mrow> -\ln|72 - T|\amp = kt + c </mrow>
+              <mrow> \ln|72 - T|\amp = -kt + c </mrow>
+              <mrow> 72 - T\amp = ce^{-kt} </mrow>
+              <mrow> T\amp = 72 + ce^{-kt}. </mrow>
+            </md>
           </p>
-          <md>
-            <mrow> \int \dfrac{1}{72-T}\, dT\amp = \int k \, dt </mrow>
-            <mrow> -\ln|72 - T|\amp = kt + c </mrow>
-            <mrow> \ln|72 - T|\amp = -kt + c </mrow>
-            <mrow> 72 - T\amp = ce^{-kt} </mrow>
-            <mrow> T\amp = 72 + ce^{-kt}. </mrow>
-          </md>
 
           <p>
             We next need to determine <m>c</m> and <m>k</m>.
@@ -1439,23 +1449,26 @@
             Now we use the fact (given in the problem) that <m>T(10) = 240</m>
             to find <m>k</m>.
           </p>
-          <md>
-            <mrow> 240 \amp = 72 + 278e^{-10k} </mrow>
-            <mrow> 168 \amp = 278 e^{-10k} </mrow>
-            <mrow> e^{-10k} \amp = \dfrac{168}{278}= \dfrac{84}{139}. </mrow>
-          </md>
+
+          <p>
+            <md>
+              <mrow> 240 \amp = 72 + 278e^{-10k} </mrow>
+              <mrow> 168 \amp = 278 e^{-10k} </mrow>
+              <mrow> e^{-10k} \amp = \dfrac{168}{278}= \dfrac{84}{139}. </mrow>
+            </md>
+          </p>
 
           <p>
             Then take the natural log of both sides and solve for <m>k</m>:
+            <md>
+              <mrow> -10k\amp = \ln\left( \dfrac{84}{139}\right) </mrow>
+              <mrow> k\amp = -\frac{1}{10}\ln\left( \dfrac{84}{139}\right) \approx 0.053657. </mrow>
+            </md>
           </p>
-          <md>
-            <mrow> -10k\amp = \ln\left( \dfrac{84}{139}\right) </mrow>
-            <mrow> k\amp = -\frac{1}{10}\ln\left( \dfrac{84}{139}\right) \approx 0.053657. </mrow>
-          </md>
 
           <p>
             Let <m>t_{s}</m> denote the time at which the temperature of the
-            cookies is 80<m>^{\circ}</m> F.
+            cookies is 80 <m>^{\circ}</m> F.
             Then
           </p>
 
@@ -1467,7 +1480,7 @@
 
           <p>
             Solving for <m>t_{s}</m> gives us <m>t_{s} = 70.45</m>.
-            So, the cookies will be at 80<m>^{\circ}</m> F after 70.45 minutes,
+            So, the cookies will be at 80 <m>^{\circ}</m> F after 70.45 minutes,
             or after 1 hour, 10 minutes, and 27 seconds.
           </p>
         </solution>
@@ -1512,10 +1525,10 @@
               proportional to the current excess amount relative to the natural
               level of the drug (typically 0) is modeled by the differential
               equation
+              <md>
+                \frac{dy}{dt}= -r y,
+              </md>
             </p>
-            <md>
-              \frac{dy}{dt}= -r y,
-            </md>
 
             <p>
               where <m>r &gt; 0</m>.
@@ -1606,4 +1619,621 @@
       </p>
     </subsection>
   </section>
+  <!-- ===================================================== -->
+  <!-- ===================================================== -->
+  <!-- Section - Applications of Separable Equations -->
+  <!-- ===================================================== -->
+  <!-- ===================================================== -->
+  <section xml:id="linear">
+    <title>Linear Differential Equations and Applications</title>
+
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Subsection - Motivating Example: Evaporating Raindrop -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <subsection>
+      <title>Motivating Example: Evaporating Raindrop <xref ref="Zill"/></title>
+
+      <p>
+        As a raindrop falls, it evaporates to some extent.
+        We assume that as it evaporates, it still maintains its spherical shape.
+        We make the following additional assumptions:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              the evaporation rate of the raindrop is proportional to its
+              surface area; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              air resistance does not impact the velocity of the raindrop.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        With these assumptions, the velocity <m>v(t)</m> of the raindrop
+        satisfies the model
+        <md>
+          \dfrac{dv}{dt}- \left(\dfrac{3\left(\frac{k}{\rho}\right)}{r_0 - \left(\frac{k}{\rho}\right)t}\right)v = g, \ v(0) = v_{0}
+        </md>
+        where <m>g</m> is the acceleration due to gravity, <m>\rho</m> is the
+        density of the raindrop, <m>r_{0}</m> is the initial radius of the drop,
+        and <m>k&gt;0</m> is the constant of proportionality.
+        We take the downward direction to be positive.
+      </p>
+
+      <p>
+        This equation is a <term>linear differential equation</term>.
+        If we assume that
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+              the initial radius of the drop is <m>1</m> cm,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\rho = 1 \text{ kg/}\text{m}^{3}</m> (or
+              <m>\rho = 0.001 \text{ g/}\text{cm}^{3}</m> ), and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>v_{0} = 0</m>,
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        then we have
+        <md>
+          v = \dfrac{73500kt^2-49t}{1500000kt-500}\text{ cm/s}.
+        </md>
+      </p>
+    </subsection>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Subsection - Definition and Examples -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <subsection>
+      <title>Definition and Examples</title>
+
+      <definition>
+        <statement>
+          <p>
+            Linear Differential Equationf-olde
+          </p>
+
+          <p>
+            A first-order differential equation of the form
+            <md>
+              y'+p(x)y=q(x)
+            </md>
+            with the coefficient function <m>p(x)</m> and the right-hand-side
+            function <m>q(x)</m>, both continuous on an open interval <m>I</m>,
+            is called a <term>linear</term> first-order differential equation.
+          </p>
+
+          <p>
+            If <m>q(x)\equiv 0</m> on <m>I</m>, the differential equation is
+            called <term>homogeneous</term> and <term>nonhomogeneous</term>
+            otherwise.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <p>
+          <m>\dfrac{dx}{dt}=kx</m> ( <m>k\in \mathbb{R}</m> ) is linear and
+          separable (autonomous).
+        </p>
+      </example>
+
+      <example>
+        <p>
+          <m>y'=(\cot x)y</m> is linear and separable.
+        </p>
+      </example>
+
+      <example>
+        <p>
+          <m>y'=y+x</m> is linear, but not separable.
+        </p>
+      </example>
+
+      <example>
+        <p>
+          <m>\dfrac{dy}{dt}=ky\left(1-\dfrac{y}{N}\right)</m> where
+          <m>k,N\in\mathbb{R}</m>, is nonlinear, separable (and autonomous).
+        </p>
+      </example>
+
+      <example>
+        <p>
+          <m>y'=xy^{2}+\ln x</m> is neither linear nor separable.
+        </p>
+      </example>
+    </subsection>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Subsection - Method of Integrating Factor -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+  <subsection>
+    <title>Method of Integrating Factor</title>
+
+    <p>
+      This method is for solving a linear first-order differential equation
+    <md>
+      y'+p(x)y=q(x).
+    </md>
+    </p>
+
+    <p>
+      It works by multiplying both sides by a suitable function <m>\mu(x)</m>,
+      called an <term>integrating factor</term>,
+    <md>
+      \mu(x)y'+p(x)\mu(x)y=\mu(x)q(x)
+    </md>
+    </p>
+
+    <p>
+      to make the left-hand side of the resulting equation recognizable as the
+      derivative of a product:
+    <md>
+      \left[\mu(x)y\right]'=\mu(x)y'+\mu'(x)y.
+    </md>
+    </p>
+
+    <p>
+      As we can see, the appropriate choice of <m>\mu(x)</m> is prescribed by the
+      differential equation
+    <md>
+      \mu'(x)=p(x)\mu(x).
+    </md>
+    </p>
+
+    <p>
+      Solving this DE by the method of separation of variables, we have
+    <md>
+      \mu(x)=e^{\int p(x)\,dx}.
+    </md>
+    </p>
+
+    <paragraphs>
+      <title>How It Works</title>
+
+      <p>
+        The method works as follows:
+      </p>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              Calculate the <em>integrating factor</em>
+            <md xml:id="eq-Integrating-factor" number="yes">
+              \mu(x)=e^{\int p(x)\,dx}.
+            </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Multiply both sides of the differential equation by <m>\mu(x)</m>
+            <md>
+              \mu(x)y'+p(x)\mu(x)y=\mu(x)q(x)
+            </md>
+            </p>
+
+            <p>
+              and recognize the left-hand side of the resulting differential
+              equation as the derivative of a product to obtain the equation
+            <md>
+              \left[\mu(x)y\right]'=\mu(x)q(x).
+            </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Integrate both sides of the equation with respect to <m>x</m> to
+              obtain
+            <md>
+              \mu(x)y=\int\mu(x)q(x)\,dx.
+            </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Solve for <m>y</m> to obtain the general solution of the original
+              equation:
+            <md xml:id="eq-General-solution-using-integrating-factor" number="yes">
+              y(x) =\dfrac{1}{\mu(x)}\int\mu(x)q(x)\,dx.
+            </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+        <warning>
+          <p>You should <em>not</em> memorize formula <xref ref="eq-General-solution-using-integrating-factor"/>.
+        Rather, you <em>should memorize</em> the formula for the integrating factor <xref ref="eq-Integrating-factor"/> and understand how to apply the integrating factor
+        as in <xref ref="example-Proper-linear"/> through <xref ref="example-Linear-and-seperable"/>.</p>
+        </warning>
+
+    </paragraphs>
+
+
+
+<note>
+  <title>Some Notes about Linear Equations</title>
+        <p>
+        <ol>
+          <li>
+            <p>
+              The general solution of a first-order linear differential equation
+              on an interval <m>I</m> contains <em>all</em> of its particular
+              solutions, and thus, there are no singular ones.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              It should be noted that the integrals we obtain in the described
+              method may be difficult, or even impossible, to express in terms of
+              elementary functions.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              In the formula for the integrating factor <xref ref="eq-Integrating-factor"/>, we can
+              regard the integration constant in the integral <m>\int p(x)\,dx</m>
+              to be <m>0</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Given an initial value problem
+            <md xml:id="IVP1" number="yes">
+              y'+p(x)y=q(x),\ y(x_{0})=y_{0},
+            </md>
+            </p>
+
+            <p>
+              where <m>x_{0}</m> is in an open interval <m>I</m>, where the
+              functions <m>p(x)</m> and <m>q(x)</m> are continuous, we can find
+              its <em>unique</em> solution by first finding the general solution
+              using the method of integrating factor and then finding the
+              appropriate value of the constant <m>c</m> by using the initial
+              condition.
+            </p>
+
+            <p>
+              We can also find the solution of initial value problem
+              <xref ref="IVP1"/> by adjusting formula <xref ref="eq-General-solution-using-integrating-factor"/> for the
+              general solution of the differential equation as follows:
+            <md>
+              <mrow> \mu(x)\amp = e^{\int_{x_0}^x p(t)\,dt} </mrow>
+              <mrow number="yes"> y\amp =\dfrac{1}{\mu(x)}\left[y_{0}+\int_{x_0}^{x} \mu(t)q(t)\,dt\right] </mrow>
+              <mrow> \amp =e^{-\int_{x_0}^x p(t)\,dt}\left[y_{0}+\int_{x_0}^{x} e^{\int_{x_0}^x p(t)\,dt}q(t)\,dt\right]. </mrow>
+            </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+</note>
+
+<example xml:id="example-Proper-linear">
+            <statement><p>
+            Find the general solution of
+          <md>
+            y'+3y=2xe^{-3x}.
+          </md>
+          </p></statement>
+          <solution>
+            <p>
+                          Since the equation is in the proper form, we
+            first find the integrating factor:
+            <md>
+              p(x) = 3, \text{ so }\mu(x) = e^{\int 3 \, dx}= e^{3x}.
+            </md>
+          </p>
+
+          <p>
+            Multiplying both sides of the DE by <m>\mu(x)</m> gives
+          <md>
+            e^{3x}y'+3e^{3x}y=2x,
+          </md>
+          </p>
+
+          <p>
+            which we can recognize as
+          <md>
+            \dfrac{d}{dx}\left(e^{3x}y\right)=2x.
+          </md>
+          </p>
+
+          <p/>
+          <p>
+            Integrating both sides with respect to <m>x</m>, we have:
+          <md>
+            <mrow> \int \dfrac{d}{dx}\left(e^{3x}y\right) \,dx\amp =\int 2x\,dx </mrow>
+            <mrow> e^{3x}y\amp = x^{2}+c\quad \text{($c\in \R$)}. </mrow>
+          </md>
+          </p>
+
+          <p>
+            Solving for <m>y</m>, we obtain the general solution of the DE
+          <md>
+            \boxed{y=e^{-3x}(x^2+c) \text{ ($c\in \R$)}.}
+          </md>
+          </p>
+
+          <p>
+            on <m>(-\infty,\infty)</m>.
+          </p>
+          </solution>
+</example>
+
+<example><statement><p>
+              Find a general solution of
+            <md>
+              (x^{2}+1)y' + 3xy = 6x.
+            </md></p>
+          </statement>
+          <solution>
+            <p>
+              First, we need to divide both sides of the
+            equation by <m>x^{2}+1</m> to get the equation in the proper form:
+            <md>
+              y' + \frac{3x}{x^{2}+1}y = \frac{6x}{x^{2}+1}.
+            </md>
+          </p>
+          <p>
+            Find the integrating factor:
+            <md>
+              p(x) = \frac{3x}{x^{2}+1}, \text{ so }\mu(x) = e^{\int \frac{3x}{x^{2}+1}dx}= e^{\frac{3}{2}\ln(x^2+1)}=   (x^{2}+1)^{\frac{3}{2}}.
+            </md>
+          </p>
+
+          <p>
+            Multiply both sides by <m>\mu(x)</m> and solve:
+          <md>
+            <mrow> (x^{2}+1)^{\frac{3}{2}}y' + \frac{3x}{x^{2}+1}(x^{2}+1)^{\frac{3}{2}}y\amp = \frac{6x}{x^{2}+1}(x^{2}+1)^{\frac{3}{2}} </mrow>
+            <mrow> (x^{2}+1)^{\frac{3}{2}}y' + 3(x^{2}+1)^{\frac{1}{2}}y\amp = 6x(x^{2}+1)^{\frac{1}{2}} </mrow>
+            <mrow> \frac{d}{dx}\left((x^{2}+1)^{\frac{3}{2}}y\right)\amp = 6x(x^{2}+1)^{\frac{1}{2}} </mrow>
+            <mrow> \int \frac{d}{dx}\left((x^{2}+1)^{\frac{3}{2}}y\right) dx\amp = \int 6x(x^{2}+1)^{\frac{1}{2}}dx </mrow>
+            <mrow> (x^{2}+1)^{\frac{3}{2}}y\amp = 2(x^{2} + 1)^{\frac{3}{2}}+ c </mrow>
+            <mrow> \amp \hspace{-3mm}\boxed{y(x) = 2 + c(x^2+1)^{-\frac{3}{2}} \ (c \in \R).} </mrow>
+          </md>
+          </p>
+          </solution>
+</example>
+
+<example>
+  <statement>
+    <p>
+                     Solve the initial value problem
+            <md>
+              y' - y = \frac{8}{11}e^{-\frac{x}{3}}, \ y(0) = -1.
+            </md> 
+    </p>
+  </statement>
+  <solution>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  First, find the general solution.
+                </p>
+
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        Find the integrating factor:
+                      </p>
+
+                      <p>
+                        <md>
+                          p(x) = -1, \text{ so }\mu(x) = e^{\int -1 dx}= e^{-x}.
+                        </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Multiply both sides of the equation by
+                        <m>\mu(x) = e^{-x}</m> and solve.
+                      <md>
+                        <mrow> e^{-x}y'-e^{-x}y\amp = \frac{8}{11}e^{-\frac{4x}{3}} </mrow>
+                        <mrow> \frac{d}{dx}\left(e^{-x}y\right)\amp = \frac{8}{11}e^{-\frac{4x}{3}} </mrow>
+                        <mrow> \int \frac{d}{dx}\left(e^{-x}y\right) dx\amp = \int \frac{8}{11}e^{-\frac{4x}{3}}dx </mrow>
+                        <mrow> e^{-x}y\amp = -\frac{6}{11}e^{-\frac{4x}{3}}+ c </mrow>
+                        <mrow> y\amp = -\frac{6}{11}e^{-\frac{x}{3}}+ ce^{x}. </mrow>
+                      </md>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find <m>c</m>, using <m>y(0)=-1</m>:
+                </p>
+
+                <p>
+                  <md>
+                    -1 = -\frac{6}{11}+ c, \text{ so }c = -\frac{5}{11}.
+                  </md>
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          <p>
+            Therefore,
+          </p>
+
+          <p>
+            <md>
+              \boxed{y(x) = -\frac{6}{11} e^{-\frac{x}{3}} - \frac{5}{11} e^x.}
+            </md>
+          </p>
+  </solution>
+</example>
+
+<example xml:id="example-Linear-and-seperable">
+  <statement>
+    <p>
+                  Solve the initial value problem
+          <md xml:id="eq-Linear-and-seperable" number="yes">
+            \dfrac{dy}{dt}=\dfrac{2y+1}{t},\ y(1)=0.
+          </md>
+            Note this is equation is both <em>linear</em> and <em>separable</em>
+            (we solved it in the previous section).
+            The equation <xref ref="eq-Linear-and-seperable"/> can be separated as follows:
+          <md>
+            y'-\dfrac{2}{t}\;y=\dfrac{1}{t}
+          </md>
+However, since the equation was initially presented in the standard linear form, in this example we will solve the original equation <xref ref="eq-Linear-and-seperable"/> using an integrating factor.
+    </p>
+  </statement>
+  <solution>
+    <p>
+            <ul>
+              <li>
+                <p>
+                  First, find the general solution.
+                </p>
+
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        Since the equation is in the proper form, we first find
+                        the integrating factor:
+                      </p>
+
+                      <p>
+                        <md>
+                          p(t) = -\frac{2}{t}\text{ so }\mu(t) = e^{-\int \frac{2}{t} \, dt}= e^{-2\ln |t|}= t^{-2}.
+                        </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Multiplying both sides of the DE by <m>\mu(t)</m> gives
+                      <md>
+                        t^{-2}y'-2t^{-3}y=t^{-3},
+                      </md>
+                      </p>
+
+                      <p>
+                        which we recognize as
+                      <md>
+                        \left[t^{-2}y\right]'=t^{-3}.
+                      </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Integrate both sides with respect to <m>t</m> to obtain:
+                      <md>
+                        <mrow> \int\left[t^{-2}y\right]'\,dt\amp = \int t^{-3}\,dt  </mrow>
+                        <mrow> t^{-2}y\amp = -\dfrac{1}{2}t^{-2}+c \quad (c\in \mathbb{R}). </mrow>
+                      </md>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Solving for <m>y</m>, we find the general solution of the
+                        DE:
+                      <md>
+                        y=ct^{2}-\dfrac{1}{2}\text{ ($c\in \R$)}
+                      </md>
+                      </p>
+
+                      <p>
+                        on each of the intervals <m>(-\infty,0)</m>,
+                        <m>(0,\infty)</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  We determine <m>c</m> by plugging in the initial condition
+                <md>
+                  0 = y(1) = c(1)^{2} - \dfrac{1}{2},
+                </md>
+                </p>
+
+                <p>
+                  so <m>c = \dfrac{1}{2}</m>.
+                </p>
+
+                <p>
+                  Therefore, the solution of the IVP is
+                <md>
+                  \boxed{y(t) =\dfrac{1}{2}t^2-\dfrac{1}{2},\  0&lt;t&lt;\infty.}
+                </md>
+                </p>
+              </li>
+            </ul>
+    </p>
+             <p>
+            We can also solve this problem by using the definite integral approach
+            (see <xref ref="eq-IVP-single-variable"/> ):
+          <md>
+            \mu(t)=\exp{\left(\int_{1}^t \left[-\dfrac{2}{x}\right]\,dx\right)}=\exp\left(-2\ln|t|\right)=t^{-2},\quad 0&lt;t&lt;\infty.
+          </md>
+          </p>
+
+          <p>
+            and the desired solution on <m>(0,\infty)</m> is obtained from
+          <md>
+            <mrow> y\amp =\dfrac{1}{t^{-2}}\left[0+\int_{1}^{t} x^{-2}\dfrac{1}{x}\,dx \right]  </mrow>
+             <mrow> \amp =t^{2}\left[\int_{1}^{t} x^{-3}\,dx \right] </mrow>
+            <mrow> \amp =t^{2}\left[\left.-\dfrac{1}{2}x^{-2}\right|_{1}^{t} \right] </mrow>
+            <mrow> \amp =t^{2}\left[\dfrac{1}{2}-\dfrac{1}{2}t^{-2}\right], </mrow>
+          </md>
+            so
+            <md>
+              \boxed{y(x) = \dfrac{1}{2}t^2-\dfrac{1}{2}, \  0 &lt; t &lt; \infty.}
+            </md>
+          </p>
+  </solution>
+</example>
+
+  </subsection>
+
+
+
+  </section>
+
 </chapter>

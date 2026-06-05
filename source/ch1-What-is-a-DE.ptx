@@ -61,13 +61,13 @@
 
 <p>
   Let <m>u</m> be a function of <m>x</m> and <m>y</m>. So <m>u = u(x, y)</m>.  Then we may represent the partial derivatives by, for example:
-  <me>
+  <md>
     \dfrac{\partial u}{\partial x} \text{ and } \dfrac{\partial^2 u}{\partial^2 y}
-  </me>
+  </md>
   or, equivalently
-  <me>
+  <md>
     u_x \text{ and } u_{yy}.
-  </me>
+  </md>
 </p>
 
 <warning xml:id="warning-only-ODEs">
@@ -87,9 +87,9 @@ where <m>F</m> is a function of the <m>n+2</m> variables.
 
 <p>
 An <m>n^{\text{th}}</m>-order differential equation solved relative to the highest derivative (which may not be possible) is said to be in <term>standard</term> (or <term>normal</term>) form:
-<me xml:id="eq-normal" number="yes">
+<md xml:id="eq-normal" number="yes">
   y^{(n)}=f\bigl(x,y,y',y'',\dots,y^{(n-1)}\bigr),
-</me>
+</md>
 where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{(n)}</m>.
 </p>
 
@@ -112,13 +112,13 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
   </statement>
 </definition>
 
-<example xml:id="example-iex" number="yes">
+<example xml:id="example-iex">
   <statement>
     <p>
       For any <m>c\in \R</m>, the function <m>y=ce^t</m> is a solution of the DE
-      <me>
+      <md>
         \dfrac{dy}{dt}=y
-      </me>
+      </md>
       on the interval <m>(-\infty,\infty)</m>      
     </p>
   </statement>
@@ -128,17 +128,19 @@ where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{
 
 <section xml:id="sec-exercises-chpt1">
   <title>Exercises for Chapter 1</title>
-<ol>
+<p><ol>
   <li>
     Verify the solution in <xref ref="example-iex" />.
   </li>
   <li>
-    Give an example of a differential equation whose solution is <me>y(x) = x^2-2\text{ on the interval }(-\infty, \infty)</me>.
+    <p>Give an example of a differential equation whose solution is
+    <md>y(x) = x^2-2\text{ on the interval }(-\infty, \infty).</md></p>
   </li>
   <li>
     Give an example of a differential equation and its solution.
   </li>
 </ol>
+</p>
 </section>
 
 </chapter>
