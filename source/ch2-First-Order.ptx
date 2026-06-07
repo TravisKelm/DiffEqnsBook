@@ -3019,8 +3019,9 @@
                 </definition>
 
                 <p>
-                    To solve differential equation <xref ref="eq-First-order-homogeneous"/>, make
-                    the substitution
+                    To solve differential equation
+                    <xref ref="eq-First-order-homogeneous"/>, make the
+                    substitution
                     <md>
                         v= \frac{y}{x}
                     </md>.
@@ -3034,7 +3035,8 @@
                 </p>
 
                 <p>
-                    Substituting into <xref ref="eq-First-order-homogeneous"/> gives
+                    Substituting into <xref ref="eq-First-order-homogeneous"/>
+                    gives
                     <md>
                         x \frac{dv}{dx}+ v = F(v) \text{ so }x \frac{dv}{dx}= F(v) - v
                     </md>,
@@ -3185,8 +3187,8 @@
                         </p>
 
                         <p>
-                            Substituting back in <m>\displaystyle v = \frac{y}{x}</m>
-                            gives
+                            Substituting back in
+                            <m>\displaystyle v = \frac{y}{x}</m> gives
                             <md>
                                 <mrow> \left(\frac{y}{x}\right)^{2} + 4\amp = cx^{2}, \amp\text{or}y^{2} + 4x^{2}\amp = cx^{4}</mrow>
                             </md>
@@ -3207,5 +3209,194 @@
                 </example>
             </paragraphs>
         </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Another Substitution -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>Another Substitution</title>
+
+            <p>
+                One example of another type of substitution is for equations of
+                the form
+                <md>
+                    \dfrac{dy}{dx}= F(ax + by + c),
+                </md>
+            </p>
+
+            <p>
+                where <m>a, \, b, \text{ and }c</m> are constants and
+                <m>b \ne 0</m>.
+                This can be transformed into a separable differential equation
+                by the substitution
+                <md>
+                    v = ax + by + c.
+                </md>
+            </p>
+
+            <p>
+                Then,
+                <md>
+                    \dfrac{dv}{dx}= a + b\dfrac{dy}{dx},
+                </md>
+            </p>
+
+            <p>
+                so
+                <md>
+                    \dfrac{dy}{dx}= \dfrac{1}{b}\left(\dfrac{dv}{dx}- a\right).
+                </md>
+            </p>
+
+            <example>
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            y' = (x+y+3)^{2}.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Let <m>v = x + y + 3</m>.
+                    </p>
+
+                    <p>
+                        Then
+                        <md>
+                            <mrow> v'&amp;= 1+ y'</mrow>
+                            <intertext>
+                                Since
+                                <m>
+                                    y' = (x + y +3)^{2} = v^{2}
+                                </m>
+                                , this gives
+                            </intertext>
+                            <mrow> v'&amp;= v^{2}+1 </mrow>
+                        </md>
+                    </p>
+
+                    <p>
+                        One can observe that this equation has no equilibrium
+                        solutions.
+                        (Can you see why not?)
+                        <md>
+                            <mrow> \int \frac{dv}{v^{2}+1}&amp;= \int dx </mrow>
+                            <mrow> \tan^{-1}v&amp;= x + c </mrow>
+                            <mrow> v&amp;= \tan(x+c) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        Substituting back in <m>v = x + y + 3</m> gives
+                        <md>
+                            x+y+3= \tan(x+c).
+                        </md>
+                    </p>
+
+                    <p>
+                        Therefore, the unique solution is
+                        <md>
+                            \boxed{y(x) = \tan(x+c)-x-3 \quad (c \in \mathbb{R}).}
+                        </md>
+                    </p>
+                </solution>
+            </example>
+
+            <example xml:id="example-Subs-not-linear">
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            y'=x^{2}-2xy+y^{2}.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Rewriting the DE as
+                        <md>
+                            y'=(y-x)^{2}
+                        </md>
+                        and substituting
+                        <md>
+                            v=y-x,\text{ so }v'=y'-1 \text{ and }y'=v'+1,
+                        </md>
+                        we arrive at the separable DE
+                        <md>
+                            v'=v^{2}-1.
+                        </md>
+                    </p>
+
+                    <p>
+                        The equilibrium solutions are <m>v=\pm 1</m>.
+                    </p>
+
+                    <p>
+                        Separating the variables and integrating, we have:
+                        <md>
+                            <mrow> \int\dfrac{1}{v^2-1}\,dv\amp =\int 1\,dx </mrow>
+                            <mrow> \dfrac{1}{2}\ln\left|\dfrac{v-1}{v+1}\right|\amp =x+c \quad (c\in \mathbb{R}) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        Exponentiating both sides, we obtain
+                        <md>
+                            \dfrac{v-1}{v+1}=ce^{2x}\quad  (c\in\mathbb{R}).
+                        </md>
+                    </p>
+
+                    <p>
+                        (Note that the singular equilibrium solution <m>v=-1</m>
+                        is not included).
+                    </p>
+
+                    <p>
+                        Next, substituting back ( <m>v=y-x</m> ), we obtain an
+                        implicit general solution of the initial problem
+                        <md>
+                            \boxed{\dfrac{y-x-1}{y-x+1}=ce^{2x}\quad (c\in\mathbb{R})}
+                        </md>.
+                    </p>
+                </solution>
+            </example>
+
+            <remark>
+              <title>Regarding <xref ref="example-Subs-not-linear"/></title>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                Note that the singular solution <m>y=x-1</m> is
+                                not included.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Since the DE nonlinear, singular solutions were
+                                to be expected.
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </remark>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Bernoulli Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+         
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Exercises for Substitution Section -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
     </section>
 </chapter>
