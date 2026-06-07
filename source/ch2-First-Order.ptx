@@ -2739,4 +2739,473 @@
             </p>
         </subsection>
     </section>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Section - Substitution Method -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <section xml:id="sec-subs">
+        <title>Substitution Method</title>
+
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Substitution Method -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>General Idea</title>
+
+            <p>
+                The general idea of the <term>Substitution Method</term> for a
+                first order differential of the form
+            </p>
+
+            <p>
+                <md>
+                    \dfrac{dy}{dx}= f(x, y)
+                </md>
+            </p>
+
+            <p>
+                is to
+            </p>
+
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            introduce a new function
+                            <md xml:id="subst1" number="yes">
+                                v = g(x,y),
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            differentiate by the <em>Chain Rule</em>
+                            (considering that <m>y = y(x)</m> )
+                            <md xml:id="subst2" number="yes">
+                                \dfrac{dv}{dx}= \dfrac{\partial g}{\partial x}(x, y) + \dfrac{\partial g}{\partial y}(x, y)\dfrac{dy}{dx},
+                            </md>
+                        </p>
+
+                        <p>
+                            and
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            solve <xref ref="subst2"/> <m>y'</m> and
+                            <xref ref="subst1"/> for <m>y</m> (if necessary) and
+                            substitute into the original DE to obtain a new
+                            first-order DE for <m>v</m> that would belong to one
+                            of the two classes of DE's that we know how to solve
+                            ( <em>separable</em> or <em>linear</em> );
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            solve the obtained DE for <m>v</m>; and
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            substitute <m>v=g(x,y)</m> back into the result to
+                            obtain an <em>implicit solution</em> of the original
+                            DE for <m>y</m>.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            A "good" substitution <m>v=g(x, y)</m> simplifies
+                            the DE, turning into one we can solve.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Obtaining an <em>explicit solution</em> for <m>y</m>
+                            may be possible but is not always practical.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+
+            <example>
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            (2x\sin y\cos y)y'=4x^{2}+\sin^{2}y.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Observe that, assuming <m>y</m> to be a function of
+                        <m>x</m>, <m>y=y(x)</m>, by the chain rule, we have:
+                        <md>
+                            \dfrac{d}{dx}(\sin^{2} y)=2\sin y\cos y y'.
+                        </md>
+                    </p>
+
+                    <p>
+                        Hence via the substitution
+                        <md>
+                            v=\sin^{2} y,\text{ so }v'=2\sin y\cos y y',
+                        </md>
+                    </p>
+
+                    <p>
+                        the DE is transformed into
+                        <md>
+                            xv'=4x^{2}+v,
+                        </md>
+                    </p>
+
+                    <p>
+                        which we write in standard form is
+                        <md>
+                            v'-\dfrac{1}{x}v=4x.
+                        </md>
+                    </p>
+
+                    <p>
+                        The latter differential equation is linear, so we may
+                        solve it using the method of integrating factor.
+                        The integrating factor is
+                        <md>
+                            \mu(x)=e^{-\int\frac{1}{x}\,dx}=e^{-\ln|x|}=\dfrac{1}{x}\quad \text{(the absolute value can be omitted)}.
+                        </md>
+                    </p>
+
+                    <p>
+                        Multiplying both sides by <m>\mu(x)=\dfrac{1}{x}</m> and
+                        recognizing the left-hand side as the derivative of a
+                        product, we have:
+                        <md>
+                            \left(\dfrac{1}{x}v\right)'=4.
+                        </md>
+                    </p>
+
+                    <p>
+                        Integrating both sides with respect to <m>x</m> gives
+                        <md>
+                            \dfrac{1}{x}v=\int 4\,dx=4x+c\quad (c\in \mathbb{R}).
+                        </md>
+                    </p>
+
+                    <p>
+                        Solving for <m>v</m>, we obtain
+                        <md>
+                            v=4x^{2}+cx\quad (c\in \mathbb{R})
+                        </md>
+                    </p>
+
+                    <p>
+                        and substituting back, we obtain an implicit general
+                        solution of the original equation,
+                        <md>
+                            \boxed{\sin^2 y=4x^2+cx \text{ where } (c\in\mathbb{R}).}
+                        </md>
+                    </p>
+                </solution>
+            </example>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Homogenous Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <subsection>
+            <title>Homogeneous Differential Equations</title>
+
+            <paragraphs>
+                <title>
+                    Motivating Example: Solar Collector <xref ref="Zill"/>
+                </title>
+
+                <p>
+                    If we assume that when the curve <m>C</m> shown below is
+                    revolved about the <m>x</m>-axis, it produces a surface of
+                    revolution having the property that all light rays <m>L</m>
+                    parallel to the <m>x</m>-axis, upon striking the surface,
+                    are reflected to one point <m>O</m>, which we label the
+                    origin.
+                </p>
+
+                <image source="solarCollector.png" width="80%">
+                    <description>
+                        <p>
+                            Ray from the origin reflects parallel to
+                            <m>x</m>-axis when ray hits the curve.
+                        </p>
+                    </description>
+                </image>
+
+                <p>
+                    Using the fact that the angle of incidence is equal to the
+                    angle of reflection, we can determine a differential
+                    equation that describes the shape of the curve <m>C</m>.
+                    This type of curve is important in applications, such as the
+                    construction of telescopes and satellite antennas,
+                    automobile headlights, and solar collectors.
+                    From geometry, we can see that the angle between the
+                    reflected line and the <m>x</m>-axis, denoted <m>\phi</m>,
+                    and the angle between <m>L</m> and <m>C</m> at the point of
+                    incidence, denoted <m>\theta</m> are related by
+                    <m>\phi = 2\theta</m>.
+                    Using this, we obtain the differential equation
+                </p>
+
+                <p>
+                    <md>
+                        \frac{dy}{dx}= \frac{-x + \sqrt{x^{2} + y^{2}}}{y}.
+                    </md>
+                    This equation is nonlinear and homogeneous, where
+                    homogeneous will be defined below.
+                    The solution of this problem requires a bit more work than
+                    the examples which we will do, because it results in a
+                    complicated integral.
+                    A general solution is
+                </p>
+
+                <p>
+                    <md>
+                        y^{2} = c(c-2x),
+                    </md>
+                </p>
+
+                <p>
+                    which is a parabola that is symmetric with respect to the
+                    <m>x</m>-axis.
+                    Try to see if you can obtain this solution.
+                </p>
+
+                <note>
+                    <p>
+                        This problem may also be solved by a different type of
+                        substitution, namely, <m>u = x^{2} + y^{2}</m>.
+                        We will discuss such substitutions a bit later.
+                    </p>
+                </note>
+
+                <definition xml:id="def-First-order-homogeneous">
+                    <statement>
+                        <p>
+                            First-Order Homogeneous Differential Equations
+                        </p>
+
+                        <p>
+                            A
+                            <term>first-order homogeneous differential equation</term>
+                            is a first-order differential equation that can be
+                            written as
+                            <md xml:id="eq-First-order-homogeneous" number="yes">
+                                \frac{dy}{dx}= F\left(\frac{y}{x}\right).
+                            </md>
+                        </p>
+                    </statement>
+                </definition>
+
+                <p>
+                    To solve differential equation <xref ref="eq-First-order-homogeneous"/>, make
+                    the substitution
+                    <md>
+                        v= \frac{y}{x}
+                    </md>.
+                </p>
+
+                <p>
+                    Therefore,
+                    <md>
+                        y= vx\quad \text{and}\quad\frac{dy}{dx}= x \frac{dv}{dx}+ v
+                    </md>.
+                </p>
+
+                <p>
+                    Substituting into <xref ref="eq-First-order-homogeneous"/> gives
+                    <md>
+                        x \frac{dv}{dx}+ v = F(v) \text{ so }x \frac{dv}{dx}= F(v) - v
+                    </md>,
+                    which is a separable equation.
+                </p>
+
+                <example>
+                    <statement>
+                        <p>
+                            Find a general solution of
+                            <md>
+                                x^{3}y'=x^{2}y-y^{3}.
+                            </md>
+                        </p>
+                    </statement>
+
+                    <solution>
+                        <p>
+                            Dividing both sides by <m>x^{3}</m>, we see that we
+                            obtain:
+                            <md>
+                                y'=\dfrac{y}{x}-\left(\dfrac{y}{x}\right)^{3}.
+                            </md>
+                            Therefore, the DE is homogeneous.
+                        </p>
+
+                        <p>
+                            Substituting
+                            <md>
+                                v=\dfrac{y}{x},\text{ so }y=xv \text{ and }y'=v+xv',
+                            </md>
+                            we obtain the separable DE
+                            <md>
+                                v+xv'=v-v^{3}.
+                            </md>
+                        </p>
+
+                        <p>
+                            The equilibrium solution is <m>v=0</m>.
+                        </p>
+
+                        <p>
+                            Separating the variables and integrating, we have:
+                            <md>
+                                <mrow> -\int v^{-3}\,dv\amp =\int \dfrac{1}{x}\,dx </mrow>
+                                <mrow> \frac{1}{2}v^{-2}\amp = \ln|x|+c \quad \text{($c\in \R$)} </mrow>
+                            </md>.
+                        </p>
+
+                        <p>
+                            (Note that the singular equilibrium solution
+                            <m>v=0</m> is not included.)
+                        </p>
+
+                        <p>
+                            Multiplying by 2 and substituting back, we obtain an
+                            implicit general solution of the initial problem
+                            <md>
+                                \boxed{\dfrac{x^2}{y^2}=2\ln|x|+c \text{ ($c\in \R$)}.}
+                            </md>
+                        </p>
+                    </solution>
+                </example>
+
+                <note>
+                    <p>
+                        In the previous example:
+                        <ul>
+                            <li>
+                                <p>
+                                    The singular equilibrium solution <m>y=0</m>
+                                    is not included.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Since the DE is nonlinear, singular
+                                    solutions were to be expected.
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </note>
+
+                <example>
+                    <statement>
+                        <p>
+                            Solve the initial value problem
+                            <md>
+                                xyy' = 2y^{2} + 4x^{2}, \ y(2) = 4.
+                            </md>
+                        </p>
+                    </statement>
+
+                    <solution>
+                        <p>
+                            Divide by <m>xy</m> to get the equation in standard
+                            form:
+                            <md>
+                                y' = 2\frac{y}{x}+ 4 \frac{x}{y}.
+                            </md>
+                        </p>
+
+                        <p>
+                            This is a homogeneous equation, so let
+                        </p>
+
+                        <p>
+                            <md>
+                                v = \frac{y}{x},\\ \text{ and so }y = vx \text{ and }y' = xv' + v.
+                            </md>
+                        </p>
+
+                        <p>
+                            Plugging into our DE gives
+                            <md>
+                                <mrow> xv'+v\amp = 2v+\frac{4}{v} </mrow>
+                                <mrow> xv'\amp = v + \frac{4}{v} </mrow>
+                                <mrow> \amp = \frac{v^{2}+4}{v} </mrow>
+                            </md>
+                        </p>
+
+                        <p>
+                            So, we have
+                            <md>
+                                x\frac{dv}{dx}= \frac{v^{2}+4}{v}.
+                            </md>
+                        </p>
+
+                        <p>
+                            Then
+                            <md>
+                                \int \frac{v}{v^{2}+4}dv= \int \frac{1}{x}dx
+                            </md>.
+                        </p>
+
+                        <p>
+                            Integrating by using the substitution
+                            <m>u = v^{2} + 4</m> for the left-hand integral
+                            gives
+                            <md>
+                                <mrow> \frac{1}{2}\ln(v^{2}+4)\amp = \ln|x| + c_{1} </mrow>
+                                <mrow> \ln(v^{2} + 4)\amp = 2 \ln|x| + c_{2} </mrow>
+                                <mrow> e^{\ln(v^2+4)}\amp = e^{2\ln|x| + c_2} </mrow>
+                                <mrow> (v^{2}+4)\amp = cx^{2} </mrow>
+                            </md>
+                        </p>
+
+                        <p>
+                            Substituting back in <m>\displaystyle v = \frac{y}{x}</m>
+                            gives
+                            <md>
+                                <mrow> \left(\frac{y}{x}\right)^{2} + 4\amp = cx^{2}, \amp\text{or}y^{2} + 4x^{2}\amp = cx^{4}</mrow>
+                            </md>
+                        </p>
+
+                        <p>
+                            Find <m>c</m>: Since <m>y(2) = 4</m>, we have
+                            <m>4^{2} + 4(2)^{2} = c(2)^{4}</m>, so <m>c = 2</m>.
+                        </p>
+
+                        <p>
+                            So we obtain the unique solution
+                            <md>
+                                \boxed{y^2 + 4x^2 = 2x^4.}
+                            </md>
+                        </p>
+                    </solution>
+                </example>
+            </paragraphs>
+        </subsection>
+    </section>
 </chapter>
