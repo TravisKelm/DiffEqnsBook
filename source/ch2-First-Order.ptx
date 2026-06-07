@@ -3392,11 +3392,379 @@
         <!-- Subsection - Bernoulli Equations -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-         
+<subsection>
+    <title>Bernoulli Equations</title>
+
+    <paragraphs>
+        <title>Motivating Example: A Falling Chain <xref ref="Zill"/></title>
+
+        <p>
+            A portion of a uniform chain that is 8 feet long is loosely coiled
+            around a peg at the edge of a high horizontal platform, and the rest
+            of the chain hangs at rest over the edge of the platform.
+            Suppose the length of the overhanging chain is 3 feet, that the
+            chain weighs 2 lb/ft, and that the positive direction is downward.
+            Starting at <m>t = 0</m> seconds, the weight of the overhanging
+            portion causes the chain on the platform to smoothly uncoil and then
+            fall to the ground.
+            If <m>x(t)</m> denotes the length of the chain overhanging the table
+            at time <m>t &gt; 0</m>, then <m>v = \frac{dx}{dt}</m> is its
+            velocity.
+            If the simplifying assumption of ignoring any resistance forces
+            (e.g., friction), then a model relating <m>v</m> to <m>y</m> is
+            given by
+        </p>
+
+        <p>
+            <md>
+                xv\frac{dv}{dx}+ v^{2} = 32x.
+            </md>
+        </p>
+
+        <p>
+            This differential equation is a Bernoulli equation (to be discussed
+            immediately following).
+            Also, interestingly enough, one can determine an ``integrating
+            factor,'' which, when multiplied by the equation, turns it into an
+            exact equation (the final type of equation to be discussed).
+            If you solve this equation either way, you can determine that
+        </p>
+
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        <m>v</m> satisfies
+                        <md>
+                            v(x) = 8\sqrt{\frac{x}{3} - \frac{9}{x^{2}}},
+                        </md>
+                        and
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        the chain leaves the platform with a velocity of 12.7
+                        ft/s (found by evaluating <m>v(8)</m>, since the chain
+                        is 8 ft.
+                        long).
+                    </p>
+                </li>
+            </ol>
+        </p>
+      </paragraphs>
+        <definition>
+            <title>Bernoulli Differential Equation</title>
+            <statement>
+                <p>
+                    A <term>Bernoulli differential equation</term> is a first-order
+                    differential equation of the form
+                <md xml:id="eq-Bernoulli-definition" number="yes">
+                    y' + p(x) y = q(x) y^{n}
+                </md>.
+              </p>
+              </statement>
+        </definition>
+<remark>
+  <p>
+     The Bernoulli equation <xref ref="eq-Bernoulli-definition"/> will be nonlinear so long as <m>n \ne 0,1</m>.
+  </p>
+</remark>
+
+        <p> Bernoulli equations can be solved by transforming them into linear equations.
+          To reduce <xref ref="eq-Bernoulli-definition"/> to linear form, do a change of
+            variables:
+        <md>
+          <mrow> \text{Let }v&amp;=y^{1-n} </mrow>
+          <intertext>Differentiating both sides with respect to <m>x</m>> gives</intertext>
+          <mrow> v'&amp;= (1-n)y^{-n}y' </mrow>
+          <mrow> (\text{From <xref ref="eq-Bernoulli-definition"/>, }y'&amp;= q(x)y^{n}-p(x)y, \text{ so}) </mrow>
+          <mrow> v'&amp;= (1-n)y^{-n}(q(x)y^{n}-p(x)y) </mrow>
+          <mrow> &amp;= (1-n)q(x) - (1-n)p(x) y^{1-n} </mrow>
+          <mrow> &amp;= (1-n)q(x) - (1-n)p(x)v </mrow>
+        </md>
+        </p>
+
+        <p>
+            We therefore obtain the linear DE
+            <md>
+                v' + (1-n)p(x)v = (1-n)q(x).
+            </md>
+        </p>
+<example>
+  <statement>
+    <p>
+                          Find a general solution of
+                <md>
+                    x^{3}y'=x^{2}y-y^{3}.
+                </md>
+    </p>
+  </statement>
+  <solution>
+                <p>
+                    Solved in the previous example as
+                    homogeneous, writing this equation in standard form gives
+                <md>
+                    y'-\dfrac{1}{x}y=-\dfrac{1}{x^3}y^{3}.
+                </md>
+                </p>
+
+                <p>
+                    We can see that this equation is also Bernoulli (with
+                    <m>n=3</m> ).
+                <md>
+                  <mrow> \text{Let }v&amp;= y^{1-n}=y^{-2}.</mrow>
+                  <intertext>Then</intertext>
+                  <mrow> v'&amp;= -2y^{-3}y' </mrow>
+                  <mrow> &amp;= -2y^{-3}\left(-\dfrac{y^3}{x^3}+\frac{1}{x}y\right) </mrow>
+                  <mrow> &amp;= 2x^{-3}- \frac{2}{x}y^{-2}</mrow>
+                  <mrow> &amp;= 2x^{2} - \frac{2}{x}v,  </mrow>
+                  <intertext>or</intertext>
+                  <mrow> v'&amp;+\frac{2}{x}v = 2x^{-3}, </mrow>
+                </md>
+                   which is a linear equation.
+                </p>
+
+                <p>
+                    The integrating factor is
+                    <m>\mu(x)=e^{\int\frac{2}{x}\,dx}=e^{2\ln|x|}=x^{2}</m>.
+                </p>
+
+                <p>
+                    Multiplying both sides by <m>\mu(x)=x^{2}</m> and
+                    recognizing the left-hand side as the derivative of a
+                    product, we have:
+                <md>
+                    (x^{2}v)'=\dfrac{2}{x}.
+                </md>
+                </p>
+
+                <p>
+                    Integrating gives
+                <md>
+                    x^{2}v=\int\dfrac{2}{x}\,dx=2\ln|x|+c\quad \text{($c\in \R$)},
+                </md>
+                </p>
+
+                <p>
+                    and substituting back, we obtain an implicit general
+                    solution of the initial DE
+                <md>
+                    \dfrac{x^2}{y^2}=2\ln|x|+c \quad \text{($c\in\R$)}.
+                </md>
+                </p>
+
+                <p>
+                    Note that the singular equilibrium solution <m>y=0</m> is
+                    not included.
+                </p>
+  </solution>
+</example>
+
+<example>
+  <statement>
+    <p>
+                    Find a general solution of
+                    <md>
+                        xy' - y = 2x^{3}y^{-2}.
+                    </md>
+                </p>
+  </statement>
+  <solution>
+               <p>
+                    Divide both sides by <m>x</m>, giving:
+                    <md>
+                        y' - \frac{1}{x}y = 2x^{2} y^{-2}.
+                    </md>
+                </p>
+
+                <p>
+                    This is Bernoulli with <m>n = -2</m>.
+                <md>
+                  <mrow> \text{Let }v&amp;=y^{1-n}=y^{3}. </mrow>
+                  <intertext>Then</intertext>
+                  <mrow> v'&amp;= 3y^{2}y' </mrow>
+                  <mrow> &amp;= 3y^{2}\left(2x^{2}y^{-2}+\frac{1}{x}y\right) </mrow>
+                  <mrow> &amp;= 6x^{2} + \frac{3}{x}y^{3} </mrow>
+                  <mrow> &amp;= 6x^{2} + \frac{3}{x}v, </mrow>
+                  <intertext>or</intertext>
+                  <mrow> v'&amp;- \frac{3}{x}v = 6x^{2} </mrow>
+                </md>.
+                </p>
+
+                <p>
+                    We now have a linear DE, so we find the integrating
+                    factor:
+                    <md>
+                        p(x) = -\frac{3}{x}, \text{ so }\mu(x) = e^{-\int \frac{3}{x} dx}= e^{-3\ln|x|}= x^{-3}
+                    </md>.
+                </p>
+
+                <p>
+                    Multiplying by <m>\mu(x)=x^{-3}</m> gives:
+                <md>
+                  <mrow> x^{-3}v' - 3x^{-4}v&amp;= \dfrac{6}{x} </mrow>
+                  <mrow> \int \frac{d}{dx}\left(x^{-2}v\right) dx&amp;= \int \dfrac{6}{x}dx </mrow>
+                  <mrow> x^{-3}v&amp;= 6\ln|x|+c </mrow>
+                  <mrow> v&amp;= 6x^{3}\ln|x| + cx^{3} \quad (c \in \mathbb{R}) </mrow>
+                </md>.
+                </p>
+
+                <p>
+                    The general solution is then
+                    <md>
+                        \boxed{y^{3} = 6x^{3}\ln|x|+cx^3 \quad (c \in \mathbb{R}),}
+                    </md>
+                </p>
+
+                <p>
+                    or
+                    <md>
+                        \boxed{y(x) = \left(6x^3\ln|x|+cx^3\right)^{\frac{1}{3}} \quad (c \in \mathbb{R}).}
+                    </md>
+                </p>
+  </solution>
+</example>
+</subsection>       
         <!-- ===================================================== -->
         <!-- ===================================================== -->
         <!-- Subsection - Exercises for Substitution Section -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
+<subsection>
+    <title>Exercises for Section <xref ref="sec-subs"/></title>
+
+    <p>
+        <ol>
+            <li>
+                <p>
+                    Identify the type(s) of equation for each of the following.
+                </p>
+
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                <m>y' - 2y = y^{3}</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>y' + y\sin x = \sin x</m>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <m>y' + y^{3}x + y = 0</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </li>
+        </ol>
+    </p>
+
+    <p>
+        Find a general solution of each of the following differential equations.
+    </p>
+
+    <p>
+        <ol>
+            <li>
+                <p>
+                    <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
+                </p>
+            </li>
+        </ol>
+    </p>
+
+    <p>
+        Solve the following initial value problems.
+    </p>
+
+    <p>
+        <ol>
+            <li>
+                <p>
+                    <m>\displaystyle x^{3} y' = x^{2} y - y^{3} x, \ y(1) = -1</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle y' + 2xy = xy^{-1}, \ y(0) = 1</m>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <m>\displaystyle \dfrac{dP}{dt}= 2P\left(1 - \dfrac{P}{10}\right), \ P(0) = 1</m>
+                </p>
+            </li>
+        </ol>
+    </p>
+</subsection>
     </section>
-</chapter>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Section - Exact Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->    
+
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Subsection - Exercises for Exact Equations -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== --> 
+
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Section - Review Probs for Chapter 2 First order DEs -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== --> 
+
+      </chapter>
