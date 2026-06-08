@@ -400,64 +400,79 @@
         </subsection>
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <!-- Subsection - Exercises for Intro to First-Order Differential Equations -->
+        <!-- Exercises for Intro to First-Order Differential Equations -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <subsection>
+        <exercises>
             <title>Exercises for <xref ref="sec-Intro-to-first-order"/></title>
 
-            <p>
-                Find a general solution of the following equations.
-            </p>
+            <exercisegroup>
+                <title>Solve Generally</title>
 
-            <p>
-                <ol>
-                    <li>
+                <introduction>
+                    <p>
+                        Find a general solution of the following equations.
+                    </p>
+                </introduction>
+
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = xe^{-x^2}</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\dfrac{dy}{dx}= 3x^{2}\sin(x^{3})</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\dfrac{dy}{dt}= 4e^{t} \cos(t)</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <title>Initial Value Problems</title>
 
-            <p>
-                Solve the following initial value problems.
-            </p>
+                <introduction>
+                    <p>
+                        Solve the following initial value problems.
+                    </p>
+                </introduction>
 
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = \dfrac{1}{\sqrt{x+2}}, \ y(2)=-1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = (t^{2} + 2t + 1)e^{t}, \ y(0) = 2</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle \frac{dy}{dx}= \dfrac{\ln(x)}{x}, \ y(1) = 0 \quad (x &gt; 0)</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
-        </subsection>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+        </exercises>
     </section>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -864,149 +879,176 @@
         <!-- Subsection - Separable Exercises -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <subsection>
-            <title>Exercises for Section <xref ref="sec-Separable"/></title>
+        <exercises xml:id="exercises-Separable">
+            <title>Exercises for <xref ref="sec-Separable"/></title>
 
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            Determine which of the following first order
-                            differential equations are separable.
-                        </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Determine which of the following first order
+                        differential equations are separable.
+                    </p>
 
-                        <p>
-                            <ol>
-                                <li>
-                                    <p>
-                                        <m>\displaystyle \frac{dy}{dx}= 3x^{2}y</m>
-                                    </p>
-                                </li>
+                    <p>
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>\displaystyle \frac{dy}{dx}= 3x^{2}y</m>
+                                </p>
+                            </li>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' = e^{2x+y}</m>
-                                    </p>
-                                </li>
+                            <li>
+                                <p>
+                                    <m>\displaystyle y' = e^{2x+y}</m>
+                                </p>
+                            </li>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle \frac{dy}{dx}= x^{2} + 2xy + y^{2}</m>
-                                    </p>
-                                </li>
+                            <li>
+                                <p>
+                                    <m>\displaystyle \frac{dy}{dx}= x^{2} + 2xy + y^{2}</m>
+                                </p>
+                            </li>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle \tan(x) y' = y^{2} + 1</m>
-                                    </p>
-                                </li>
+                            <li>
+                                <p>
+                                    <m>\displaystyle \tan(x) y' = y^{2} + 1</m>
+                                </p>
+                            </li>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle \frac{dy}{dx}= xy + x + y</m>
-                                    </p>
-                                </li>
-                            </ol>
-                        </p>
-                    </li>
+                            <li>
+                                <p>
+                                    <m>\displaystyle \frac{dy}{dx}= xy + x + y</m>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            Apply the method of separation of variables to
-                            verify <xref ref="example-Singular"/>.
-                        </p>
-                    </li>
-                </ol>
-            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Apply the method of separation of variables to verify
+                        <xref ref="example-Singular"/>.
+                    </p>
+                </statement>
+            </exercise>
+            <exercisegroup>
+                <title>Solve Generally</title>
 
-            <p>
-                Find a general solution for each of the following equations.
-            </p>
+                <introduction>
+                    <p>
+                        Find a general solution for each of the following
+                        equations.
+                    </p>
+                </introduction>
 
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle (x^{2} + 1)y' = y^{2} + 1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = 3x^{2}y^{2}</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle \left(\frac{2y}{x}\right) \frac{dy}{dx}= 0 \quad (x \ne 0)</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle \sin(y) y' = \cos(x)</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = 3x^{2}e^{y}</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <title>Initial Value Problems</title>
 
-            <p>
-                Solve the following initial value problems.
-            </p>
+                <introduction>
+                    <p>
+                        Solve the following initial value problems.
+                    </p>
+                </introduction>
 
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y\frac{dy}{dx}= x^{2} + 1, \ y(0) = -2</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle \frac{dy}{dx}= \frac{y}{x}, \ y(1) = 1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle x^{2} y' = y, \ y(1) = 0</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle \frac{dy}{dx}= xy + x + y + 1, \ y(0) = 0</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle x\dfrac{dy}{dx}-y = 2x^{2}y, \ y(1) = 1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = 2x(y^{2} + 1), \ y(\sqrt{\pi}) = 0</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle xy' = 2y\ln(x), \ y(1) = 2</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
-        </subsection>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+        </exercises>
     </section>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -1140,7 +1182,7 @@
         <!-- Subsection - Geometric Example -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <subsection>
+        <subsection xml:id="subsec-Geometric-example">
             <title>Geometric Example</title>
 
             <p>
@@ -1443,12 +1485,12 @@
             <example xml:id="ex-newt">
                 <statement>
                     <p>
-                        Consider a tray of cookies removed from the oven at 350
-                        <m>^{\circ}</m> F and placed in a room with a
-                        temperature of 72 <m>^{\circ}</m> F.
-                        If the cookies are at 240 <m>^{\circ}</m> F after 10
-                        minutes, how long will it take for them to cool to 80
-                        <m>^{\circ}</m> F?
+                        Consider a tray of cookies removed from the oven at
+                        <m>350^{\circ}</m> F and placed in a room with a
+                        temperature of <m>72^{\circ}</m> F.
+                        If the cookies are at <m>240^{\circ}</m> F after 10
+                        minutes, how long will it take for them to cool to
+                        <m>80^{\circ}</m> F?
                     </p>
                 </statement>
 
@@ -1519,7 +1561,7 @@
 
                     <p>
                         Let <m>t_{s}</m> denote the time at which the
-                        temperature of the cookies is 80 <m>^{\circ}</m> F.
+                        temperature of the cookies is <m>80^{\circ}</m> F.
                         Then
                     </p>
 
@@ -1531,7 +1573,7 @@
 
                     <p>
                         Solving for <m>t_{s}</m> gives us <m>t_{s} = 70.45</m>.
-                        So, the cookies will be at 80 <m>^{\circ}</m> F after
+                        So, the cookies will be at <m>80^{\circ}</m> F after
                         70.45 minutes, or after 1 hour, 10 minutes, and 27
                         seconds.
                     </p>
@@ -1543,147 +1585,154 @@
         <!-- Subsection - Exercises for Applications of Separable Equations -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <subsection>
+        <exercises xml:id="exercises-Applications-of-separable">
             <title>Exercises for Section <xref ref="sepapp"/></title>
 
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            Verify the solution to the Geometric Application
-                            problem.
-                        </p>
-                    </li>
+            <exercise>
+                <statement>
+                    <p>
+                        Verify the solution to the Geometric Application problem
+                        in <xref ref="subsec-Geometric-example"/>.
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            Find the equation of the curve with slope
-                            <m>\dfrac{x}{y}</m> through the point <m>(0, 2)</m>.
-                            What type of curve is this?
-                        </p>
-                    </li>
+            <exercise>
+                <statement>
+                    <p>
+                        Find the equation of the curve with slope
+                        <m>\dfrac{x}{y}</m> through the point <m>(0, 2)</m>.
+                        What type of curve is this?
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            Find the equation of the curve with slope
-                            <m>\dfrac{y}{x}</m> through the point <m>(1, 0)</m>.
-                            What type of curve is this?
-                        </p>
-                    </li>
+            <exercise>
+                <statement>
+                    <p>
+                        Find the equation of the curve with slope
+                        <m>\dfrac{y}{x}</m> through the point <m>(1, 0)</m>.
+                        What type of curve is this?
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            (Drug Elimination) The amount <m>y(t)</m> of a
-                            certain drug in the bloodstream as a function of
-                            time <m>t</m> declining at a rate proportional to
-                            the current excess amount relative to the natural
-                            level of the drug (typically 0) is modeled by the
-                            differential equation
-                            <md>
-                                \frac{dy}{dt}= -r y,
-                            </md>
-                        </p>
+            <exercise>
+                <title>Drug Elimination</title>
 
-                        <p>
-                            where <m>r &gt; 0</m>.
-                            Suppose that after 2 hours, half of the initial
-                            amount of the drug is left in the patient's system
-                            (i.e., <m>y(2) = 0.5y(0)</m> ).
-                            Find <m>y(t)</m> assuming that initially, the
-                            patient is given 250 mg of the drug (i.e.,
-                            <m>y(0) = 250</m> ).
-                        </p>
-                    </li>
+                <statement>
+                    <p>
+                        The amount <m>y(t)</m> of a certain drug in the
+                        bloodstream as a function of time <m>t</m> declining at
+                        a rate proportional to the current excess amount
+                        relative to the natural level of the drug (typically 0)
+                        is modeled by the differential equation
+                        <md>
+                            \frac{dy}{dt}= -r y,
+                        </md>
+                        where <m>r &gt; 0</m>.
+                        Suppose that after 2 hours, half of the initial amount
+                        of the drug is left in the patient's system (i.e.,
+                        <m>y(2) = 0.5y(0)</m> ).
+                        Find <m>y(t)</m> assuming that initially, the patient is
+                        given 250 mg of the drug (i.e., <m>y(0) = 250</m> ).
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            (Radiocarbon Dating) The half-life of Carbon-14 is
-                            approximately 5,730 years.
-                            Suppose remains have been found in which it is
-                            estimated that 65%of the original Carbon-14 has
-                            decayed.
-                            Estimate the age of the remains.
-                        </p>
-                    </li>
+            <exercise>
+                <title>Radiocarbon Dating</title>
 
-                    <li>
-                        <p>
-                            (Population Model) A new species of animal has just
-                            been discovered.
-                            The rate of change in the size of its population was
-                            found to be proportional to the square root of its
-                            current size.
-                        </p>
+                <statement>
+                    <p>
+                        The half-life of Carbon-14 is approximately 5,730 years.
+                        Suppose remains have been found in which it is estimated
+                        that 65%of the original Carbon-14 has decayed.
+                        Estimate the age of the remains.
+                    </p>
+                </statement>
+            </exercise>
 
-                        <p>
-                            <ol>
-                                <li>
-                                    <p>
-                                        Formulate a mathematical model
-                                        describing the population size
-                                        <m>P(t)</m> of this new species over
-                                        time.
-                                    </p>
-                                </li>
+            <exercise>
+                <title>Population Model</title>
 
-                                <li>
-                                    <p>
-                                        If the initial population is <m>100</m>
-                                        animals and, after 2 months, the
-                                        population has grown to 400 animals,
-                                        determine the size of the population at
-                                        any time <m>t</m>.
-                                    </p>
-                                </li>
+                <statement>
+                    <p>
+                        A new species of animal has just been discovered.
+                        The rate of change in the size of its population was
+                        found to be proportional to the square root of its
+                        current size.
+                    </p>
 
-                                <li>
-                                    <p>
-                                        How long before the population has grown
-                                        to 1000 animals?
-                                    </p>
-                                </li>
-                            </ol>
-                        </p>
-                    </li>
+                    <p>
+                        <ol>
+                            <li>
+                                <p>
+                                    Formulate a mathematical model describing
+                                    the population size <m>P(t)</m> of this new
+                                    species over time.
+                                </p>
+                            </li>
 
-                    <li>
-                        <p>
-                            (Logistic Population Model) A population model that
-                            takes into account the fact that, as a population
-                            grows in size its rate of change decreases, is the
-                            <em>logistic model</em>.
-                            Given a population of size <m>P(t)</m>, the logistic
-                            model is defined by
-                        </p>
+                            <li>
+                                <p>
+                                    If the initial population is <m>100</m>
+                                    animals and, after 2 months, the population
+                                    has grown to 400 animals, determine the size
+                                    of the population at any time <m>t</m>.
+                                </p>
+                            </li>
 
-                        <p>
-                            <md>
-                                \dfrac{dP}{dt}= rP\left(1 - \dfrac{P}{K}\right),
-                            </md>
-                        </p>
+                            <li>
+                                <p>
+                                    How long before the population has grown to
+                                    1000 animals?
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </exercise>
 
-                        <p>
-                            where <m>r</m> is the intrinsic growth rate of the
-                            population in a given area (the growth rate in the
-                            absence of any restrictions) and <m>K</m> is the
-                            carrying capacity of the area (the maximum
-                            population that can be supported).
-                        </p>
+            <exercise>
+                <title>Logistic Population Model</title>
 
-                        <p>
-                            If <m>r = 2</m> per year and <m>K = 10000</m>, use
-                            the logistic equation to determine the population
-                            size at any time of a species with an initial
-                            population of 1000.
-                        </p>
+                <statement>
+                    <p>
+                        A population model that takes into account the fact
+                        that, as a population grows in size its rate of change
+                        decreases, is the <em>logistic model</em>.
+                        Given a population of size <m>P(t)</m>, the logistic
+                        model is defined by
+                    </p>
 
-                        <p>
-                            <em>Hint: You will need to use partial fractions to evaluate the integral on the left-hand side.</em>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </subsection>
+                    <p>
+                        <md>
+                            \dfrac{dP}{dt}= rP\left(1 - \dfrac{P}{K}\right),
+                        </md>
+                    </p>
+
+                    <p>
+                        where <m>r</m> is the intrinsic growth rate of the
+                        population in a given area (the growth rate in the
+                        absence of any restrictions) and <m>K</m> is the
+                        carrying capacity of the area (the maximum population
+                        that can be supported).
+                    </p>
+
+                    <p>
+                        If <m>r = 2</m> per year and <m>K = 10000</m>, use the
+                        logistic equation to determine the population size at
+                        any time of a species with an initial population of
+                        1000.
+                    </p>
+
+                    <p>
+                        <em>Hint: You will need to use partial fractions to evaluate the integral on the left-hand side.</em>
+                    </p>
+                </statement>
+            </exercise>
+        </exercises>
     </section>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -1785,11 +1834,9 @@
             <title>Definition and Examples</title>
 
             <definition>
-                <statement>
-                    <p>
-                        Linear Differential Equationf-olde
-                    </p>
+                <title>Linear Differential Equation</title>
 
+                <statement>
                     <p>
                         A first-order differential equation of the form
                         <md>
@@ -2540,155 +2587,177 @@
         <!-- Subsection - Excercises for Linear Equations -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <subsection>
+        <exercises xml:id="exercises-Linear-equations">
             <title>Exercises for Section <xref ref="linear"/></title>
 
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            What is the integrating factor for the equation
-                            <m>y'-2xy=8x</m>?
-                        </p>
-                    </li>
+            <exercise>
+                <statement>
+                    <p>
+                        What is the integrating factor for the equation
+                        <m>y'-2xy=8x</m>?
+                    </p>
+                </statement>
+            </exercise>
 
-                    <li>
-                        <p>
-                            Consider the problem
-                        </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Consider the problem
+                        <md>
+                            \cos (x) y' = -\sin (x) y.
+                        </md>
+                    </p>
 
-                        <p>
-                            <md>
-                                \cos (x) y' = -\sin (x) y.
-                            </md>
-                        </p>
+                    <p>
+                        <ol>
+                            <li>
+                                <p>
+                                    Is the equation separable?
+                                    Why?
+                                </p>
+                            </li>
 
-                        <p>
-                            <ol>
-                                <li>
-                                    <p>
-                                        Is the equation separable?
-                                        Why?
-                                    </p>
-                                </li>
+                            <li>
+                                <p>
+                                    Is the equation linear?
+                                    Why?
+                                </p>
+                            </li>
 
-                                <li>
-                                    <p>
-                                        Is the equation linear?
-                                        Why?
-                                    </p>
-                                </li>
+                            <li>
+                                <p>
+                                    Find a general solution.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </exercise>
 
-                                <li>
-                                    <p>
-                                        Find a general solution.
-                                    </p>
-                                </li>
-                            </ol>
-                        </p>
-                    </li>
+            <exercise>
+                <statement>
+                    <p>
+                        Give an example of an equation that is both separable
+                        and linear.
+                    </p>
+                </statement>
+            </exercise>
+            <exercisegroup>
+                <title>General Solutions</title>
 
-                    <li>
-                        <p>
-                            Give an example of an equation that is both
-                            separable and linear.
-                        </p>
-                    </li>
-                </ol>
-            </p>
+                <introduction>
+                    <p>
+                        Find a general solution for each of the following
+                        equations.
+                    </p>
+                </introduction>
 
-            <p>
-                Find a general solution for each of the following equations.
-            </p>
-
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' - 2xy = 8x</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle xy' + 2y = x^{4}</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = 2y - x^{2}y + 1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle e^{x} (y' + y) = e^{-x}</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle (x^{2} + 1)y' = x^{2} + 2xy + 1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' = y\cos(x) + 2\cos(x)</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <title>Initial Value Problems</title>
 
-            <p>
-                Solve the following initial value problems.
-            </p>
+                <introduction>
+                    <p>
+                        Solve the following initial value problems.
+                    </p>
+                </introduction>
 
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle y' + 2xy = 6x, \ y(0) = 0</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle (x^{2} + 1) y' + 2xy = e^{2x}, \ y(0) = -1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle 2yy' = 6xy^{2} + 3xy, \ y(0) = -1</m>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             <m>\displaystyle 2xy' - 4x^{2}y = 12x^{-2}e^{x^2}, \ y(1) = 0</m>
                         </p>
-                    </li>
-                </ol>
-            </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <title>Mixing Problems</title>
 
-            <p>
-                Solve the following mixing problems.
-            </p>
+                <introduction>
+                    <p>
+                        Solve the following mixing problems.
+                    </p>
+                </introduction>
 
-            <p>
-                <ol>
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             A 100 gallon tank initially contains 50 gal of brine
                             containing 5 pounds of salt.
                             Brine containing 1 pound of salt per gallon enters
                             the tank at the rate of 4 gal/s, and the well-mixed
                             brine in the tank flows out at the rate of 3 gal/s.
-                        </p>
-
-                        <p>
                             <ol>
                                 <li>
                                     <p>
@@ -2706,18 +2775,17 @@
                                 </li>
                             </ol>
                         </p>
-                    </li>
+                    </statement>
+                </exercise>
 
-                    <li>
+                <exercise>
+                    <statement>
                         <p>
                             A 50 L tank initially contains 40 L of brine in
                             which is dissolved 1 kg of salt.
                             Pure water enters the tank at the rate of 3 L/s, and
                             the well-mixed solution in the tank flows out at the
                             rate of 4 L/s.
-                        </p>
-
-                        <p>
                             <ol>
                                 <li>
                                     <p>
@@ -2734,10 +2802,10 @@
                                 </li>
                             </ol>
                         </p>
-                    </li>
-                </ol>
-            </p>
-        </subsection>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+        </exercises>
     </section>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
@@ -3660,50 +3728,53 @@
         <!-- ===================================================== -->
         <!-- ===================================================== -->
         <exercises>
+            <title>Exercises for <xref ref="sec-subs"/></title>
+
             <exercisegroup>
-              <title>Identify</title>
-              
+                <title>Identify Type</title>
+
                 <introduction>
-                  <p>
-                    
-                  </p>
+                    <p>
+                        Identify the type(s) of equation for each of the
+                        following:
+                    </p>
                 </introduction>
 
                 <exercise>
                     <statement>
-                    <p>
-                        Identify the type(s) of equation for each of the
-                        following:
-                        <ol>
-                                <li>
-                                    <p>
-                                        <m>y' - 2y = y^{3}</m>
-                                    </p>
-                                </li>
+                        <p>
+                            <m>y' - 2y = y^{3}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>y' + y\sin x = \sin x</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>y' + y\sin x = \sin x</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>y' + y^{3}x + y = 0</m>
-                                    </p>
-                                </li>
-                            </ol>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>y' + y^{3}x + y = 0</m>
                         </p>
                     </statement>
                 </exercise>
             </exercisegroup>
             <exercisegroup>
+                <title>Solve Generally</title>
+
                 <introduction>
                     <p>
                         Find a general solution of each of the following
@@ -3714,174 +3785,93 @@
                 <exercise>
                     <statement>
                         <p>
-                            <ol>
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
-                                    </p>
-                                </li>
+                            <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
-                                    </p>
-                                </li>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
+                        </p>
+                    </statement>
+                </exercise>
 
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
-                                    </p>
-                                </li>
-                            </ol>
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
+                        </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <title>Initial Value Problems</title>
+
+                <introduction>
+                    <p>
+                        Solve the following initial value problems.
+                    </p>
+                </introduction>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle x^3 y' = x^2 y - y^3 x, \ y(1) = -1</m>
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle y' + 2xy = xy^{-1}, \ y(0) = 1</m>
+                        </p>
+                    </statement>
+                </exercise>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            <m>\displaystyle \frac{dP}{dt} = 2P\left(1 - \frac{P}{10}\right), \ P(0) = 1</m>
                         </p>
                     </statement>
                 </exercise>
             </exercisegroup>
         </exercises>
-
-        <subsection>
-            <title>Exercises for <xref ref="sec-subs"/></title>
-
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            Identify the type(s) of equation for each of the
-                            following.
-                        </p>
-
-                        <p>
-                            <ol>
-                                <li>
-                                    <p>
-                                        <m>y' - 2y = y^{3}</m>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <m>y' + y\sin x = \sin x</m>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <m>y' + y^{3}x + y = 0</m>
-                                    </p>
-                                </li>
-                            </ol>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-
-            <p>
-                Find a general solution of each of the following differential
-                equations.
-            </p>
-
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-
-            <p>
-                Solve the following initial value problems.
-            </p>
-
-            <p>
-                <ol>
-                    <li>
-                        <p>
-                            <m>\displaystyle x^{3} y' = x^{2} y - y^{3} x, \ y(1) = -1</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle y' + 2xy = xy^{-1}, \ y(0) = 1</m>
-                        </p>
-                    </li>
-
-                    <li>
-                        <p>
-                            <m>\displaystyle \dfrac{dP}{dt}= 2P\left(1 - \dfrac{P}{10}\right), \ P(0) = 1</m>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </subsection>
     </section>
     <!-- ===================================================== -->
     <!-- ===================================================== -->
