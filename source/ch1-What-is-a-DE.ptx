@@ -1,146 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch1-What-is-a-DE" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>What is a Differential Equation?</title>
+    <title>What is a Differential Equation?</title>
 
-<section xml:id="sec-chpt1">
-  <title>Chapter 1</title>  
+    <section xml:id="sec-chpt1">
+        <title>Chapter 1</title>
 
-<definition xml:id="def-DifferentialEquation"><idx>Differential Equations</idx>
-    <statement>
-    <p>
-      An equation relating an unknown function and one or more of its derivatives is called a <term>differential equation</term> (or DE for short).
-    </p>
-    <p>
-      A DE in one independent variable is called an <term>ordinary differential equation</term> (short, ODE). A DE in several independent variables is called a <term>partial differential equation</term> (or PDE).
-    </p>
-    <p>
-      The <term>order</term> of a differential equation is the order of the highest derivative of the unknown function in the equation.
-    </p>
-    </statement>
-</definition>
+        <definition xml:id="def-DifferentialEquation">
+            <idx>Differential Equations</idx>
+            <statement>
+                <p>
+                    An equation relating an unknown function and one or more of
+                    its derivatives is called a
+                    <term>differential equation</term> (or DE for short).
+                </p>
 
-<example xml:id="example-DEs">
-    <title>Examples of Differential Equations</title>
+                <p>
+                    A DE in one independent variable is called an
+                    <term>ordinary differential equation</term> (short, ODE).
+                    A DE in several independent variables is called a
+                    <term>partial differential equation</term> (or PDE).
+                </p>
+
+                <p>
+                    The <term>order</term> of a differential equation is the
+                    order of the highest derivative of the unknown function in
+                    the equation.
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="example-DEs">
+            <title>Examples of Differential Equations</title>
+
+            <p>
+                <ol>
+                    <li xml:id="example-standardODE">
+                        <m>\dfrac{dy}{dt}=y</m> is a <term>first-order</term>
+                        ODE in independent variable <m>t</m>.
+                    </li>
+
+                    <li>
+                        <m>\dfrac{\partial u}{\partial x}+\dfrac{\partial u}{\partial y}=0</m>
+                        is a <term>first-order</term> PDE in two independent
+                        variables, <m>x</m> and <m>y</m>.
+                    </li>
+
+                    <li xml:id="example-nonstandardODE">
+                        <m>y^{(3)}+xy'+y^2=e^{-x}</m> is a
+                        <term>third-order</term> ODE in independent variable
+                        <m>x</m>.
+                    </li>
+
+                    <li>
+                        <m>u_{t}=u_{xx}+u_{yy}</m> is a
+                        <term>second-order</term> PDE in three independent
+                        variables <m>t</m>, <m>x</m> and <m>y</m> (this is a
+                        <term>two-dimensional heat equation</term> ).
+                    </li>
+                </ol>
+            </p>
+        </example>
+
+        <note xml:id="note-deriv-notations">
+            <title>Notations for Derivatives</title>
+
+            <p>
+                The prior examples demonstrate various notations for
+                derivatives.
+            </p>
+        </note>
+
         <p>
-          <ol>
-            <li xml:id="example-standardODE">
-              <m>\dfrac{dy}{dt}=y</m> is a <term>first-order</term> ODE in independent variable <m>t</m>.
-            </li>
-            <li>
-              <m>\dfrac{\partial u}{\partial x}+\dfrac{\partial u}{\partial y}=0</m> is a <term>first-order</term> PDE in two independent variables, <m>x</m> and <m>y</m>.
-            </li>
-            <li xml:id="example-nonstandardODE">
-              <m>y^{(3)}+xy'+y^2=e^{-x}</m> is a <term>third-order</term>  ODE in independent variable <m>x</m>.
-            </li>
-            <li>
-              <m>u_{t}=u_{xx}+u_{yy}</m> is a <term>second-order</term> PDE in three independent variables <m>t</m>, <m>x</m> and <m>y</m> (this is a <term>two-dimensional heat equation</term>).
-            </li>
-          </ol>
+            Recall the following.
+            Let <m>y</m> be a function of <m>x</m>, so <m>&gt;y = y(x)</m>.
+            <ol>
+                <li>
+                    For first derivatives, the notations <m>\dfrac{dy}{dx}</m>
+                    and <m>y'</m> are equivalent.
+                </li>
+
+                <li>
+                    For higher order derivatives, the notations
+                    <m>\dfrac{d^n y}{dx^n}</m> and <m>y^{(n)}</m> are
+                    equivalent.
+                </li>
+            </ol>
         </p>
-</example>
 
-<note xml:id="note-deriv-notations">
-  <title>Notations for Derivatives</title>
-  <p>
-    The prior examples demonstrate various notations for derivatives.
-  </p>
-</note>
+        <p>
+            Let <m>u</m> be a function of <m>x</m> and <m>y</m>.
+            So <m>u = u(x, y)</m>.
+            Then we may represent the partial derivatives by, for example:
+            <md>
+                \dfrac{\partial u}{\partial x} \text{ and } \dfrac{\partial^2 u}{\partial^2 y}
+            </md>
+            or, equivalently
+            <md>
+                u_x \text{ and } u_{yy}.
+            </md>
+        </p>
 
-<p>
- Recall the following.  Let <m>y</m> be a function of <m>x</m>, so <m>>y = y(x)</m>.
- <ol>
-  <li>
-    For first derivatives, the notations <m>\dfrac{dy}{dx}</m> and <m>y'</m> are equivalent.
-  </li>
-  <li>
-    For higher order derivatives, the notations <m>\dfrac{d^n y}{dx^n}</m> and <m>y^{(n)}</m> are equivalent.
-  </li>
- </ol>
-</p>
+        <warning xml:id="warning-only-ODEs">
+            <title>This book only deals with ODEs</title>
 
-<p>
-  Let <m>u</m> be a function of <m>x</m> and <m>y</m>. So <m>u = u(x, y)</m>.  Then we may represent the partial derivatives by, for example:
-  <md>
-    \dfrac{\partial u}{\partial x} \text{ and } \dfrac{\partial^2 u}{\partial^2 y}
-  </md>
-  or, equivalently
-  <md>
-    u_x \text{ and } u_{yy}.
-  </md>
-</p>
+            <p>
+                For the remainder of this textbook, we will only consider
+                ordinary differential equations.
+            </p>
+        </warning>
 
-<warning xml:id="warning-only-ODEs">
-    <title>This book only deals with ODEs</title>
-    <p>
-      For the remainder of this textbook, we will only consider ordinary differential equations.
-    </p>
-  </warning>
+        <p>
+            The most general form of an <m>n^{\text{th}}</m>-order ordinary
+            differential equation with independent variable <m>x</m> and unknown
+            function (or dependent variable) <m>y=y(x)</m> is
+            <md xml:id="eq-general" number="yes">
+                F\bigl(x,y,y',y'',\dots,y^{(n)}\bigr)=0,
+            </md>
+            where <m>F</m> is a function of the <m>n+2</m> variables.
+        </p>
 
-<p>
-The most general form of an <m>n^{\text{th}}</m>-order ordinary differential equation with independent variable <m>x</m> and unknown function (or dependent variable) <m>y=y(x)</m> is
-<md xml:id="eq-general" number="yes">
-  F\bigl(x,y,y',y'',\dots,y^{(n)}\bigr)=0,
-</md>
-where <m>F</m> is a function of the <m>n+2</m> variables.
-</p>
+        <p>
+            An <m>n^{\text{th}}</m>-order differential equation solved relative
+            to the highest derivative (which may not be possible) is said to be
+            in <term>standard</term> (or <term>normal</term> ) form:
+            <md xml:id="eq-normal" number="yes">
+                y^{(n)}=f\bigl(x,y,y',y'',\dots,y^{(n-1)}\bigr),
+            </md>
+            where <m>f</m> is a function of the <m>n+1</m> variables
+            <m>x, y, y', \dots, y^{(n)}</m>.
+        </p>
 
-<p>
-An <m>n^{\text{th}}</m>-order differential equation solved relative to the highest derivative (which may not be possible) is said to be in <term>standard</term> (or <term>normal</term>) form:
-<md xml:id="eq-normal" number="yes">
-  y^{(n)}=f\bigl(x,y,y',y'',\dots,y^{(n-1)}\bigr),
-</md>
-where <m>f</m> is a function of the <m>n+1</m> variables <m>x, y, y', \dots, y^{(n)}</m>.
-</p>
+        <p>
+            Thus, in <xref ref="example-DEs"/> the prior examples,
+            <xref ref="example-standardODE"/> is in standard form and
+            <xref ref="example-nonstandardODE"/> is not.
+        </p>
 
-<p>Thus, in <xref ref="example-DEs" /> the prior examples, 
-  <xref ref="example-standardODE"/> is in standard form and <xref ref="example-nonstandardODE"/> is not.</p>
+        <definition xml:id="def-solution">
+            <title>Solution of a Differential Equation</title>
 
-<definition xml:id="def-solution">
-  <title>Solution of a Differential Equation</title>  
-  <statement>
-    <p>
-      A function <m>y=y(x)</m> is called a <term>solution</term><idx>solution</idx> of differential equation <xref ref="eq-general" /> on an interval <m>I</m> if it is <m>n</m> times differentiable on <m>I</m> and
-      <md>
-        F\bigl(x,y(x),y'(x),y''(x),...,y^{(n)}(x)\bigr)=0
-      </md>
-      for all <m>x\in I</m>.
-    </p>
-    <p>
-      The function <m>y=y(x)</m> is also said to <term>satisfy</term><idx>satisfy</idx> differential equation <xref ref="eq-general" /> on the interval <m>I</m>.
-    </p>
-  </statement>
-</definition>
+            <statement>
+                <p>
+                    A function <m>y=y(x)</m> is called a <term>solution</term>
+                    <idx>solution</idx> of differential equation
+                    <xref ref="eq-general"/> on an interval <m>I</m> if it is
+                    <m>n</m> times differentiable on <m>I</m> and
+                    <md>
+                        F\bigl(x,y(x),y'(x),y''(x),...,y^{(n)}(x)\bigr)=0
+                    </md>
+                    for all <m>x\in I</m>.
+                </p>
 
-<example xml:id="example-iex">
-  <statement>
-    <p>
-      For any <m>c\in \R</m>, the function <m>y=ce^t</m> is a solution of the DE
-      <md>
-        \dfrac{dy}{dt}=y
-      </md>
-      on the interval <m>(-\infty,\infty)</m>      
-    </p>
-  </statement>
-</example>
+                <p>
+                    The function <m>y=y(x)</m> is also said to
+                    <term>satisfy</term> <idx>satisfy</idx> differential
+                    equation <xref ref="eq-general"/> on the interval <m>I</m>.
+                </p>
+            </statement>
+        </definition>
 
-</section>
+        <example xml:id="example-iex">
+            <statement>
+                <p>
+                    For any <m>c\in \R</m>, the function <m>y=ce^t</m> is a
+                    solution of the DE
+                    <md>
+                        \dfrac{dy}{dt}=y
+                    </md>
+                    on the interval <m>(-\infty,\infty)</m>
+                </p>
+            </statement>
+        </example>
+    </section>
+    <exercises xml:id="exercises-Chapter-1">
+        <title>Exercises for Chapter 1</title>
 
-<section xml:id="sec-exercises-chpt1">
-  <title>Exercises for Chapter 1</title>
-<p><ol>
-  <li>
-    Verify the solution in <xref ref="example-iex" />.
-  </li>
-  <li>
-    <p>Give an example of a differential equation whose solution is
-    <md>y(x) = x^2-2\text{ on the interval }(-\infty, \infty).</md></p>
-  </li>
-  <li>
-    Give an example of a differential equation and its solution.
-  </li>
-</ol>
-</p>
-</section>
+        <exercise>
+            <statement>
+                <p>
+                    Verify the solution in <xref ref="example-iex"/>.
+                </p>
+            </statement>
+        </exercise>
 
+        <exercise>
+            <statement>
+                <p>
+                    Give an example of a differential equation whose solution is
+                    <md>
+                        y(x) = x^2-2\text{ on the interval }(-\infty, \infty)
+                    </md>.
+                </p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Give an example of a differential equation and its solution.
+                </p>
+            </statement>
+        </exercise>
+    </exercises>
 </chapter>
