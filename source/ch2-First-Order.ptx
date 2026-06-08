@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch2-First-Order" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="ch-First-order-equations" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>First-Order Differential Equations</title>
 
     <introduction>
@@ -1364,15 +1364,15 @@
                                                 <md>
                                                     <mrow> \dfrac{1}{0.65-0.015y}\,dy\amp = 1\,dt </mrow>
                                                     <mrow> \int\dfrac{1}{0.65-0.015y}\,dy\amp =\int 1\,dt </mrow>
-                                                    <mrow> \dfrac{1}{-0.015}\ln|0.65-0.015y|\amp = t+c_{1} \quad (c_{1} \in \R). </mrow>
+                                                    <mrow> \dfrac{1}{-0.015}\ln|0.65-0.015y|\amp = t+c_{1} \quad (c_{1} \in \mathbb{R}). </mrow>
                                                 </md>
                                             </p>
 
                                             <p>
                                                 Now we solve for <m>y</m>:
                                                 <md>
-                                                    <mrow> \ln|0.015y-0.65|\amp = -0.015t+c \quad (c \in \R) </mrow>
-                                                    <mrow> y(t)\amp = \frac{0.65}{0.015}+ce^{-0.015t}\quad (c \in \R) </mrow>
+                                                    <mrow> \ln|0.015y-0.65|\amp = -0.015t+c \quad (c \in \mathbb{R}) </mrow>
+                                                    <mrow> y(t)\amp = \frac{0.65}{0.015}+ce^{-0.015t}\quad (c \in \mathbb{R}) </mrow>
                                                 </md>
                                             </p>
                                         </li>
@@ -2069,15 +2069,15 @@
                         have:
                         <md>
                             <mrow> \int \dfrac{d}{dx}\left(e^{3x}y\right) \,dx\amp =\int 2x\,dx </mrow>
-                            <mrow> e^{3x}y\amp = x^{2}+c\quad \text{($c\in \R$)}. </mrow>
-                        </md>
+                            <mrow> e^{3x}y\amp = x^{2}+c\quad (c\in \mathbb{R}) </mrow>
+                        </md>.
                     </p>
 
                     <p>
                         Solving for <m>y</m>, we obtain the general solution of
                         the DE
                         <md>
-                            \boxed{y=e^{-3x}(x^2+c) \text{ ($c\in \R$)}.}
+                            \boxed{y=e^{-3x}(x^2+c)\quad (c\in \mathbb{R})}
                         </md>
                     </p>
 
@@ -2121,7 +2121,7 @@
                             <mrow> \frac{d}{dx}\left((x^{2}+1)^{\frac{3}{2}}y\right)\amp = 6x(x^{2}+1)^{\frac{1}{2}} </mrow>
                             <mrow> \int \frac{d}{dx}\left((x^{2}+1)^{\frac{3}{2}}y\right) dx\amp = \int 6x(x^{2}+1)^{\frac{1}{2}}dx </mrow>
                             <mrow> (x^{2}+1)^{\frac{3}{2}}y\amp = 2(x^{2} + 1)^{\frac{3}{2}}+ c </mrow>
-                            <mrow> \amp \hspace{-3mm}\boxed{y(x) = 2 + c(x^2+1)^{-\frac{3}{2}} \ (c \in \R).} </mrow>
+                            <mrow> \amp \hspace{-3mm}\boxed{y(x) = 2 + c(x^2+1)^{-\frac{3}{2}}\quad (c \in \mathbb{R}).} </mrow>
                         </md>
                     </p>
                 </solution>
@@ -2284,7 +2284,7 @@
                                                 Solving for <m>y</m>, we find
                                                 the general solution of the DE:
                                                 <md>
-                                                    y=ct^{2}-\dfrac{1}{2}\text{ ($c\in \R$)}
+                                                    y=ct^{2}-\dfrac{1}{2}\quad (c\in \mathbb{R})
                                                 </md>
                                             </p>
 
@@ -3082,7 +3082,7 @@
                             Separating the variables and integrating, we have:
                             <md>
                                 <mrow> -\int v^{-3}\,dv\amp =\int \dfrac{1}{x}\,dx </mrow>
-                                <mrow> \frac{1}{2}v^{-2}\amp = \ln|x|+c \quad \text{($c\in \R$)} </mrow>
+                                <mrow> \frac{1}{2}v^{-2}\amp = \ln|x|+c \quad (c\in \mathbb{R}) </mrow>
                             </md>.
                         </p>
 
@@ -3095,7 +3095,7 @@
                             Multiplying by 2 and substituting back, we obtain an
                             implicit general solution of the initial problem
                             <md>
-                                \boxed{\dfrac{x^2}{y^2}=2\ln|x|+c \text{ ($c\in \R$)}.}
+                                \boxed{\dfrac{x^2}{y^2}=2\ln|x|+c\quad (c\in \mathbb{R})}
                             </md>
                         </p>
                     </solution>
@@ -3367,7 +3367,8 @@
             </example>
 
             <remark>
-              <title>Regarding <xref ref="example-Subs-not-linear"/></title>
+                <title>Regarding <xref ref="example-Subs-not-linear"/></title>
+
                 <p>
                     <ul>
                         <li>
@@ -3392,379 +3393,1030 @@
         <!-- Subsection - Bernoulli Equations -->
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-<subsection>
-    <title>Bernoulli Equations</title>
+        <subsection>
+            <title>Bernoulli Equations</title>
 
-    <paragraphs>
-        <title>Motivating Example: A Falling Chain <xref ref="Zill"/></title>
-
-        <p>
-            A portion of a uniform chain that is 8 feet long is loosely coiled
-            around a peg at the edge of a high horizontal platform, and the rest
-            of the chain hangs at rest over the edge of the platform.
-            Suppose the length of the overhanging chain is 3 feet, that the
-            chain weighs 2 lb/ft, and that the positive direction is downward.
-            Starting at <m>t = 0</m> seconds, the weight of the overhanging
-            portion causes the chain on the platform to smoothly uncoil and then
-            fall to the ground.
-            If <m>x(t)</m> denotes the length of the chain overhanging the table
-            at time <m>t &gt; 0</m>, then <m>v = \frac{dx}{dt}</m> is its
-            velocity.
-            If the simplifying assumption of ignoring any resistance forces
-            (e.g., friction), then a model relating <m>v</m> to <m>y</m> is
-            given by
-        </p>
-
-        <p>
-            <md>
-                xv\frac{dv}{dx}+ v^{2} = 32x.
-            </md>
-        </p>
-
-        <p>
-            This differential equation is a Bernoulli equation (to be discussed
-            immediately following).
-            Also, interestingly enough, one can determine an ``integrating
-            factor,'' which, when multiplied by the equation, turns it into an
-            exact equation (the final type of equation to be discussed).
-            If you solve this equation either way, you can determine that
-        </p>
-
-        <p>
-            <ol>
-                <li>
-                    <p>
-                        <m>v</m> satisfies
-                        <md>
-                            v(x) = 8\sqrt{\frac{x}{3} - \frac{9}{x^{2}}},
-                        </md>
-                        and
-                    </p>
-                </li>
-
-                <li>
-                    <p>
-                        the chain leaves the platform with a velocity of 12.7
-                        ft/s (found by evaluating <m>v(8)</m>, since the chain
-                        is 8 ft.
-                        long).
-                    </p>
-                </li>
-            </ol>
-        </p>
-      </paragraphs>
-        <definition>
-            <title>Bernoulli Differential Equation</title>
-            <statement>
-                <p>
-                    A <term>Bernoulli differential equation</term> is a first-order
-                    differential equation of the form
-                <md xml:id="eq-Bernoulli-definition" number="yes">
-                    y' + p(x) y = q(x) y^{n}
-                </md>.
-              </p>
-              </statement>
-        </definition>
-<remark>
-  <p>
-     The Bernoulli equation <xref ref="eq-Bernoulli-definition"/> will be nonlinear so long as <m>n \ne 0,1</m>.
-  </p>
-</remark>
-
-        <p> Bernoulli equations can be solved by transforming them into linear equations.
-          To reduce <xref ref="eq-Bernoulli-definition"/> to linear form, do a change of
-            variables:
-        <md>
-          <mrow> \text{Let }v&amp;=y^{1-n} </mrow>
-          <intertext>Differentiating both sides with respect to <m>x</m>> gives</intertext>
-          <mrow> v'&amp;= (1-n)y^{-n}y' </mrow>
-          <mrow> (\text{From <xref ref="eq-Bernoulli-definition"/>, }y'&amp;= q(x)y^{n}-p(x)y, \text{ so}) </mrow>
-          <mrow> v'&amp;= (1-n)y^{-n}(q(x)y^{n}-p(x)y) </mrow>
-          <mrow> &amp;= (1-n)q(x) - (1-n)p(x) y^{1-n} </mrow>
-          <mrow> &amp;= (1-n)q(x) - (1-n)p(x)v </mrow>
-        </md>
-        </p>
-
-        <p>
-            We therefore obtain the linear DE
-            <md>
-                v' + (1-n)p(x)v = (1-n)q(x).
-            </md>
-        </p>
-<example>
-  <statement>
-    <p>
-                          Find a general solution of
-                <md>
-                    x^{3}y'=x^{2}y-y^{3}.
-                </md>
-    </p>
-  </statement>
-  <solution>
-                <p>
-                    Solved in the previous example as
-                    homogeneous, writing this equation in standard form gives
-                <md>
-                    y'-\dfrac{1}{x}y=-\dfrac{1}{x^3}y^{3}.
-                </md>
-                </p>
+            <paragraphs>
+                <title>
+                    Motivating Example: A Falling Chain <xref ref="Zill"/>
+                </title>
 
                 <p>
-                    We can see that this equation is also Bernoulli (with
-                    <m>n=3</m> ).
-                <md>
-                  <mrow> \text{Let }v&amp;= y^{1-n}=y^{-2}.</mrow>
-                  <intertext>Then</intertext>
-                  <mrow> v'&amp;= -2y^{-3}y' </mrow>
-                  <mrow> &amp;= -2y^{-3}\left(-\dfrac{y^3}{x^3}+\frac{1}{x}y\right) </mrow>
-                  <mrow> &amp;= 2x^{-3}- \frac{2}{x}y^{-2}</mrow>
-                  <mrow> &amp;= 2x^{2} - \frac{2}{x}v,  </mrow>
-                  <intertext>or</intertext>
-                  <mrow> v'&amp;+\frac{2}{x}v = 2x^{-3}, </mrow>
-                </md>
-                   which is a linear equation.
-                </p>
-
-                <p>
-                    The integrating factor is
-                    <m>\mu(x)=e^{\int\frac{2}{x}\,dx}=e^{2\ln|x|}=x^{2}</m>.
-                </p>
-
-                <p>
-                    Multiplying both sides by <m>\mu(x)=x^{2}</m> and
-                    recognizing the left-hand side as the derivative of a
-                    product, we have:
-                <md>
-                    (x^{2}v)'=\dfrac{2}{x}.
-                </md>
-                </p>
-
-                <p>
-                    Integrating gives
-                <md>
-                    x^{2}v=\int\dfrac{2}{x}\,dx=2\ln|x|+c\quad \text{($c\in \R$)},
-                </md>
-                </p>
-
-                <p>
-                    and substituting back, we obtain an implicit general
-                    solution of the initial DE
-                <md>
-                    \dfrac{x^2}{y^2}=2\ln|x|+c \quad \text{($c\in\R$)}.
-                </md>
-                </p>
-
-                <p>
-                    Note that the singular equilibrium solution <m>y=0</m> is
-                    not included.
-                </p>
-  </solution>
-</example>
-
-<example>
-  <statement>
-    <p>
-                    Find a general solution of
+                    A portion of a uniform chain that is 8 feet long is loosely
+                    coiled around a peg at the edge of a high horizontal
+                    platform, and the rest of the chain hangs at rest over the
+                    edge of the platform.
+                    Suppose the length of the overhanging chain is 3 feet, that
+                    the chain weighs 2 lb/ft, and that the positive direction is
+                    downward.
+                    Starting at <m>t = 0</m> seconds, the weight of the
+                    overhanging portion causes the chain on the platform to
+                    smoothly uncoil and then fall to the ground.
+                    If <m>x(t)</m> denotes the length of the chain overhanging
+                    the table at time <m>t &gt; 0</m>, then
+                    <m>v = \frac{dx}{dt}</m> is its velocity.
+                    If the simplifying assumption of ignoring any resistance
+                    forces (e.g., friction), then a model relating <m>v</m> to
+                    <m>y</m> is given by
                     <md>
-                        xy' - y = 2x^{3}y^{-2}.
-                    </md>
-                </p>
-  </statement>
-  <solution>
-               <p>
-                    Divide both sides by <m>x</m>, giving:
-                    <md>
-                        y' - \frac{1}{x}y = 2x^{2} y^{-2}.
+                        xv\frac{dv}{dx}+ v^{2} = 32x.
                     </md>
                 </p>
 
                 <p>
-                    This is Bernoulli with <m>n = -2</m>.
-                <md>
-                  <mrow> \text{Let }v&amp;=y^{1-n}=y^{3}. </mrow>
-                  <intertext>Then</intertext>
-                  <mrow> v'&amp;= 3y^{2}y' </mrow>
-                  <mrow> &amp;= 3y^{2}\left(2x^{2}y^{-2}+\frac{1}{x}y\right) </mrow>
-                  <mrow> &amp;= 6x^{2} + \frac{3}{x}y^{3} </mrow>
-                  <mrow> &amp;= 6x^{2} + \frac{3}{x}v, </mrow>
-                  <intertext>or</intertext>
-                  <mrow> v'&amp;- \frac{3}{x}v = 6x^{2} </mrow>
-                </md>.
-                </p>
-
-                <p>
-                    We now have a linear DE, so we find the integrating
-                    factor:
-                    <md>
-                        p(x) = -\frac{3}{x}, \text{ so }\mu(x) = e^{-\int \frac{3}{x} dx}= e^{-3\ln|x|}= x^{-3}
-                    </md>.
-                </p>
-
-                <p>
-                    Multiplying by <m>\mu(x)=x^{-3}</m> gives:
-                <md>
-                  <mrow> x^{-3}v' - 3x^{-4}v&amp;= \dfrac{6}{x} </mrow>
-                  <mrow> \int \frac{d}{dx}\left(x^{-2}v\right) dx&amp;= \int \dfrac{6}{x}dx </mrow>
-                  <mrow> x^{-3}v&amp;= 6\ln|x|+c </mrow>
-                  <mrow> v&amp;= 6x^{3}\ln|x| + cx^{3} \quad (c \in \mathbb{R}) </mrow>
-                </md>.
-                </p>
-
-                <p>
-                    The general solution is then
-                    <md>
-                        \boxed{y^{3} = 6x^{3}\ln|x|+cx^3 \quad (c \in \mathbb{R}),}
-                    </md>
-                </p>
-
-                <p>
-                    or
-                    <md>
-                        \boxed{y(x) = \left(6x^3\ln|x|+cx^3\right)^{\frac{1}{3}} \quad (c \in \mathbb{R}).}
-                    </md>
-                </p>
-  </solution>
-</example>
-</subsection>       
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->
-        <!-- Subsection - Exercises for Substitution Section -->
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->
-<subsection>
-    <title>Exercises for Section <xref ref="sec-subs"/></title>
-
-    <p>
-        <ol>
-            <li>
-                <p>
-                    Identify the type(s) of equation for each of the following.
+                    This differential equation is a
+                    <term>Bernoulli equation</term> (to be discussed immediately
+                    following).
+                    Also, interestingly enough, one can determine an
+                    ``integrating factor,'' which, when multiplied by the
+                    equation, turns it into an exact equation (the final type of
+                    equation to be discussed).
+                    If you solve this equation either way, you can determine
+                    that
                 </p>
 
                 <p>
                     <ol>
                         <li>
                             <p>
-                                <m>y' - 2y = y^{3}</m>
+                                <m>v</m> satisfies
+                                <md>
+                                    v(x) = 8\sqrt{\frac{x}{3} - \frac{9}{x^{2}}},
+                                </md>
+                                and
                             </p>
                         </li>
 
                         <li>
                             <p>
-                                <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p>
-                                <m>y' + y\sin x = \sin x</m>
-                            </p>
-                        </li>
-
-                        <li>
-                            <p>
-                                <m>y' + y^{3}x + y = 0</m>
+                                the chain leaves the platform with a velocity of
+                                12.7 ft/s (found by evaluating <m>v(8)</m>,
+                                since the chain is 8 ft.
+                                long).
                             </p>
                         </li>
                     </ol>
                 </p>
-            </li>
-        </ol>
-    </p>
+            </paragraphs>
 
-    <p>
-        Find a general solution of each of the following differential equations.
-    </p>
+            <definition>
+                <title>Bernoulli Differential Equation</title>
 
-    <p>
-        <ol>
-            <li>
+                <statement>
+                    <p>
+                        A <term>Bernoulli differential equation</term> is a
+                        first-order differential equation of the form
+                        <md xml:id="eq-Bernoulli-definition" number="yes">
+                            y' + p(x) y = q(x) y^{n}
+                        </md>.
+                    </p>
+                </statement>
+            </definition>
+
+            <remark>
                 <p>
-                    <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                    The Bernoulli equation <xref ref="eq-Bernoulli-definition"/>
+                    will be nonlinear so long as <m>n \ne 0,1</m>.
                 </p>
-            </li>
+            </remark>
 
-            <li>
-                <p>
-                    <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
-                </p>
-            </li>
+            <p>
+                Bernoulli equations can be solved by transforming them into
+                linear equations.
+                To reduce <xref ref="eq-Bernoulli-definition"/> to linear form,
+                do a change of variables:
+                <md>
+                    <mrow> \text{Let }v&amp;=y^{1-n} </mrow>
+                    <intertext>
+                        Differentiating both sides with respect to
+                        <m>
+                            x
+                        </m>
+                        &gt; gives
+                    </intertext>
+                    <mrow> v'&amp;= (1-n)y^{-n}y' </mrow>
+                    <mrow> (\text{From <xref ref="eq-Bernoulli-definition"/>, }y'&amp;= q(x)y^{n}-p(x)y, \text{ so}) </mrow>
+                    <mrow> v'&amp;= (1-n)y^{-n}(q(x)y^{n}-p(x)y) </mrow>
+                    <mrow> &amp;= (1-n)q(x) - (1-n)p(x) y^{1-n} </mrow>
+                    <mrow> &amp;= (1-n)q(x) - (1-n)p(x)v </mrow>
+                </md>
+            </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
-                </p>
-            </li>
+            <p>
+                We therefore obtain the linear DE
+                <md>
+                    v' + (1-n)p(x)v = (1-n)q(x).
+                </md>
+            </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
-                </p>
-            </li>
+            <example>
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            x^{3}y'=x^{2}y-y^{3}.
+                        </md>
+                    </p>
+                </statement>
 
-            <li>
-                <p>
-                    <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
-                </p>
-            </li>
+                <solution>
+                    <p>
+                        Solved in the previous example as homogeneous, writing
+                        this equation in standard form gives
+                        <md>
+                            y'-\dfrac{1}{x}y=-\dfrac{1}{x^3}y^{3}.
+                        </md>
+                    </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
-                </p>
-            </li>
+                    <p>
+                        We can see that this equation is also Bernoulli (with
+                        <m>n=3</m> ).
+                        <md>
+                            <mrow> \text{Let }v&amp;= y^{1-n}=y^{-2}.</mrow>
+                            <intertext>
+                                Then
+                            </intertext>
+                            <mrow> v'&amp;= -2y^{-3}y' </mrow>
+                            <mrow> &amp;= -2y^{-3}\left(-\dfrac{y^3}{x^3}+\frac{1}{x}y\right) </mrow>
+                            <mrow> &amp;= 2x^{-3}- \frac{2}{x}y^{-2}</mrow>
+                            <mrow> &amp;= 2x^{2} - \frac{2}{x}v,  </mrow>
+                            <intertext>
+                                or
+                            </intertext>
+                            <mrow> v'&amp;+\frac{2}{x}v = 2x^{-3}, </mrow>
+                        </md>
+                        which is a linear equation.
+                    </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
-                </p>
-            </li>
-        </ol>
-    </p>
+                    <p>
+                        The integrating factor is
+                        <m>\mu(x)=e^{\int\frac{2}{x}\,dx}=e^{2\ln|x|}=x^{2}</m>.
+                    </p>
 
-    <p>
-        Solve the following initial value problems.
-    </p>
+                    <p>
+                        Multiplying both sides by <m>\mu(x)=x^{2}</m> and
+                        recognizing the left-hand side as the derivative of a
+                        product, we have:
+                        <md>
+                            (x^{2}v)'=\dfrac{2}{x}.
+                        </md>
+                    </p>
 
-    <p>
-        <ol>
-            <li>
-                <p>
-                    <m>\displaystyle x^{3} y' = x^{2} y - y^{3} x, \ y(1) = -1</m>
-                </p>
-            </li>
+                    <p>
+                        Integrating gives
+                        <md>
+                            x^{2}v=\int\dfrac{2}{x}\,dx=2\ln|x|+c\quad (c\in \mathbb{R}),
+                        </md>
+                    </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle y' + 2xy = xy^{-1}, \ y(0) = 1</m>
-                </p>
-            </li>
+                    <p>
+                        and substituting back, we obtain an implicit general
+                        solution of the initial DE
+                        <md>
+                            \dfrac{x^2}{y^2}=2\ln|x|+c \quad (c\in \mathbb{R})
+                        </md>.
+                    </p>
 
-            <li>
-                <p>
-                    <m>\displaystyle \dfrac{dP}{dt}= 2P\left(1 - \dfrac{P}{10}\right), \ P(0) = 1</m>
-                </p>
-            </li>
-        </ol>
-    </p>
-</subsection>
+                    <p>
+                        Note that the singular equilibrium solution <m>y=0</m>
+                        is not included.
+                    </p>
+                </solution>
+            </example>
+
+            <example>
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            xy' - y = 2x^{3}y^{-2}.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Divide both sides by <m>x</m>, giving:
+                        <md>
+                            y' - \frac{1}{x}y = 2x^{2} y^{-2}.
+                        </md>
+                    </p>
+
+                    <p>
+                        This is Bernoulli with <m>n = -2</m>.
+                        <md>
+                            <mrow> \text{Let }v&amp;=y^{1-n}=y^{3}. </mrow>
+                            <intertext>
+                                Then
+                            </intertext>
+                            <mrow> v'&amp;= 3y^{2}y' </mrow>
+                            <mrow> &amp;= 3y^{2}\left(2x^{2}y^{-2}+\frac{1}{x}y\right) </mrow>
+                            <mrow> &amp;= 6x^{2} + \frac{3}{x}y^{3} </mrow>
+                            <mrow> &amp;= 6x^{2} + \frac{3}{x}v, </mrow>
+                            <intertext>
+                                or
+                            </intertext>
+                            <mrow> v'&amp;- \frac{3}{x}v = 6x^{2} </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        We now have a linear DE, so we find the integrating
+                        factor:
+                        <md>
+                            p(x) = -\frac{3}{x}, \text{ so }\mu(x) = e^{-\int \frac{3}{x} dx}= e^{-3\ln|x|}= x^{-3}
+                        </md>.
+                    </p>
+
+                    <p>
+                        Multiplying by <m>\mu(x)=x^{-3}</m> gives:
+                        <md>
+                            <mrow> x^{-3}v' - 3x^{-4}v&amp;= \dfrac{6}{x} </mrow>
+                            <mrow> \int \frac{d}{dx}\left(x^{-2}v\right) dx&amp;= \int \dfrac{6}{x}dx </mrow>
+                            <mrow> x^{-3}v&amp;= 6\ln|x|+c </mrow>
+                            <mrow> v&amp;= 6x^{3}\ln|x| + cx^{3} \quad (c \in \mathbb{R}) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        The general solution is then
+                        <md>
+                            \boxed{y^{3} = 6x^{3}\ln|x|+cx^3 \quad (c \in \mathbb{R}),}
+                        </md>
+                    </p>
+
+                    <p>
+                        or
+                        <md>
+                            \boxed{y(x) = \left(6x^3\ln|x|+cx^3\right)^{\frac{1}{3}} \quad (c \in \mathbb{R}).}
+                        </md>
+                    </p>
+                </solution>
+            </example>
+        </subsection>
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <!-- Exercises for Substitution Section -->
+        <!-- ===================================================== -->
+        <!-- ===================================================== -->
+        <exercises>
+            <exercisegroup>
+              <title>Identify</title>
+              
+                <introduction>
+                  <p>
+                    
+                  </p>
+                </introduction>
+
+                <exercise>
+                    <statement>
+                    <p>
+                        Identify the type(s) of equation for each of the
+                        following:
+                        <ol>
+                                <li>
+                                    <p>
+                                        <m>y' - 2y = y^{3}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>y' + y\sin x = \sin x</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>y' + y^{3}x + y = 0</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+            <exercisegroup>
+                <introduction>
+                    <p>
+                        Find a general solution of each of the following
+                        differential equations.
+                    </p>
+                </introduction>
+
+                <exercise>
+                    <statement>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </statement>
+                </exercise>
+            </exercisegroup>
+        </exercises>
+
+        <subsection>
+            <title>Exercises for <xref ref="sec-subs"/></title>
+
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            Identify the type(s) of equation for each of the
+                            following.
+                        </p>
+
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        <m>y' - 2y = y^{3}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>y' + y\sin x = \sin x</m>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <m>y' + y^{3}x + y = 0</m>
+                                    </p>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                Find a general solution of each of the following differential
+                equations.
+            </p>
+
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle y' - \dfrac{y}{x}= \dfrac{\sqrt{x^{2} - y^{2}}}{x}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle e^{2x+y}y' = e^{x-y}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle 2xy y' = x^{2} + 3y^{2}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' - 4xy = e^{x^2}\sqrt{y}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle xy' = y + xe^{\frac{y}{x}}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' - \dfrac{y}{x}= xy^{2}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' = (x + 2y + 3)^{2}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                Solve the following initial value problems.
+            </p>
+
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <m>\displaystyle x^{3} y' = x^{2} y - y^{3} x, \ y(1) = -1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle y' + 2xy = xy^{-1}, \ y(0) = 1</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle \dfrac{dP}{dt}= 2P\left(1 - \dfrac{P}{10}\right), \ P(0) = 1</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </subsection>
     </section>
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->
-        <!-- Section - Exact Equations -->
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->    
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Section - Exact Equations -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <section xml:id="sec-Exact">
+        <title>Exact Differential Equations</title>
 
+        <introduction>
+            <title>Introduction</title>
+
+            <p>
+                Consider a first-order differential equation
+                <md xml:id="eq-Exact-form" number="yes">
+                    M(x,y)+N(x,y)\dfrac{dy}{dx}=0
+                </md>
+                sometimes written in a more symmetric
+                <term>differential form</term>
+                <md xml:id="eq-Exact-differential" number="yes">
+                    M(x,y)dx+N(x,y)dy=0.
+                </md>
+            </p>
+
+            <p>
+                Observe that <em>any</em> first-order differential equation
+                <md>
+                    y'=f(x,y)
+                </md>
+                can be written as <xref ref="eq-Exact-form"/> or
+                <xref ref="eq-Exact-differential"/> with <m>M(x,y)=f(x,y)</m>
+                and <m>N(x,y)=-1</m>.
+            </p>
+
+            <p>
+                However, <em>if</em> it happens that there is a function
+                <m>F(x,y)</m> such that
+                <md>
+                    F_{x}(x,y)=M(x,y) \text{ and }F_{y}(x,y)=N(x,y),
+                </md>
+                then differential equation <xref ref="eq-Exact-form"/> turns
+                into
+                <md>
+                    F_{x}(x,y)+F_{y}(x,y)\dfrac{dy}{dx}=0.
+                </md>
+            </p>
+
+            <p>
+                Such a differential is called <term>exact</term> since its
+                left-hand side is exactly the derivative of <m>F(x,y)</m>
+                relative to <m>x</m>, assuming <m>y</m> to be a function of
+                <m>x</m>, <m>y=y(x)</m>, and applying the chain rule.
+            </p>
+
+            <p>
+                Thus, in this case, we have:
+                <md>
+                    \dfrac{d}{dx}F\left(x,y(x)\right)=0.
+                </md>
+            </p>
+
+            <p>
+                Consequently, the equation
+                <md>
+                    F(x,y)=c\quad (c\in \mathbb{R})
+                </md>
+                implicitly defines the general solution of the original
+                differential equation.
+            </p>
+        </introduction>
+
+        <subsection>
+            <title>How Do We Know If a Differential Equation Is Exact?</title>
+
+            <p>
+                In <xref ref="eq-Exact-form"/> (or, equivalently,
+                <xref ref="eq-Exact-differential"/> ), if <m>M(x, y)</m> and
+                <m>N(x, y)</m> are defined and have continuous first partial
+                derivatives in an open region in the <m>xy</m>-plane, then
+                <md>
+                    M_{y}(x, y) = F_{xy}(x, y) \text{ and }N_{x}(x, y) = F_{yx}(x, y).
+                </md>
+            </p>
+
+            <p>
+                By the assumption of the continuity of the first partial
+                derivatives of <m>M</m> and <m>N</m>, the second derivatives of
+                <m>F</m> are also continuous.
+                Then, by equality of mixed partial derivatives
+                <md>
+                    F_{xy}(x, y) = F_{yx}(x, y)
+                </md>
+                (see, e.g., <xref ref="Stewart"/> ), we obtain the following
+                condition that must be satisfied for the differential equation
+                to be exact:
+                <md xml:id="eq-Test-for-exactness">
+                    M_{y}(x, y) = N_{x}(x, y).
+                </md>
+            </p>
+        </subsection>
+
+        <subsection>
+            <title>How Do We Solve an Exact Differential Equation?</title>
+
+            <p>
+                Provided condition <xref ref="eq-Test-for-exactness"/> holds,
+                the equation is exact and, since we are looking for a function
+                <m>F(x,y)</m> such that <m>F_{x}(x,y)=M(x,y)</m>, we have
+                <md>
+                    F(x,y)=\int M(x,y)\,dx+g(y).
+                </md>
+            </p>
+
+            <p>
+                Recall that when integrating a function of <m>x</m> and <m>y</m>
+                relative to <m>x</m>, we obtain instead of the integration
+                constant an arbitrary function of <m>y</m>, <m>g(y)</m>.
+            </p>
+
+            <p>
+                Since, we also have the condition that <m>F_{y}(x,y)=N(x,y)</m>,
+                we differentiate the former expression relative to <m>y</m>,
+                obtaining a differential equation for <m>g(y)</m>, which we
+                solve for <m>g(y)</m> and, thus, obtain <m>F(x,y)</m>.
+            </p>
+
+            <p>
+                Observe that the order of finding <m>F(x,y)</m> can be
+                different: we can, first, use the condition
+                <m>F_{y}(x,y)=N(x,y)</m>, obtaining
+                <md>
+                    F(x,y)=\int N(x,y)\,dy+h(x),
+                </md>
+                where, since we are integrating with respect to <m>y</m> we
+                obtain an arbitrary function of <m>x</m>, <m>h(x)</m>, instead
+                of the integration constant.
+                Since <m>F_{x}(x,y)=M(x,y)</m>, we differentiate the former
+                expression with respect to <m>x</m>, obtaining a differential
+                equation for <m>h(x)</m>, which we solve for <m>h(x)</m> and,
+                thus, obtain <m>F(x,y)</m>.
+            </p>
+
+            <example>
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            y+xy'=0.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        As is easily checked this DE is exact (also separable
+                        and linear!).
+                        Since <m>M(x, y) = y, \ N(x, y) = x</m>, and
+                        <md>
+                            M_{y}(x, y) = 1 = N_{x}(x, y),
+                        </md>
+                        the equation is exact.
+                    </p>
+
+                    <p>
+                        Now we are looking for a function <m>F(x,y)</m> such
+                        that <m>F_{x}(x,y)= M(x, y) = y</m>,
+                        <md>
+                            F(x,y)=\int y\,dx=xy+g(y),
+                        </md>
+                        where <m>g(y)</m> is a function to be determined.
+                    </p>
+
+                    <p>
+                        Since <m>F_{y}(x,y)=N(x, y) = x</m>, we have that
+                        <md>
+                            x = F_{y}(x, y) = \frac{\partial}{\partial y}(xy + g(y)),
+                        </md>
+                        or
+                        <md>
+                            x+g'(y)=x.
+                        </md>
+                    </p>
+
+                    <p>
+                        This gives, <m>g'(y)=0</m>, and thus,
+                        <m>g(y)=0 + c_{1}</m> ( <m>c_{1}\in\mathbb{R}</m> ).
+                    </p>
+
+                    <p>
+                        Therefore, <m>F(x,y)=xy+c_{1}</m> and the general
+                        solution is given by <m>F(x, y) = c</m>, so we have
+                        <md>
+                            xy + c_{1} = c,
+                        </md>
+                        or
+                        <md>
+                            \boxed{xy=c\quad  (c\in\mathbb{R}).}
+                        </md>
+                    </p>
+                </solution>
+            </example>
+
+            <example xml:id="example-Exact-no-need-for-c">
+                <statement>
+                    <p>
+                        Find a general solution of
+                        <md>
+                            (2x^{2}-y^{2})dx + (2y^{2}-2xy)dy = 0.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Since
+                        <m>M(x, y) = 2x^{2}-y^{2}, \ N(x, y) = 2y^{2}-2xy</m>
+                        and
+                        <md>
+                            M_{y}(x, y) = -2y= N_{x}(x, y),
+                        </md>
+                        the equation is exact.
+                    </p>
+
+                    <p>
+                        Next, find <m>F(x, y)</m>.
+                        <md>
+                            <mrow> F(x,y)&amp;= \int M(x,y)dx </mrow>
+                            <mrow> &amp;= \int(2x^{2}-y^{2})dx </mrow>
+                            <mrow> &amp;= \frac{2}{3}x^{2}-xy^{2}+g(y) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        Now, since <m>N(x, y) = F_{y}(x, y)</m>, find the
+                        partial derivative of <m>F(x, y)</m> with respect to
+                        <m>y</m> and set it equal to <m>N(x, y)</m> to find
+                        <m>g(y)</m>.
+                    </p>
+
+                    <p>
+                        Since <m>\displaystyle N(x, y) = F_{y}(x, y)</m>, we
+                        have
+                        <md>
+                            <mrow> 2y^{2} - 2xy&amp;= -2xy + g'(y). </mrow>
+                            <intertext>
+                                We then solve for
+                                <m>
+                                    g(y)
+                                </m>
+                                .
+                            </intertext>
+                            <mrow> g'(y)&amp;= 2y^{2} </mrow>
+                            <mrow> g(y)&amp;= \frac{2}{3}y^{3} (+c_{1}) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        So,
+                        <m>F(x, y) = \frac{2}{3}x^{3} - xy^{2} + \frac{2}{3}y^{3}</m>.
+                    </p>
+
+                    <p>
+                        We do not need to include the <m>+c_{1}</m> in the above
+                        calculation, because our solution is of the form
+                        <m>F(x, y) = c</m>, and so the constants will be
+                        combined in the solution.
+                        The general solution is given by the equation
+                        <md>
+                            \boxed{\frac{2}{3}x^3 - xy^2 + \frac{2}{3}y^3 = c\quad  (c\in\mathbb{R}).}
+                        </md>
+                    </p>
+                </solution>
+            </example>
+
+            <example>
+                <statement>
+                    <p>
+                        Solve the initial value problem
+                        <md xml:id="equation-Exact-IVP" number="yes">
+                            y^{3} + 3xy^{2} \frac{dy}{dx}= 0,\quad y(1) = -2.
+                        </md>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Since <m>M(x, y) = y^{3}, \ N(x, y) = 3xy^{2}</m> and
+                        <md>
+                            M_{y}(x, y) = 3y^{2}=N_{x}(x, y),
+                        </md>
+                        the equation is exact.
+                    </p>
+
+                    <p>
+                        Next, find <m>F(x, y)</m>.
+                        <md>
+                            <mrow> F(x,y)&amp;= \int N(x,y)dy </mrow>
+                            <mrow> &amp;= \int 3xy^{2} dx </mrow>
+                            <mrow> &amp;= xy^{3} + h(x) </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        Now, since <m>M(x, y) = F_{x}</m>, find the partial
+                        derivative of <m>F(x, y)</m> with respect to <m>x</m>
+                        and set it equal to <m>M(x, y)</m> to find <m>h(x)</m>.
+                        We have
+                        <md>
+                            <mrow> y^{3}&amp;= y^{3} + h'(x) </mrow>
+                            <mrow> h'(x)&amp;= 0 </mrow>
+                            <mrow> h(x)&amp;= 0+c_{1} </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        As noted at the end of
+                        <xref ref="example-Exact-no-need-for-c"/>, we can omit
+                        the <m>+c_{1}</m> in the calculation, so
+                        <m>F(x, y) = xy^{3}</m>, and the general solution is
+                        given by <m>F(x, y) = c</m>, so we get the equation
+                        <md>
+                            xy^{3} = c.
+                        </md>
+                    </p>
+
+                    <p>
+                        Lastly we can find the value of <m>c</m>: Use
+                        <m>y(1) = -2</m>, which gives <m>x = 1, y = -2</m>.
+                        Substituting into the general solution gives
+                        <md>
+                            <mrow> 1(-2)^{3}&amp;= c </mrow>
+                            <mrow> c&amp;= -8 </mrow>
+                        </md>.
+                    </p>
+
+                    <p>
+                        So, in conclusion, the solution to equation
+                        <xref ref="equation-Exact-IVP"/> is
+                        <md>
+                            \boxed{xy^3 = -8.}
+                        </md>
+                    </p>
+
+                    <p>
+                        <em>Note:</em> The astute reader might have noticed that
+                        this equation is also separable.
+                        You should verify that solving as a separable equation
+                        gives the same results.
+                    </p>
+                </solution>
+            </example>
+        </subsection>
         <!-- ===================================================== -->
         <!-- ===================================================== -->
         <!-- Subsection - Exercises for Exact Equations -->
         <!-- ===================================================== -->
-        <!-- ===================================================== --> 
+        <!-- ===================================================== -->
+        <exercises xml:id="exercises-For-exact">
+            <title>Exercises for <xref ref="sec-Exact"/></title>
 
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->
-        <!-- Section - Review Probs for Chapter 2 First order DEs -->
-        <!-- ===================================================== -->
-        <!-- ===================================================== --> 
+            <exercise>
+                <statement>
+                    <p>
+                        Determine if the following equations are exact.
+                        If not, then state that the equation is not exact.
+                        If it is exact, say so and find a general solution of
+                        the equation.
+                    </p>
 
-      </chapter>
+                    <p>
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>\displaystyle x^{2}y' - 2xy = e^{x}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>\sin(x)y' = -y\cos(x)</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>\displaystyle y' = \dfrac{x^2 + y^2}{2xy}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>\dfrac{dy}{dx}= \dfrac{y\sin(xy)}{x\cos(xy)}</m>
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <m>(y - x)y' = (y - 3x^{2})</m>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Find a general solution of the equation
+                        <md>
+                            \displaystyle e^{y} - y\cos(x) = (\sin(x) - xe^{y}) y'.
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Solve the initial value problem
+                        <md>
+                            \displaystyle ye^{xy}= (\cos(y)-xe^{xy}) y', \ y(0) = \dfrac{\pi}{2}.
+                        </md>
+                    </p>
+                </statement>
+            </exercise>
+        </exercises>
+    </section>
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- Review Exercises Chapter 2 First order DEs -->
+    <!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <exercises xml:id="exercises-First-order-review">
+        <title><xref ref="ch-First-order-equations"/> Review Problems</title>
+
+        <exercisegroup>
+            <title>Identify</title>
+
+            <introduction>
+                <p>
+                    For each of the following, <em>identify</em> the type(s) of
+                    the equation:
+                </p>
+            </introduction>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m>x \sin(y) y' = \cos(y)</m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m>2xy + (x^2 + 2y^2)y' = 0</m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m>y^2y' = 1</m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m>(x^2 - 1)y' + 2xy = e^x</m>
+                    </p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <title>General Solutions</title>
+
+            <introduction>
+                <p>
+                    Find a general solution of each of the following equations:
+                </p>
+            </introduction>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m> \sin(y) y' - 2x = 0 </m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m> e^y - y\cos(x) = \left(\sin(x) - x e^y\right)y' </m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Solve <m> (x^2 + 1)y' + 2xy = 0 </m> in three ways.
+                    </p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <title>Initial Value Problems</title>
+
+            <introduction>
+                <p>
+                    Solve the following initial value problems:
+                </p>
+            </introduction>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m> y'-xy=xy^{-2}, \ y(0) = 1 </m>
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <m> xy' - y = \sqrt{x^2 + y^2}, \ y(1) = 0 </m>
+                    </p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</chapter>
