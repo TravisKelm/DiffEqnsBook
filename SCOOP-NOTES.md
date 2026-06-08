@@ -33,6 +33,7 @@
 - <md> blocks can go inside of <p> blocks and should whenever it is natural
 - Find and replace "em>" with "term>"
 - You can clean up indentation with <Right-click>,"Format document with...",Pretext-tools
+- if all the reference break, try searching for "\ds" commands that need to be replaced by "\displaystyle"
 
 ### Removing Extraneous line breaks
 - Shift+Ctrl+P to bring up command palatte, then *Join Lines*
